@@ -45,6 +45,8 @@
 
 
 
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -188,19 +190,23 @@
         
         
     <div id="comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-        id: 'https://xjoi.github.io/', // 可选。默认为 location.href
-        owner: 'becauseofyou',
-        repo: 'becauseofyou.github.io',
-        oauth: {
-            client_id: 'af0e91f8b3e07b208cc7',
-            client_secret: '20b655d18155c0ee2c3093b8be4b91f15d444c3b',
-        },
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'af0e91f8b3e07b208cc7',
+            clientSecret: '20b655d18155c0ee2c3093b8be4b91f15d444c3b',
+            repo: 'xjoi.github.io',
+            owner: 'xjoi',
+            admin: ['becauseofyou'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
     })
-    gitment.render('comments')
 </script>
 
     </div>
