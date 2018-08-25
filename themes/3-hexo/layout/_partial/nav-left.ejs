@@ -1,0 +1,62 @@
+<a href="/" class="avatar_target">
+    <img class="avatar" src="<%=theme.avatar%>" />
+</a>
+<div class="author">
+    <span><%=config.author%></span>
+</div>
+
+<div class="icon">
+    <% if(theme.link.rss){%>
+    <a class="rss" title="rss" href="<%= theme.link.rss %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.github){%>
+    <a class="github" title="github" href="<%= theme.link.github %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.facebook){%>
+    <a class="facebook" title="facebook" href="<%= theme.link.facebook %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.twitter){%>
+    <a class="twitter" title="twitter" href="<%= theme.link.twitter %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.linkedin){%>
+    <a class="linkedin" title="linkedin" href="<%= theme.link.linkedin %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.instagram){%>
+    <a class="instagram" title="instagram" href="<%= theme.link.instagram %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.reddit){%>
+    <a class="reddit" title="reddit" href="<%= theme.link.reddit %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.weibo){%>
+    <a class="weibo" title="weibo" href="<%= theme.link.weibo %>" target="_blank"></a>
+    <%}%>
+    <% if(theme.link.email){%>
+    <a class="email" title="email" href="mailto:<%= theme.link.email %>"></a>
+    <%}%>
+</div>
+<% var menus = 0%>
+<% for (var menu in theme.menu.menus) {  if (theme.menu.menus[menu].on) {menus++}}%>
+<% if (menus>0){%>
+<a class="more-menus">更多菜单</a>
+<%}%>
+<ul>
+    <li class="all active">全部文章</li>
+    <% site.categories.forEach(function(category, i){ %>
+    <li data-rel="<%=category.name%>"> <%=category.name%> </li>
+    <% }) %>
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    <% for (var menu in theme.menu.menus) {%>
+    <% if (theme.menu.menus[menu].on) {%>
+    <a class="dynamic-menu <%=(theme.menu.menus[menu].type==1 ?'site_url':'')%>" <%if(theme.menu.menus[menu].type==2){%>target="_self" <%}else if(theme.menu.menus[menu].type==3){%>target="_blank"<%}%>  href="<%=theme.menu.menus[menu].url%>"><%=menu %></a>
+    <%}}%>
+    </div>
+    <div><% if (theme.menu.about.on) {%><a <%if(theme.menu.friend.on){%>style="border-right: 1px solid #fff; width: 49%" <%}%> class="about <%=(theme.menu.about.type==1 ?'site_url':'')%>" <%if(theme.menu.about.type==2){%>target="_self" <%}else if(theme.menu.about.type==3){%>target="_blank"<%}%> href="/about">关于</a><% } %><% if (theme.menu.friend.on){%><a <% if (theme.menu.about.on) {%>style="width: 50%" <%}%> class="friends">友链</a><%}%></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="<%=site.posts.length%>">
+<% if(theme.word_count){%><input type="hidden" id="yelog_site_word_count" value="<%=totalcount(site)%>"><%}%>
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
