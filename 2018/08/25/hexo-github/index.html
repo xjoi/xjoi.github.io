@@ -14,10 +14,12 @@
 <meta property="og:site_name" content="xjoi-blog">
 <meta property="og:description" content="安装  git bash下载 nodejs下载 打开git bash，输入npm -v 检测是否安装成功 安装hexo: npm i -g hexo   github 相关注册github账号,注意验证好邮箱假设账号名字为yourname在你的github中新建一个仓库,名字为 yourname.github.io 打开gitbash git config --global user.name &amp;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-25T13:23:20.847Z">
+<meta property="og:image" content="https://xjoi.github.io/img/auth.png">
+<meta property="og:updated_time" content="2018-08-25T15:04:54.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我从哪里来">
 <meta name="twitter:description" content="安装  git bash下载 nodejs下载 打开git bash，输入npm -v 检测是否安装成功 安装hexo: npm i -g hexo   github 相关注册github账号,注意验证好邮箱假设账号名字为yourname在你的github中新建一个仓库,名字为 yourname.github.io 打开gitbash git config --global user.name &amp;">
+<meta name="twitter:image" content="https://xjoi.github.io/img/auth.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -42,8 +44,6 @@
 <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 
 
-
-<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
 
 </head>
 <div style="display: none">
@@ -91,8 +91,8 @@
     </div>
     <div><a  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="2">
-
+<input type="hidden" id="yelog_site_posts_number" value="1">
+<input type="hidden" id="yelog_site_word_count" value="687">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -114,7 +114,7 @@
 </div>
         <div class="title-list">
     <form onkeydown="if(event.keyCode==13){return false;}">
-        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
         <i class="cross"></i>
         <span>
         <label for="tagswitch">Tags:</label>
@@ -131,15 +131,11 @@
 </div>
 
     
+    <div id="local-search-result">
+
+    </div>
+    
     <nav id="title-list-nav">
-        
-        <a  class=""
-           href="/2018/08/25/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2018-08-25 11:01:56">2018/08/25</span>
-        </a>
         
         <a  class="工具们 "
            href="/2018/08/25/hexo-github/"
@@ -185,10 +181,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-08-25 21:23:20'>2018-08-25 15:00</time>
+        创建时间:<time class="date" title='更新时间: 2018-08-25 23:04:54'>2018-08-25 15:00</time>
         
     </div>
     <div class="article-meta">
+        
+        <span>字数:687</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -298,9 +296,18 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 </blockquote>
 <h1 id="友链与评论"><a href="#友链与评论" class="headerlink" title="友链与评论"></a>友链与评论</h1><p>编辑themes/3-hexo/_config.yml文件</p>
 <blockquote>
-<p>链接图标link: 修改github地址<br>友情链接friends: 增加自己朋友的blog地址<br>评论: comment : 选择打开,如果选择gitalk  ,在下方gitalk下面填入相应信息</p>
-</blockquote>
+<p>链接图标link: 修改github地址<br>友情链接friends: 增加自己朋友的blog地址<br>评论: comment : 开启设置为true, 选择gitment  ,在下方gitment下面填入相应信息</p>
+<pre><code>注册: https://github.com/settings/applications/new
+</code></pre></blockquote>
+<p><img src="/img/auth.png" alt="image"></p>
+<p>编辑3-hexo/_config.yml</p>
+<pre><code>gitment:
+  owner: becauseofyou #账户名
+  repo: xjoi.github.io #存放评论的仓库名
+  client_id: af0e91f8b3e07b208cc7
+  client_secret: 20b655d18155c0ee2c3093b8be4b91f15d444c3b
 
+</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
     </div>
@@ -310,10 +317,10 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
 <div class="article_copyright">
     <p><span>文章标题:</span>我从哪里来</p>
-    
+    <p><span>文章字数:</span><span class="post-count">687</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
     <p><span>发布时间:</span>2018-08-25, 15:00:08</p>
-    <p><span>最后更新:</span>2018-08-25, 21:23:20</p>
+    <p><span>最后更新:</span>2018-08-25, 23:04:54</p>
     <span>原始链接:</span><a class="post-url" href="/2018/08/25/hexo-github/" title="我从哪里来">https://xjoi.github.io/2018/08/25/hexo-github/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -322,23 +329,19 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
 
     <div id="comments"></div>
-<link rel="stylesheet" href="/css/gitalk.css">
-
-<script type="text/javascript">
-    $.getScript('/js/gitalk.js', function () {
-        var gitalk = new Gitalk({
-            clientID: '',
-            clientSecret: '',
-            repo: 'xjoi.github.io',
-            owner: 'xjoi',
-            admin: ['becauseofyou'],
-            id: location.pathname,
-            distractionFreeMode: 'true',
-            language: 'zh-CN',
-            perPage: parseInt('10',10)
-        })
-        gitalk.render('comments')
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'https://xjoi.github.io/2018/08/25/hexo-github/', // 可选。默认为 location.href
+        owner: 'becauseofyou',
+        repo: 'xjoi.github.io',
+        oauth: {
+            client_id: 'af0e91f8b3e07b208cc7',
+            client_secret: '20b655d18155c0ee2c3093b8be4b91f15d444c3b',
+        },
     })
+    gitment.render('comments')
 </script>
 
 
