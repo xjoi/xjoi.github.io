@@ -125,7 +125,14 @@ hexo new post xxx
 
 因此为了满足异地的写作与发布,我们应该要将本地的内容以及相关的配置备份一下
 
-//待续
+[备份](https://lrscy.github.io/2018/01/26/Hexo-Github-Backup/)
+```
+git clone https://github.com/yourgithubname/yourgithubname.github.com
+cd yourgithubname
+npm install hexo-cli
+npm install
+npm install hexo-deployer-git
+```
 
 
 
