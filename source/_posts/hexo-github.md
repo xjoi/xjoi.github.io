@@ -29,11 +29,12 @@ git config --global user.email "github验证的邮箱名"
 ssh-keygen -t rsa -C "github验证的邮箱名" (默认按回车即可)
 ```
 
-将id_rsa.pub中的内容复制到github网页端->settings->SSH and GPG keys->New SSH key
+将~/.ssh/id_rsa.pub中的内容复制到github网页端->settings->SSH and GPG keys->New SSH key
 完成后在bash中输入
 
 ```
 ssh -T git@github.com
+输入yes即可
 ```
 
 设置成功返回
