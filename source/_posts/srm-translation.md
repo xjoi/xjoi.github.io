@@ -6,6 +6,66 @@ tags: noip普及
 mathjax: true
 ---
 
+
+# srm-727-div1-T1-OnlySanta
+
+## 题意
+
+>给你一个字符串S,一开始不包含"SATAN",长度小于1000
+>你可以在任意位置插入若干个字符使得
+>S包含"SANTA"但是不包含"SATAN",不需要最小化插入字符的个数
+>随便输出一个解即可
+
+## 样例
+
+```
+"STANA"
+Returns: "STANTA"
+
+"STN"
+Returns: "SANTNA"
+
+"SXAYNTA"
+Returns: "OOOOSOXAYNTOOOOAOOO"
+```
+# srm-727-div2-T3-ManageSubsequences
+
+## 题意
+
+>给你三个字符串S,A,B
+>求在S中插入最少多少个字符可以使得S包含A，不包含B
+>如果不能达成，返回-1
+>$字符串长度<=300$
+
+## 样例
+
+```
+"ABXBCA"
+"ABCD"
+"XD"
+Returns: 2
+```
+
+# srm-727-div2-T2-Twodiagonals
+
+## 题意
+
+>平面上有n个点,现在你需要建造两条路，一条是斜率为1,
+>另一条斜率为-1
+>你的任务是让这两条路经过尽可能多的点
+>求最多经过几个点
+>$1<=N<=1000,0<=x[i],y[i]<=999$
+
+## 样例
+
+```
+{1, 4, 4, 5}
+{3, 0, 2, 3}
+Returns: 4
+
+(1,3) (4,0) (4,2) (5,3)四个点都可以被经过
+
+```
 # srm-728-div1-T1-Halving
 
 ## 题意
