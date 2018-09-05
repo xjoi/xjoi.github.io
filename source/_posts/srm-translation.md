@@ -6,7 +6,32 @@ tags: noip普及
 mathjax: true
 ---
 
+# srm-728-div2-T2-IncreasingSequencesEasy
+
+## 题意
+
+>给你两个长度为n的数组L[],R[]
+>求满足```L[i]<=A[i]<=R[i]```而且```A[0]<A[1]<...<A[n-1]```的序列的数量
+>答案对998244353取模
+>$1<=n<=300,1<=L[i]<=10^4,L[i]<=R[i]<=10^4$
+
+## 样例
+
+```
+    
+{1, 3, 1, 4}
+{6, 5, 4, 6}
+Returns: 4
+There are 4 strictly increasing sequences satisfying the conditions: {1, 3, 4, 5}, {1, 3, 4, 6}, {2, 3, 4, 5} and {2, 3, 4, 6}.
+1)
+
+{10, 20}
+{20, 30}
+Returns: 120
+```
+
 # srm-729-div2-T2-SoManyRectangles
+
 
 ## 题意
 
@@ -27,6 +52,39 @@ mathjax: true
 Returns: 5
 
 ```
+
+# srm-729-div2-T3-RareItems
+
+## 题意
+
+>给你一个数组表示每种物品的出现个数
+>现在根据每种物品的比例随机购买每种物品
+>期望购买几次能将每种物品都买到手
+>$1<=n<=20$
+
+## 样例
+
+```
+{2,2}
+Returns: 3.0
+```
+
+# srm-729-div1-T1-MagicNumberThree
+
+## 题意
+>给你一个长度为50的数字串，问你有多少个子序列构成的数字可以被3整除
+>答案对1e9+7取模
+
+## 样例
+    
+```
+"132"
+Returns: 3
+
+"00"
+Returns: 3
+```
+
 
 # srm-730-div2-T2-ExpectedMinimumPowerDiv2
 
