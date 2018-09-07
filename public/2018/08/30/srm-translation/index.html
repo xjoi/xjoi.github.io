@@ -6,18 +6,18 @@
   <meta name="keywords" content=" noip ">
   <meta name="description" content="srm-翻译 | xjoi-blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="srm-720-div2-T3-RainbowGraphsrm-720-div2-T2-MinProduct题意 给你一个长度为10的数组cnt,cnt[i]表示数字i的个数再给你两个数X，Y，你需要构造两个整数A,BA有X位，B有Y位数字，数字i在A，B中出现的总次数不能超过cnt[i]求AxB的最小值$0&amp;lt;=cnt[i]&amp;lt;=20,1&amp;lt;=X,Y&amp;lt;=9,cnt数组的和&amp;gt">
+<meta name="description" content="srm-720-div2-T3-RainbowGraph题意 给你一副无向图n个点,每个点有一种颜色你想要走遍图中的每一个点恰好一次同一种颜色的点一定要连着走，也就是走完一种颜色再去走另一种颜色请问有多少种不同的走法$2&amp;lt;=n&amp;lt;=100$每个点的颜色为0-9，每种颜色出现不会超过10次边数最多有2500条  srm-720-div2-T2-MinProduct题意 给你一个长度为10的">
 <meta name="keywords" content="noip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="srm-翻译">
 <meta property="og:url" content="https://xjoi.github.io/2018/08/30/srm-translation/index.html">
 <meta property="og:site_name" content="xjoi-blog">
-<meta property="og:description" content="srm-720-div2-T3-RainbowGraphsrm-720-div2-T2-MinProduct题意 给你一个长度为10的数组cnt,cnt[i]表示数字i的个数再给你两个数X，Y，你需要构造两个整数A,BA有X位，B有Y位数字，数字i在A，B中出现的总次数不能超过cnt[i]求AxB的最小值$0&amp;lt;=cnt[i]&amp;lt;=20,1&amp;lt;=X,Y&amp;lt;=9,cnt数组的和&amp;gt">
+<meta property="og:description" content="srm-720-div2-T3-RainbowGraph题意 给你一副无向图n个点,每个点有一种颜色你想要走遍图中的每一个点恰好一次同一种颜色的点一定要连着走，也就是走完一种颜色再去走另一种颜色请问有多少种不同的走法$2&amp;lt;=n&amp;lt;=100$每个点的颜色为0-9，每种颜色出现不会超过10次边数最多有2500条  srm-720-div2-T2-MinProduct题意 给你一个长度为10的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-07T04:17:33.620Z">
+<meta property="og:updated_time" content="2018-09-07T04:33:40.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="srm-翻译">
-<meta name="twitter:description" content="srm-720-div2-T3-RainbowGraphsrm-720-div2-T2-MinProduct题意 给你一个长度为10的数组cnt,cnt[i]表示数字i的个数再给你两个数X，Y，你需要构造两个整数A,BA有X位，B有Y位数字，数字i在A，B中出现的总次数不能超过cnt[i]求AxB的最小值$0&amp;lt;=cnt[i]&amp;lt;=20,1&amp;lt;=X,Y&amp;lt;=9,cnt数组的和&amp;gt">
+<meta name="twitter:description" content="srm-720-div2-T3-RainbowGraph题意 给你一副无向图n个点,每个点有一种颜色你想要走遍图中的每一个点恰好一次同一种颜色的点一定要连着走，也就是走完一种颜色再去走另一种颜色请问有多少种不同的走法$2&amp;lt;=n&amp;lt;=100$每个点的颜色为0-9，每种颜色出现不会超过10次边数最多有2500条  srm-720-div2-T2-MinProduct题意 给你一个长度为10的">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -94,7 +94,7 @@
     <div><a  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="5.7k">
+<input type="hidden" id="yelog_site_word_count" value="5.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -195,12 +195,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-07 12:17:33'>2018-08-30 17:33</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-07 12:33:40'>2018-08-30 17:33</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:4,706</span>
+        <span>字数:4,814</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -230,7 +230,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-720-div2-T3-RainbowGraph"><span class="toc-text">srm-720-div2-T3-RainbowGraph</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-720-div2-T2-MinProduct"><span class="toc-text">srm-720-div2-T2-MinProduct</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-721-div1-T1-RememberWords"><span class="toc-text">srm-721-div1-T1-RememberWords</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-1"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-1"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-721-div2-T3-ApocalypseEasy"><span class="toc-text">srm-721-div2-T3-ApocalypseEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-2"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-2"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-722-div1-T1-TCPhoneHomeEasy"><span class="toc-text">srm-722-div1-T1-TCPhoneHomeEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-3"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-3"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div1-T1-TopXorer"><span class="toc-text">srm-723-div1-T1-TopXorer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-4"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-4"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div2-T3-SimpleMazeEasy"><span class="toc-text">srm-723-div2-T3-SimpleMazeEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-5"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-5"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div2-T2-TopXorerEasy"><span class="toc-text">srm-723-div2-T2-TopXorerEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-6"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-6"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div1-T1-OrAndSum"><span class="toc-text">srm-724-div1-T1-OrAndSum</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-7"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-7"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div2-T3-UnfinishedTournamentEasy"><span class="toc-text">srm-724-div2-T3-UnfinishedTournamentEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-8"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-8"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div2-T2-OrAndSumEasy"><span class="toc-text">srm-724-div2-T2-OrAndSumEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-9"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-9"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div1-T1-Unpacking"><span class="toc-text">srm-726-div1-T1-Unpacking</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-10"><span class="toc-text">题意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div2-T3-HeroicScheduled2"><span class="toc-text">srm-726-div2-T3-HeroicScheduled2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-11"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-10"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div2-T2-TurtleGame"><span class="toc-text">srm-726-div2-T2-TurtleGame</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-12"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-11"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div1-T1-OnlySanta"><span class="toc-text">srm-727-div1-T1-OnlySanta</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-13"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-12"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div2-T3-ManageSubsequences"><span class="toc-text">srm-727-div2-T3-ManageSubsequences</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-14"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-13"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div2-T2-Twodiagonals"><span class="toc-text">srm-727-div2-T2-Twodiagonals</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-15"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-14"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div1-T1-Halving"><span class="toc-text">srm-728-div1-T1-Halving</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-16"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-15"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div2-T3-IncreasingSequencesEasy"><span class="toc-text">srm-728-div2-T3-IncreasingSequencesEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-17"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-16"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div2-T2-IncreasingSequencesEasy"><span class="toc-text">srm-728-div2-T2-IncreasingSequencesEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-18"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-17"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div2-T2-SoManyRectangles"><span class="toc-text">srm-729-div2-T2-SoManyRectangles</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-19"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-18"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div2-T3-RareItems"><span class="toc-text">srm-729-div2-T3-RareItems</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-20"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-19"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div1-T1-MagicNumberThree"><span class="toc-text">srm-729-div1-T1-MagicNumberThree</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-21"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-20"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-730-div2-T2-ExpectedMinimumPowerDiv2"><span class="toc-text">srm-730-div2-T2-ExpectedMinimumPowerDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-22"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-21"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-730-div2-T3-StonesOnATreeDiv2"><span class="toc-text">srm-730-div2-T3-StonesOnATreeDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-23"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-22"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-731-div2-T3-JustBrackets"><span class="toc-text">srm-731-div2-T3-JustBrackets</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-24"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-23"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-731-div1-T1-TreesAndBractkets"><span class="toc-text">srm-731-div1-T1-TreesAndBractkets</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-25"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-24"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-733-div2-T2-BuildingSpanningTreesDiv2"><span class="toc-text">srm-733-div2-T2-BuildingSpanningTreesDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-26"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-25"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-733-div2-T3-HamiltonianPathsInGraph"><span class="toc-text">srm-733-div2-T3-HamiltonianPathsInGraph</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-27"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-26"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div2-T2-TheSquarecityDiv2"><span class="toc-text">srm-734-div2-T2-TheSquarecityDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-28"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-27"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div2-T3-TheRectangularCityDiv2"><span class="toc-text">srm-734-div2-T3-TheRectangularCityDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-29"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-28"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div1-T1-TheRoundCityDiv1"><span class="toc-text">srm-734-div1-T1-TheRoundCityDiv1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-30"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-29"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-735-div2-T2-TeleportationMaze"><span class="toc-text">srm-735-div2-T2-TeleportationMaze</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-31"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-30"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-735-div2-T3-MajoritySubarray"><span class="toc-text">srm_735_div2_T3_MajoritySubarray</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-32"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-31"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#736-div2-T2-Reroll"><span class="toc-text">736-div2-T2-Reroll</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-33"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-32"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#736-div2-T3-MazeWithKeys"><span class="toc-text">736-div2-T3-MazeWithKeys</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-34"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-33"><span class="toc-text">样例</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-720-div2-T3-RainbowGraph"><span class="toc-text">srm-720-div2-T3-RainbowGraph</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意"><span class="toc-text">题意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-720-div2-T2-MinProduct"><span class="toc-text">srm-720-div2-T2-MinProduct</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-1"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-721-div1-T1-RememberWords"><span class="toc-text">srm-721-div1-T1-RememberWords</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-2"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-1"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-721-div2-T3-ApocalypseEasy"><span class="toc-text">srm-721-div2-T3-ApocalypseEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-3"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-2"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-722-div1-T1-TCPhoneHomeEasy"><span class="toc-text">srm-722-div1-T1-TCPhoneHomeEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-4"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-3"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div1-T1-TopXorer"><span class="toc-text">srm-723-div1-T1-TopXorer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-5"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-4"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div2-T3-SimpleMazeEasy"><span class="toc-text">srm-723-div2-T3-SimpleMazeEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-6"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-5"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-723-div2-T2-TopXorerEasy"><span class="toc-text">srm-723-div2-T2-TopXorerEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-7"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-6"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div1-T1-OrAndSum"><span class="toc-text">srm-724-div1-T1-OrAndSum</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-8"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-7"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div2-T3-UnfinishedTournamentEasy"><span class="toc-text">srm-724-div2-T3-UnfinishedTournamentEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-9"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-8"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-724-div2-T2-OrAndSumEasy"><span class="toc-text">srm-724-div2-T2-OrAndSumEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-10"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-9"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div1-T1-Unpacking"><span class="toc-text">srm-726-div1-T1-Unpacking</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-11"><span class="toc-text">题意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div2-T3-HeroicScheduled2"><span class="toc-text">srm-726-div2-T3-HeroicScheduled2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-12"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-10"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-726-div2-T2-TurtleGame"><span class="toc-text">srm-726-div2-T2-TurtleGame</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-13"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-11"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div1-T1-OnlySanta"><span class="toc-text">srm-727-div1-T1-OnlySanta</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-14"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-12"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div2-T3-ManageSubsequences"><span class="toc-text">srm-727-div2-T3-ManageSubsequences</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-15"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-13"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-727-div2-T2-Twodiagonals"><span class="toc-text">srm-727-div2-T2-Twodiagonals</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-16"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-14"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div1-T1-Halving"><span class="toc-text">srm-728-div1-T1-Halving</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-17"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-15"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div2-T3-IncreasingSequencesEasy"><span class="toc-text">srm-728-div2-T3-IncreasingSequencesEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-18"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-16"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-728-div2-T2-IncreasingSequencesEasy"><span class="toc-text">srm-728-div2-T2-IncreasingSequencesEasy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-19"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-17"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div2-T2-SoManyRectangles"><span class="toc-text">srm-729-div2-T2-SoManyRectangles</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-20"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-18"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div2-T3-RareItems"><span class="toc-text">srm-729-div2-T3-RareItems</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-21"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-19"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-729-div1-T1-MagicNumberThree"><span class="toc-text">srm-729-div1-T1-MagicNumberThree</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-22"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-20"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-730-div2-T2-ExpectedMinimumPowerDiv2"><span class="toc-text">srm-730-div2-T2-ExpectedMinimumPowerDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-23"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-21"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-730-div2-T3-StonesOnATreeDiv2"><span class="toc-text">srm-730-div2-T3-StonesOnATreeDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-24"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-22"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-731-div2-T3-JustBrackets"><span class="toc-text">srm-731-div2-T3-JustBrackets</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-25"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-23"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-731-div1-T1-TreesAndBractkets"><span class="toc-text">srm-731-div1-T1-TreesAndBractkets</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-26"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-24"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-733-div2-T2-BuildingSpanningTreesDiv2"><span class="toc-text">srm-733-div2-T2-BuildingSpanningTreesDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-27"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-25"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-733-div2-T3-HamiltonianPathsInGraph"><span class="toc-text">srm-733-div2-T3-HamiltonianPathsInGraph</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-28"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-26"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div2-T2-TheSquarecityDiv2"><span class="toc-text">srm-734-div2-T2-TheSquarecityDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-29"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-27"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div2-T3-TheRectangularCityDiv2"><span class="toc-text">srm-734-div2-T3-TheRectangularCityDiv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-30"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-28"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-734-div1-T1-TheRoundCityDiv1"><span class="toc-text">srm-734-div1-T1-TheRoundCityDiv1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-31"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-29"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-735-div2-T2-TeleportationMaze"><span class="toc-text">srm-735-div2-T2-TeleportationMaze</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-32"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-30"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#srm-735-div2-T3-MajoritySubarray"><span class="toc-text">srm_735_div2_T3_MajoritySubarray</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-33"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-31"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#736-div2-T2-Reroll"><span class="toc-text">736-div2-T2-Reroll</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-34"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-32"><span class="toc-text">样例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#736-div2-T3-MazeWithKeys"><span class="toc-text">736-div2-T3-MazeWithKeys</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-35"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样例-33"><span class="toc-text">样例</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -245,7 +245,10 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="srm-720-div2-T3-RainbowGraph"><a href="#srm-720-div2-T3-RainbowGraph" class="headerlink" title="srm-720-div2-T3-RainbowGraph"></a>srm-720-div2-T3-RainbowGraph</h1><h1 id="srm-720-div2-T2-MinProduct"><a href="#srm-720-div2-T2-MinProduct" class="headerlink" title="srm-720-div2-T2-MinProduct"></a>srm-720-div2-T2-MinProduct</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+        <h1 id="srm-720-div2-T3-RainbowGraph"><a href="#srm-720-div2-T3-RainbowGraph" class="headerlink" title="srm-720-div2-T3-RainbowGraph"></a>srm-720-div2-T3-RainbowGraph</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>给你一副无向图n个点,每个点有一种颜色<br>你想要走遍图中的每一个点恰好一次<br>同一种颜色的点一定要连着走，也就是走完一种颜色再去走另一种颜色<br>请问有多少种不同的走法<br>$2&lt;=n&lt;=100$<br>每个点的颜色为0-9，每种颜色出现不会超过10次<br>边数最多有2500条</p>
+</blockquote>
+<h1 id="srm-720-div2-T2-MinProduct"><a href="#srm-720-div2-T2-MinProduct" class="headerlink" title="srm-720-div2-T2-MinProduct"></a>srm-720-div2-T2-MinProduct</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个长度为10的数组cnt,cnt[i]表示数字i的个数<br>再给你两个数X，Y，你需要构造两个整数A,B<br>A有X位，B有Y位数字，数字i在A，B中出现的总次数不能超过cnt[i]<br>求AxB的最小值<br>$0&lt;=cnt[i]&lt;=20,1&lt;=X,Y&lt;=9,cnt数组的和&gt;=X+Y$</p>
 </blockquote>
 <h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><pre><code>{0,1,1,2,1,1,0,0,0,0}
@@ -274,7 +277,7 @@ Returns: 12345678987654321
 8
 Returns: 99999998900000001
 
-</code></pre><h1 id="srm-721-div1-T1-RememberWords"><a href="#srm-721-div1-T1-RememberWords" class="headerlink" title="srm-721-div1-T1-RememberWords"></a>srm-721-div1-T1-RememberWords</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-721-div1-T1-RememberWords"><a href="#srm-721-div1-T1-RememberWords" class="headerlink" title="srm-721-div1-T1-RememberWords"></a>srm-721-div1-T1-RememberWords</h1><h2 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你d1,d2,w1,w2<br>能否构造出一个x[]<br>x[1]+..+x[d1] = w1, x[d1+1]+..+x[d1+d2] = w2，|x[i+1]-x[i]|&lt;=1<br>$1&lt;=d1,d2&lt;=10^9,0&lt;=w1,w2&lt;=10^9$</p>
 </blockquote>
 <h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -308,7 +311,7 @@ Returns: &quot;Possible&quot;
 1000000000
 Returns: &quot;Possible&quot;
 
-</code></pre><h1 id="srm-721-div2-T3-ApocalypseEasy"><a href="#srm-721-div2-T3-ApocalypseEasy" class="headerlink" title="srm-721-div2-T3-ApocalypseEasy"></a>srm-721-div2-T3-ApocalypseEasy</h1><h2 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-721-div2-T3-ApocalypseEasy"><a href="#srm-721-div2-T3-ApocalypseEasy" class="headerlink" title="srm-721-div2-T3-ApocalypseEasy"></a>srm-721-div2-T3-ApocalypseEasy</h1><h2 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一棵n个点的无向树，有k个不同的节点上有玩具，一开始这k个点也放着炸弹<br>炸弹在T秒后就会爆炸，因此你有T次机会可以移动玩具<br>每次移动可以将某个玩具移动到相邻的点上，在T秒内允许多个玩具在同一个节点<br>但是T秒后，一个节点只能有一个玩具<br>求最终可以保护多少个玩具不被炸掉<br>$2&lt;=n&lt;=50$</p>
 </blockquote>
 <h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -342,7 +345,7 @@ Returns: 4
 1
 
 
-</code></pre><h1 id="srm-722-div1-T1-TCPhoneHomeEasy"><a href="#srm-722-div1-T1-TCPhoneHomeEasy" class="headerlink" title="srm-722-div1-T1-TCPhoneHomeEasy"></a>srm-722-div1-T1-TCPhoneHomeEasy</h1><h2 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-722-div1-T1-TCPhoneHomeEasy"><a href="#srm-722-div1-T1-TCPhoneHomeEasy" class="headerlink" title="srm-722-div1-T1-TCPhoneHomeEasy"></a>srm-722-div1-T1-TCPhoneHomeEasy</h1><h2 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个整数n表示手机号码的位数<br>再给你一些字符串表示保留的号码，比如911 110 120等<br>问你一共有多少的手机号码不以保留号码开头<br>$1&lt;=n&lt;=17,保留号码的个数&lt;=50$</p>
 </blockquote>
 <h2 id="样例-3"><a href="#样例-3" class="headerlink" title="样例"></a>样例</h2><pre><code>7
@@ -361,7 +364,7 @@ Returns: 700000
 6
 { &quot;1&quot;, &quot;23&quot;, &quot;345&quot; }
 Returns: 889000
-</code></pre><h1 id="srm-723-div1-T1-TopXorer"><a href="#srm-723-div1-T1-TopXorer" class="headerlink" title="srm-723-div1-T1-TopXorer"></a>srm-723-div1-T1-TopXorer</h1><h2 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-723-div1-T1-TopXorer"><a href="#srm-723-div1-T1-TopXorer" class="headerlink" title="srm-723-div1-T1-TopXorer"></a>srm-723-div1-T1-TopXorer</h1><h2 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个n个元素的数组x[],$0&lt;=x[i]&lt;=10^9,1&lt;=n&lt;=50$<br>你需要找到一个数组a[], 0&lt;=a[i]&lt;=x[i]<br>使得a[0]^a[1]..^a[n-1] 最大<br>输出这个最大值</p>
 </blockquote>
 <h2 id="样例-4"><a href="#样例-4" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -397,7 +400,7 @@ Returns: 0
    ...
    ...
 
-</code></pre><h2 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h2 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>如上第一个是一级十字迷宫，第二个是三级十字迷宫<br>一个点可以走到上下左右相邻的某一个点<br>给你一个n级十字迷宫，求所有点对之间最短路的和对 (1e9+7)取模<br>$1&lt;=n&lt;=10^{18}$</p>
 </blockquote>
 <h2 id="样例-5"><a href="#样例-5" class="headerlink" title="样例"></a>样例</h2><pre><code>1
@@ -409,7 +412,7 @@ Returns: 4680
 1000000000000
 Returns: 763641672
 
-</code></pre><h1 id="srm-723-div2-T2-TopXorerEasy"><a href="#srm-723-div2-T2-TopXorerEasy" class="headerlink" title="srm-723-div2-T2-TopXorerEasy"></a>srm-723-div2-T2-TopXorerEasy</h1><h2 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-723-div2-T2-TopXorerEasy"><a href="#srm-723-div2-T2-TopXorerEasy" class="headerlink" title="srm-723-div2-T2-TopXorerEasy"></a>srm-723-div2-T2-TopXorerEasy</h1><h2 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你三个整数A,B,C<br>求最大的$a^b^c,(0&lt;=a&lt;=A,0&lt;=b&lt;=B,0&lt;=c&lt;=C)$<br>$0&lt;=A&lt;=10^9,0&lt;=B&lt;=10^9,0&lt;=C&lt;=10^9$</p>
 </blockquote>
 <h2 id="样例-6"><a href="#样例-6" class="headerlink" title="样例"></a>样例</h2><pre><code>2
@@ -446,7 +449,7 @@ Returns: 1073741823
 0
 Returns: 0
 
-</code></pre><h1 id="srm-724-div1-T1-OrAndSum"><a href="#srm-724-div1-T1-OrAndSum" class="headerlink" title="srm-724-div1-T1-OrAndSum"></a>srm-724-div1-T1-OrAndSum</h1><h2 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-724-div1-T1-OrAndSum"><a href="#srm-724-div1-T1-OrAndSum" class="headerlink" title="srm-724-div1-T1-OrAndSum"></a>srm-724-div1-T1-OrAndSum</h1><h2 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你两个数组X[],Y[],都包含n个元素<br>是否存在一个a数组a[0]到a[n]使得<br>$a[i]|a[i+1] = X[i], a[i]+a[i+1] = Y<a href="0&lt;=i&lt;=n-1">i</a>$<br>$1&lt;=n&lt;=50, 0&lt;=X[i],Y[i]&lt;=10^{18}$</p>
 </blockquote>
 <h2 id="样例-7"><a href="#样例-7" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -466,7 +469,7 @@ a[] = {1,2,3,4,5,6}.
 {333333333333333333,333333333333333333,333333333333333333}
 Returns: &quot;Possible&quot;
 
-</code></pre><h1 id="srm-724-div2-T3-UnfinishedTournamentEasy"><a href="#srm-724-div2-T3-UnfinishedTournamentEasy" class="headerlink" title="srm-724-div2-T3-UnfinishedTournamentEasy"></a>srm-724-div2-T3-UnfinishedTournamentEasy</h1><h2 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-724-div2-T3-UnfinishedTournamentEasy"><a href="#srm-724-div2-T3-UnfinishedTournamentEasy" class="headerlink" title="srm-724-div2-T3-UnfinishedTournamentEasy"></a>srm-724-div2-T3-UnfinishedTournamentEasy</h1><h2 id="题意-9"><a href="#题意-9" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个n*n的字符矩阵G表示n个人之间的胜负关系, 如果x能赢y，则G[x][y]=’W’,G[y][x]=’L’<br>如果还不知道x y之间的胜负，G[x][y]=G[y][x]=’?’<br>每个人的胜率 s[i] = 第i个人胜出的场次/(n - 1)<br>你需要补充未知的一些胜负关系使得最终胜率的方差尽可能大<br>输出最大的方差<br>方差的定义：$aver = (s[0]+s[1]+..s[n-1]) / n$<br>方差 = $( (s[0]-aver)^2+(s[1]-aver)^2+..+(s[n-1]-aver)^2 )/ n$<br>$2&lt;=n&lt;=20$<br>误差不超过1e-9</p>
 </blockquote>
 <h2 id="样例-8"><a href="#样例-8" class="headerlink" title="样例"></a>样例</h2><pre><code>{&quot;-??&quot;,
@@ -506,7 +509,7 @@ Returns: 0.08333333333333331
  &quot;?-&quot;}
 Returns: 0.25
 
-</code></pre><h1 id="srm-724-div2-T2-OrAndSumEasy"><a href="#srm-724-div2-T2-OrAndSumEasy" class="headerlink" title="srm-724-div2-T2-OrAndSumEasy"></a>srm-724-div2-T2-OrAndSumEasy</h1><h2 id="题意-9"><a href="#题意-9" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-724-div2-T2-OrAndSumEasy"><a href="#srm-724-div2-T2-OrAndSumEasy" class="headerlink" title="srm-724-div2-T2-OrAndSumEasy"></a>srm-724-div2-T2-OrAndSumEasy</h1><h2 id="题意-10"><a href="#题意-10" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你两个非负整数X,Y<br>是否存在两个整数A,B满足$A | B = X, A + B = Y$<br>$0&lt;=X,Y&lt;=10^{18}$</p>
 </blockquote>
 <h2 id="样例-9"><a href="#样例-9" class="headerlink" title="样例"></a>样例</h2><pre><code>7
@@ -527,7 +530,7 @@ Returns: &quot;Possible&quot;
 999999999999999999
 Returns: &quot;Possible&quot;
 A = 111111111111111111, B = 888888888888888888.
-</code></pre><h1 id="srm-726-div1-T1-Unpacking"><a href="#srm-726-div1-T1-Unpacking" class="headerlink" title="srm-726-div1-T1-Unpacking"></a>srm-726-div1-T1-Unpacking</h1><h2 id="题意-10"><a href="#题意-10" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-726-div1-T1-Unpacking"><a href="#srm-726-div1-T1-Unpacking" class="headerlink" title="srm-726-div1-T1-Unpacking"></a>srm-726-div1-T1-Unpacking</h1><h2 id="题意-11"><a href="#题意-11" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>有n个盒子，每个盒子里外面有一张标签告诉你有a[i]个红球，b[i]个蓝球，需要c[i]的钱购买<br>现在告诉你每个盒子球的总量是符合标签的说明的,但是具体的种类可能会有如下偏差&gt;比如可能有a[i]+1 b[i]-1 a[i] b[i]  a[i]-1 b[i]+1三种可能<br>现在问你最少花多少钱买盒子能够使得至少会有K个球是同色的<br>$1&lt;=n&lt;=50, 1&lt;=a[i],b[i],c[i]&lt;=10000$</p>
 </blockquote>
 <pre><code>{6,5}
@@ -556,7 +559,7 @@ Returns: 13
 10
 Returns: 10
 
-</code></pre><h1 id="srm-726-div2-T3-HeroicScheduled2"><a href="#srm-726-div2-T3-HeroicScheduled2" class="headerlink" title="srm-726-div2-T3-HeroicScheduled2"></a>srm-726-div2-T3-HeroicScheduled2</h1><h2 id="题意-11"><a href="#题意-11" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-726-div2-T3-HeroicScheduled2"><a href="#srm-726-div2-T3-HeroicScheduled2" class="headerlink" title="srm-726-div2-T3-HeroicScheduled2"></a>srm-726-div2-T3-HeroicScheduled2</h1><h2 id="题意-12"><a href="#题意-12" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你n个任务的开始时间start[]与结束时间finish[]<br>每天你可以选择一个任务完成,求有多少种任务的集合是可完成的<br>$1&lt;=n&lt;=50, 0&lt;=start[i]&lt;=finish[i]&lt;=15$</p>
 </blockquote>
 <h2 id="样例-10"><a href="#样例-10" class="headerlink" title="样例"></a>样例</h2><pre><code>{0,0,0}
@@ -568,7 +571,7 @@ Returns: 4
 {15,15,15}
 Returns: 7
 注：三个任务不能完成，其他所有组合都可以完成
-</code></pre><h1 id="srm-726-div2-T2-TurtleGame"><a href="#srm-726-div2-T2-TurtleGame" class="headerlink" title="srm-726-div2-T2-TurtleGame"></a>srm-726-div2-T2-TurtleGame</h1><h2 id="题意-12"><a href="#题意-12" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-726-div2-T2-TurtleGame"><a href="#srm-726-div2-T2-TurtleGame" class="headerlink" title="srm-726-div2-T2-TurtleGame"></a>srm-726-div2-T2-TurtleGame</h1><h2 id="题意-13"><a href="#题意-13" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个网格，有些点被#覆盖了，现在hexo和jack轮流开始将空地变成#<br>如果当前轮到的人操作之后左上角到右下角不存在通路了，当前操作的人就输了<br>通路只能是从左上角到右下角往右或者往下走的路径<br>问你hexo是否存在必胜策略</p>
 </blockquote>
 <h2 id="样例-11"><a href="#样例-11" class="headerlink" title="样例"></a>样例</h2><pre><code>{&quot;..&quot;,
@@ -580,7 +583,7 @@ Returns: &quot;Win&quot;
  &quot;.#.&quot;,
  &quot;...&quot;}
 Returns: &quot;Lose&quot;
-</code></pre><h1 id="srm-727-div1-T1-OnlySanta"><a href="#srm-727-div1-T1-OnlySanta" class="headerlink" title="srm-727-div1-T1-OnlySanta"></a>srm-727-div1-T1-OnlySanta</h1><h2 id="题意-13"><a href="#题意-13" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-727-div1-T1-OnlySanta"><a href="#srm-727-div1-T1-OnlySanta" class="headerlink" title="srm-727-div1-T1-OnlySanta"></a>srm-727-div1-T1-OnlySanta</h1><h2 id="题意-14"><a href="#题意-14" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个字符串S,一开始不包含”SATAN”,长度小于1000<br>你可以在任意位置插入若干个字符使得<br>S包含”SANTA”但是不包含”SATAN”,不需要最小化插入字符的个数<br>随便输出一个解即可</p>
 </blockquote>
 <h2 id="样例-12"><a href="#样例-12" class="headerlink" title="样例"></a>样例</h2><pre><code>&quot;STANA&quot;
@@ -591,14 +594,14 @@ Returns: &quot;SANTNA&quot;
 
 &quot;SXAYNTA&quot;
 Returns: &quot;OOOOSOXAYNTOOOOAOOO&quot;
-</code></pre><h1 id="srm-727-div2-T3-ManageSubsequences"><a href="#srm-727-div2-T3-ManageSubsequences" class="headerlink" title="srm-727-div2-T3-ManageSubsequences"></a>srm-727-div2-T3-ManageSubsequences</h1><h2 id="题意-14"><a href="#题意-14" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-727-div2-T3-ManageSubsequences"><a href="#srm-727-div2-T3-ManageSubsequences" class="headerlink" title="srm-727-div2-T3-ManageSubsequences"></a>srm-727-div2-T3-ManageSubsequences</h1><h2 id="题意-15"><a href="#题意-15" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你三个字符串S,A,B<br>求在S中插入最少多少个字符可以使得S包含A，不包含B<br>如果不能达成，返回-1<br>$字符串长度&lt;=300$</p>
 </blockquote>
 <h2 id="样例-13"><a href="#样例-13" class="headerlink" title="样例"></a>样例</h2><pre><code>&quot;ABXBCA&quot;
 &quot;ABCD&quot;
 &quot;XD&quot;
 Returns: 2
-</code></pre><h1 id="srm-727-div2-T2-Twodiagonals"><a href="#srm-727-div2-T2-Twodiagonals" class="headerlink" title="srm-727-div2-T2-Twodiagonals"></a>srm-727-div2-T2-Twodiagonals</h1><h2 id="题意-15"><a href="#题意-15" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-727-div2-T2-Twodiagonals"><a href="#srm-727-div2-T2-Twodiagonals" class="headerlink" title="srm-727-div2-T2-Twodiagonals"></a>srm-727-div2-T2-Twodiagonals</h1><h2 id="题意-16"><a href="#题意-16" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>平面上有n个点,现在你需要建造两条路，一条是斜率为1,<br>另一条斜率为-1<br>你的任务是让这两条路经过尽可能多的点<br>求最多经过几个点<br>$1&lt;=N&lt;=1000,0&lt;=x[i],y[i]&lt;=999$</p>
 </blockquote>
 <h2 id="样例-14"><a href="#样例-14" class="headerlink" title="样例"></a>样例</h2><pre><code>{1, 4, 4, 5}
@@ -607,7 +610,7 @@ Returns: 4
 
 (1,3) (4,0) (4,2) (5,3)四个点都可以被经过
 
-</code></pre><h1 id="srm-728-div1-T1-Halving"><a href="#srm-728-div1-T1-Halving" class="headerlink" title="srm-728-div1-T1-Halving"></a>srm-728-div1-T1-Halving</h1><h2 id="题意-16"><a href="#题意-16" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-728-div1-T1-Halving"><a href="#srm-728-div1-T1-Halving" class="headerlink" title="srm-728-div1-T1-Halving"></a>srm-728-div1-T1-Halving</h1><h2 id="题意-17"><a href="#题意-17" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>你有一些木棍，现在你想让这些木棍都变成同样的长度<br>你可以进行如下的操作<br>选择一根长度为L&gt;=2的木棍<br>如果L为偶数，将木棍一分为2，变成两根L/2的木棍<br>否则，分成一根为(L+1) / 2, 另一根为(L-1) / 2;<br>在分成的两根中选择其中一根，扔掉另外一根<br>可以证明的是任何集合的木棍都能最终变成一样长度的木棍<br>现在问你最少需要几步可以完成任务<br>$2&lt;=n&lt;=50, 1&lt;=a_i&lt;=10^9$</p>
 </blockquote>
 <h2 id="样例-15"><a href="#样例-15" class="headerlink" title="样例"></a>样例</h2><pre><code>{11, 4}
@@ -622,7 +625,7 @@ Returns: 3
 
 {1, 2, 3, 4, 5, 6, 7}
 Returns: 10
-</code></pre><h1 id="srm-728-div2-T3-IncreasingSequencesEasy"><a href="#srm-728-div2-T3-IncreasingSequencesEasy" class="headerlink" title="srm-728-div2-T3-IncreasingSequencesEasy"></a>srm-728-div2-T3-IncreasingSequencesEasy</h1><h2 id="题意-17"><a href="#题意-17" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-728-div2-T3-IncreasingSequencesEasy"><a href="#srm-728-div2-T3-IncreasingSequencesEasy" class="headerlink" title="srm-728-div2-T3-IncreasingSequencesEasy"></a>srm-728-div2-T3-IncreasingSequencesEasy</h1><h2 id="题意-18"><a href="#题意-18" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个有向图，每个点都只有一个出度<br>问你存在多少的有向图，可以从原图中选择一个三元组$a,b,c$，重标号成$b,c,a$之后得到<br>$1&lt;=n&lt;=10$</p>
 </blockquote>
 <h2 id="样例-16"><a href="#样例-16" class="headerlink" title="样例"></a>样例</h2><pre><code>{2, 2, 0}//表示0-&gt;2,1-&gt;2,2-&gt;0这个有向图
@@ -640,7 +643,7 @@ Returns: 0
 
 {4, 5, 3, 1, 1, 5}
 Returns: 179
-</code></pre><h1 id="srm-728-div2-T2-IncreasingSequencesEasy"><a href="#srm-728-div2-T2-IncreasingSequencesEasy" class="headerlink" title="srm-728-div2-T2-IncreasingSequencesEasy"></a>srm-728-div2-T2-IncreasingSequencesEasy</h1><h2 id="题意-18"><a href="#题意-18" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-728-div2-T2-IncreasingSequencesEasy"><a href="#srm-728-div2-T2-IncreasingSequencesEasy" class="headerlink" title="srm-728-div2-T2-IncreasingSequencesEasy"></a>srm-728-div2-T2-IncreasingSequencesEasy</h1><h2 id="题意-19"><a href="#题意-19" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你两个长度为n的数组L[],R[]<br>求满足<code>L[i]&lt;=A[i]&lt;=R[i]</code>而且<code>A[0]&lt;A[1]&lt;...&lt;A[n-1]</code>的序列的数量<br>答案对998244353取模<br>$1&lt;=n&lt;=300,1&lt;=L[i]&lt;=10^4,L[i]&lt;=R[i]&lt;=10^4$</p>
 </blockquote>
 <h2 id="样例-17"><a href="#样例-17" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -653,7 +656,7 @@ There are 4 strictly increasing sequences satisfying the conditions: {1, 3, 4, 5
 {10, 20}
 {20, 30}
 Returns: 120
-</code></pre><h1 id="srm-729-div2-T2-SoManyRectangles"><a href="#srm-729-div2-T2-SoManyRectangles" class="headerlink" title="srm-729-div2-T2-SoManyRectangles"></a>srm-729-div2-T2-SoManyRectangles</h1><h2 id="题意-19"><a href="#题意-19" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-729-div2-T2-SoManyRectangles"><a href="#srm-729-div2-T2-SoManyRectangles" class="headerlink" title="srm-729-div2-T2-SoManyRectangles"></a>srm-729-div2-T2-SoManyRectangles</h1><h2 id="题意-20"><a href="#题意-20" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>有n个矩形，问你最大重叠的次数<br>边或者点的重叠不算<br>$1&lt;=n&lt;=50$</p>
 </blockquote>
 <h2 id="样例-18"><a href="#样例-18" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -665,12 +668,12 @@ Returns: 120
 (x1[i], y1[i])  (x2[i], y2[i]) 表示一个矩形的左下角和右上角
 Returns: 5
 
-</code></pre><h1 id="srm-729-div2-T3-RareItems"><a href="#srm-729-div2-T3-RareItems" class="headerlink" title="srm-729-div2-T3-RareItems"></a>srm-729-div2-T3-RareItems</h1><h2 id="题意-20"><a href="#题意-20" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-729-div2-T3-RareItems"><a href="#srm-729-div2-T3-RareItems" class="headerlink" title="srm-729-div2-T3-RareItems"></a>srm-729-div2-T3-RareItems</h1><h2 id="题意-21"><a href="#题意-21" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个数组表示每种物品的出现个数<br>现在根据每种物品的比例随机购买每种物品<br>期望购买几次能将每种物品都买到手<br>$1&lt;=n&lt;=20$</p>
 </blockquote>
 <h2 id="样例-19"><a href="#样例-19" class="headerlink" title="样例"></a>样例</h2><pre><code>{2,2}
 Returns: 3.0
-</code></pre><h1 id="srm-729-div1-T1-MagicNumberThree"><a href="#srm-729-div1-T1-MagicNumberThree" class="headerlink" title="srm-729-div1-T1-MagicNumberThree"></a>srm-729-div1-T1-MagicNumberThree</h1><h2 id="题意-21"><a href="#题意-21" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-729-div1-T1-MagicNumberThree"><a href="#srm-729-div1-T1-MagicNumberThree" class="headerlink" title="srm-729-div1-T1-MagicNumberThree"></a>srm-729-div1-T1-MagicNumberThree</h1><h2 id="题意-22"><a href="#题意-22" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个长度为50的数字串，问你有多少个子序列构成的数字可以被3整除<br>答案对1e9+7取模</p>
 </blockquote>
 <h2 id="样例-20"><a href="#样例-20" class="headerlink" title="样例"></a>样例</h2><pre><code>&quot;132&quot;
@@ -678,7 +681,7 @@ Returns: 3
 
 &quot;00&quot;
 Returns: 3
-</code></pre><h1 id="srm-730-div2-T2-ExpectedMinimumPowerDiv2"><a href="#srm-730-div2-T2-ExpectedMinimumPowerDiv2" class="headerlink" title="srm-730-div2-T2-ExpectedMinimumPowerDiv2"></a>srm-730-div2-T2-ExpectedMinimumPowerDiv2</h1><h2 id="题意-22"><a href="#题意-22" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-730-div2-T2-ExpectedMinimumPowerDiv2"><a href="#srm-730-div2-T2-ExpectedMinimumPowerDiv2" class="headerlink" title="srm-730-div2-T2-ExpectedMinimumPowerDiv2"></a>srm-730-div2-T2-ExpectedMinimumPowerDiv2</h1><h2 id="题意-23"><a href="#题意-23" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你两个整数$n,x$, $1&lt;=n&lt;=50$<br>假如要选择x个整数，每个整数都在1-n之间，<br>现在在所有的这些选择中，我们选取x个数都不同的选择<br>假设选择中最小的数为$S$,求$2^S$的期望<br>也就是说每一种x个数不同的选择都会有一个$S_i$,求<br>$2^{S_i}$的平均值，也就是期望</p>
 </blockquote>
 <h2 id="样例-21"><a href="#样例-21" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -696,7 +699,7 @@ Returns: 2.6666666666666665
 有三种选择 {1,2} or {1,3} or {2,3}. 
 S值分别为1 1 2
 2^S的期望为 (2^1 + 2^1 + 2^2) / 3 = 8 / 3 = 2.6666666
-</code></pre><h1 id="srm-730-div2-T3-StonesOnATreeDiv2"><a href="#srm-730-div2-T3-StonesOnATreeDiv2" class="headerlink" title="srm-730-div2-T3-StonesOnATreeDiv2"></a>srm-730-div2-T3-StonesOnATreeDiv2</h1><h2 id="题意-23"><a href="#题意-23" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-730-div2-T3-StonesOnATreeDiv2"><a href="#srm-730-div2-T3-StonesOnATreeDiv2" class="headerlink" title="srm-730-div2-T3-StonesOnATreeDiv2"></a>srm-730-div2-T3-StonesOnATreeDiv2</h1><h2 id="题意-24"><a href="#题意-24" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一棵树，每个点有点权<br>现在你可以在一些点上放石头，也可以拿掉某些点上的石头<br>一个点可以放石头当且仅当这个点的所有儿子都放上了石头<br>根节点放上石头任务完成<br>求在整个过程中放着石头的节点的点权之和的最大值的最小值<br>n&lt;=1000</p>
 </blockquote>
 <h2 id="样例-22"><a href="#样例-22" class="headerlink" title="样例"></a>样例</h2><pre><code>{0,1,2,3} //分别表示1的父亲 2的父亲 3的父亲 4的父亲
@@ -711,7 +714,7 @@ Returns: 8
 移除节点2上的石头   (权值和 = 6)
 在节点0(根节点)上放一个石头 (权值和 = 7)
 整个过程中最大的权值和为8，不存在比最大值比8小的方案了
-</code></pre><h1 id="srm-731-div2-T3-JustBrackets"><a href="#srm-731-div2-T3-JustBrackets" class="headerlink" title="srm-731-div2-T3-JustBrackets"></a>srm-731-div2-T3-JustBrackets</h1><h2 id="题意-24"><a href="#题意-24" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-731-div2-T3-JustBrackets"><a href="#srm-731-div2-T3-JustBrackets" class="headerlink" title="srm-731-div2-T3-JustBrackets"></a>srm-731-div2-T3-JustBrackets</h1><h2 id="题意-25"><a href="#题意-25" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个合法的括号序列，每次你可以删除一个”()”<br>你可以删除0个或者多个”()”<br>求操作之后字典序最小的序列<br>字符串长度&lt;=100</p>
 </blockquote>
 <h2 id="样例-23"><a href="#样例-23" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -731,7 +734,7 @@ Returns: &quot;(())&quot;
 
 &quot;(()(()))&quot;
 Returns: &quot;((()))&quot;
-</code></pre><h1 id="srm-731-div1-T1-TreesAndBractkets"><a href="#srm-731-div1-T1-TreesAndBractkets" class="headerlink" title="srm-731-div1-T1-TreesAndBractkets"></a>srm-731-div1-T1-TreesAndBractkets</h1><h2 id="题意-25"><a href="#题意-25" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-731-div1-T1-TreesAndBractkets"><a href="#srm-731-div1-T1-TreesAndBractkets" class="headerlink" title="srm-731-div1-T1-TreesAndBractkets"></a>srm-731-div1-T1-TreesAndBractkets</h1><h2 id="题意-26"><a href="#题意-26" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个合法的括号序列s1，每次你可以删除一个”()”<br>你可以删除0个或者多个”()”<br>求能否删成另一个括号序列s2</p>
 </blockquote>
 <h2 id="样例-24"><a href="#样例-24" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -748,7 +751,7 @@ Returns: &quot;Impossible&quot;
 &quot;((())((())())())&quot;
 &quot;(()(())())&quot;
 Returns: &quot;Possible&quot;
-</code></pre><h1 id="srm-733-div2-T2-BuildingSpanningTreesDiv2"><a href="#srm-733-div2-T2-BuildingSpanningTreesDiv2" class="headerlink" title="srm-733-div2-T2-BuildingSpanningTreesDiv2"></a>srm-733-div2-T2-BuildingSpanningTreesDiv2</h1><h2 id="题意-26"><a href="#题意-26" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-733-div2-T2-BuildingSpanningTreesDiv2"><a href="#srm-733-div2-T2-BuildingSpanningTreesDiv2" class="headerlink" title="srm-733-div2-T2-BuildingSpanningTreesDiv2"></a>srm-733-div2-T2-BuildingSpanningTreesDiv2</h1><h2 id="题意-27"><a href="#题意-27" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>有一副n个点的完全图G（每两个点之间都有边，一共有 n*(n-1)/2条边)<br>告诉你一个边的集合E,里面有n-3条边<br>G的生成树是选取G里面的n-1条边连接G中所有的点<br>请问有多少的生成树会包括E，返回答案对987654323取模<br>$4 &lt;= n &lt;= 1000$<br>假设$x[i]-&gt;y[i]$表示E里面的一条边<br>$x[i] &lt; y[i]$ </p>
 </blockquote>
 <h2 id="样例-25"><a href="#样例-25" class="headerlink" title="样例"></a>样例</h2><pre><code>
@@ -783,7 +786,7 @@ n-3条边之间形成了环，无解
 {4,5}
 Returns: 20
 
-</code></pre><h1 id="srm-733-div2-T3-HamiltonianPathsInGraph"><a href="#srm-733-div2-T3-HamiltonianPathsInGraph" class="headerlink" title="srm-733-div2-T3-HamiltonianPathsInGraph"></a>srm-733-div2-T3-HamiltonianPathsInGraph</h1><h2 id="题意-27"><a href="#题意-27" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-733-div2-T3-HamiltonianPathsInGraph"><a href="#srm-733-div2-T3-HamiltonianPathsInGraph" class="headerlink" title="srm-733-div2-T3-HamiltonianPathsInGraph"></a>srm-733-div2-T3-HamiltonianPathsInGraph</h1><h2 id="题意-28"><a href="#题意-28" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>有一个有向图,恰好有n*(n-1)/2条边，对于每一个(i，j)要么有一条<br>i-&gt;j的边，要么有一条j-&gt;i的边,但不会同时存在这两条边<br>给你这个图的邻接矩阵a，a[i][j]=’+’表示i-&gt;j有边，’-‘表示没有<br>a[i][i]=’.’表示这个图没有自环<br>图的汉密尔顿路径是长度为n包含每个点恰好一次的路径<br>实际上对于上面这种特性的图，一定存在至少一条汉密尔顿路径<br>输出任意一条汉密尔顿路径</p>
 </blockquote>
 <h2 id="样例-26"><a href="#样例-26" class="headerlink" title="样例"></a>样例</h2><pre><code>{&quot;.+&quot;,
@@ -804,7 +807,7 @@ Returns: {3, 1, 2, 0 }
 {2, 0, 3, 1}
 {3, 1, 2, 0}
 
-</code></pre><h1 id="srm-734-div2-T2-TheSquarecityDiv2"><a href="#srm-734-div2-T2-TheSquarecityDiv2" class="headerlink" title="srm-734-div2-T2-TheSquarecityDiv2"></a>srm-734-div2-T2-TheSquarecityDiv2</h1><h2 id="题意-28"><a href="#题意-28" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-734-div2-T2-TheSquarecityDiv2"><a href="#srm-734-div2-T2-TheSquarecityDiv2" class="headerlink" title="srm-734-div2-T2-TheSquarecityDiv2"></a>srm-734-div2-T2-TheSquarecityDiv2</h1><h2 id="题意-29"><a href="#题意-29" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个n*n的数字网格,每个格子表示一个房间,每个格子里面的数字表示房间的温度<br>每个房间的温度都是不同的<br>每个房间一开始都有一个人<br>从(x1,y1)移动到(x2,y2)需要花费|x1-x2|+|y1-y2|的时间<br>一个人每次移动的时间不得超过r<br>现在所有人都开始重复如下操作:<br>每个人都去寻找最近的比自己房间温度高的房间,直到距离r以内不存在温度更高的房间为止<br>求最终有多少个房间里面有人 以及 人数最多的房间有多少人<br>$1&lt;=n&lt;=20$</p>
 </blockquote>
 <h2 id="样例-27"><a href="#样例-27" class="headerlink" title="样例"></a>样例</h2><pre><code>r = 1
@@ -823,7 +826,7 @@ ans = {4, 4}
 2和4房间的最终都会到8
 ...
 
-</code></pre><h1 id="srm-734-div2-T3-TheRectangularCityDiv2"><a href="#srm-734-div2-T3-TheRectangularCityDiv2" class="headerlink" title="srm-734-div2-T3-TheRectangularCityDiv2"></a>srm-734-div2-T3-TheRectangularCityDiv2</h1><h2 id="题意-29"><a href="#题意-29" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-734-div2-T3-TheRectangularCityDiv2"><a href="#srm-734-div2-T3-TheRectangularCityDiv2" class="headerlink" title="srm-734-div2-T3-TheRectangularCityDiv2"></a>srm-734-div2-T3-TheRectangularCityDiv2</h1><h2 id="题意-30"><a href="#题意-30" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个n*m的网格，里面有空地和障碍,<br>请问有多少种走法可以从边界的某个空地出发走遍每一个空地恰好一次，<br>最后从某个边界的空地走出去<br>$n\times m&lt;=20$</p>
 </blockquote>
 <h2 id="样例-28"><a href="#样例-28" class="headerlink" title="样例"></a>样例</h2><pre><code>{
@@ -850,14 +853,14 @@ Returns: 2
     &quot;....&quot;
 }
 Returns: 0
-</code></pre><h1 id="srm-734-div1-T1-TheRoundCityDiv1"><a href="#srm-734-div1-T1-TheRoundCityDiv1" class="headerlink" title="srm-734-div1-T1-TheRoundCityDiv1"></a>srm-734-div1-T1-TheRoundCityDiv1</h1><h2 id="题意-30"><a href="#题意-30" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-734-div1-T1-TheRoundCityDiv1"><a href="#srm-734-div1-T1-TheRoundCityDiv1" class="headerlink" title="srm-734-div1-T1-TheRoundCityDiv1"></a>srm-734-div1-T1-TheRoundCityDiv1</h1><h2 id="题意-31"><a href="#题意-31" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个半径为r，圆心在0 0位置的圆<br>求从圆心处能看到多少个圆内的整点<br>比如0 0 可以看到1 1，但是看不到2 2，因为2 2被1 1 挡住了<br>$ 1 &lt;= r &lt;= 1e6 $</p>
 </blockquote>
 <h2 id="样例-29"><a href="#样例-29" class="headerlink" title="样例"></a>样例</h2><pre><code>2
 Returns: 8
 一共有12个点: (0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 2), (0, -2), (2, 0), (-2, 0),  
 最后四个点看不到
-</code></pre><h1 id="srm-735-div2-T2-TeleportationMaze"><a href="#srm-735-div2-T2-TeleportationMaze" class="headerlink" title="srm-735-div2-T2-TeleportationMaze"></a>srm-735-div2-T2-TeleportationMaze</h1><h2 id="题意-31"><a href="#题意-31" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-735-div2-T2-TeleportationMaze"><a href="#srm-735-div2-T2-TeleportationMaze" class="headerlink" title="srm-735-div2-T2-TeleportationMaze"></a>srm-735-div2-T2-TeleportationMaze</h1><h2 id="题意-32"><a href="#题意-32" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个网格迷宫，求从起点走到终点的最短路<br>有两种走法</p>
 <ul>
 <li>走到上下左右某个相邻的空地，代价是1</li>
@@ -891,7 +894,7 @@ answer:-1 （无解）
 #.....
 
 answer: 5
-</code></pre><h1 id="srm-735-div2-T3-MajoritySubarray"><a href="#srm-735-div2-T3-MajoritySubarray" class="headerlink" title="srm_735_div2_T3_MajoritySubarray"></a>srm_735_div2_T3_MajoritySubarray</h1><h2 id="题意-32"><a href="#题意-32" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="srm-735-div2-T3-MajoritySubarray"><a href="#srm-735-div2-T3-MajoritySubarray" class="headerlink" title="srm_735_div2_T3_MajoritySubarray"></a>srm_735_div2_T3_MajoritySubarray</h1><h2 id="题意-33"><a href="#题意-33" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你一个数组，长度为100000, 每个元素都在0-49之间<br>求多少子区间存在一个众数的数量大于区间长度的一半<br>众数：出现最多的数</p>
 </blockquote>
 <h2 id="样例-31"><a href="#样例-31" class="headerlink" title="样例"></a>样例</h2><pre><code>0 0 1 2 0
@@ -903,7 +906,7 @@ answer： 8
 {0,0}:0的出现次数超过一半 
 {0,0,1}：0的出现次数超过一半
 {0,0,1,2,0}
-</code></pre><h1 id="736-div2-T2-Reroll"><a href="#736-div2-T2-Reroll" class="headerlink" title="736-div2-T2-Reroll"></a>736-div2-T2-Reroll</h1><h2 id="题意-33"><a href="#题意-33" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="736-div2-T2-Reroll"><a href="#736-div2-T2-Reroll" class="headerlink" title="736-div2-T2-Reroll"></a>736-div2-T2-Reroll</h1><h2 id="题意-34"><a href="#题意-34" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>给你n个数,表示n个骰子向上的面的数字<br>再给你一个数target(n&lt;=target&lt;=6*n)<br>你可以选取这n个骰子中的若干个骰子重新扔<br>最少需要选择几个骰子重新扔能使得所有朝上的数的和为target<br>$1&lt;=n&lt;=20$</p>
 </blockquote>
 <h2 id="样例-32"><a href="#样例-32" class="headerlink" title="样例"></a>样例</h2><pre><code>42 
@@ -915,7 +918,7 @@ answer: 6
 {4,2,4,5}
 
 answer: 2
-</code></pre><h1 id="736-div2-T3-MazeWithKeys"><a href="#736-div2-T3-MazeWithKeys" class="headerlink" title="736-div2-T3-MazeWithKeys"></a>736-div2-T3-MazeWithKeys</h1><h2 id="题意-34"><a href="#题意-34" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><h1 id="736-div2-T3-MazeWithKeys"><a href="#736-div2-T3-MazeWithKeys" class="headerlink" title="736-div2-T3-MazeWithKeys"></a>736-div2-T3-MazeWithKeys</h1><h2 id="题意-35"><a href="#题意-35" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>你正在设计一个网格地图游戏，网格满足如下条件<br>1：恰好有一个出口<br>2：可能有一些门，门的标号为大写字母A-Z，每种门最多只有一个<br>3：可能有一些钥匙，钥匙的标号为小写字母a-z，每种钥匙只能打开对应的大写字母的门<br>4：可能有一些空地，空地的标号为小数点<br>5：可能有一些障碍，障碍不能经过<br>对于一个地图，你想要知道有多少的空地可以到达出口，为了使游戏显得不那么简单，你想要知道到达出口至少开一扇门的的空地有多少个<br>n,m&lt;=50<br>‘.’ 代表空地<br>‘#’ 代表障碍<br>‘*’代表出口</p>
 </blockquote>
 <h2 id="样例-33"><a href="#样例-33" class="headerlink" title="样例"></a>样例</h2><pre><code>6 7
@@ -944,10 +947,10 @@ a..A.
 
 <div class="article_copyright">
     <p><span>文章标题:</span>srm-翻译</p>
-    <p><span>文章字数:</span><span class="post-count">4,706</span></p>
+    <p><span>文章字数:</span><span class="post-count">4,814</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
     <p><span>发布时间:</span>2018-08-30, 17:33:15</p>
-    <p><span>最后更新:</span>2018-09-07, 12:17:33</p>
+    <p><span>最后更新:</span>2018-09-07, 12:33:40</p>
     <span>原始链接:</span><a class="post-url" href="/2018/08/30/srm-translation/" title="srm-翻译">https://xjoi.github.io/2018/08/30/srm-translation/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
