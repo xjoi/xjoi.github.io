@@ -2,11 +2,12 @@
 title: srm-翻译
 date: 2018-08-30 17:33:15
 categories: topcoder
-tags: noip普及
+tags: noip
 mathjax: true
 ---
 
-# srm-720-div2-T3-MinProduct
+# srm-720-div2-T3-RainbowGraph
+
 # srm-720-div2-T2-MinProduct
 
 ## 题意
