@@ -6,13 +6,20 @@
   <meta name="keywords" content=" 网站搭建 ">
   <meta name="description" content="我从哪里来 | xjoi-blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xjoi-blog">
-<meta property="og:url" content="https://xjoi.github.io/index.html">
+<meta name="description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
+<meta name="keywords" content="noip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="srm-翻译">
+<meta property="og:url" content="https://xjoi.github.io/2018/08/30/srm-translation/index.html">
 <meta property="og:site_name" content="xjoi-blog">
+<meta property="og:description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://xjoi.github.io/img/srm_718_div2_T2.png">
+<meta property="og:updated_time" content="2018-09-07T10:37:53.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xjoi-blog">
+<meta name="twitter:title" content="srm-翻译">
+<meta name="twitter:description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
+<meta name="twitter:image" content="https://xjoi.github.io/img/srm_718_div2_T2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -89,7 +96,7 @@
     <div><a  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="6.6k">
+<input type="hidden" id="yelog_site_word_count" value="6.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -190,12 +197,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-03 15:42:58'>2018-08-25 15:00</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-07 18:35:21'>2018-08-25 15:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:961</span>
+        <span>字数:985</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -225,7 +232,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-相关"><span class="toc-text">github 相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初始化博客"><span class="toc-text">初始化博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选择主题"><span class="toc-text">选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#将博客部署到github上"><span class="toc-text">将博客部署到github上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置博客模板"><span class="toc-text">设置博客模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发表博客"><span class="toc-text">发表博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站的备份"><span class="toc-text">网站的备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站信息修改"><span class="toc-text">网站信息修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文末声明"><span class="toc-text">文末声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学公式"><span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码高亮"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#头像与文章列表背景"><span class="toc-text">头像与文章列表背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#友链与评论"><span class="toc-text">友链与评论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#全文搜索"><span class="toc-text">全文搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字数统计"><span class="toc-text">字数统计</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-相关"><span class="toc-text">github 相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初始化博客"><span class="toc-text">初始化博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选择主题"><span class="toc-text">选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#将博客部署到github上"><span class="toc-text">将博客部署到github上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置博客模板"><span class="toc-text">设置博客模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发表博客"><span class="toc-text">发表博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站的备份"><span class="toc-text">网站的备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站信息修改"><span class="toc-text">网站信息修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文末声明"><span class="toc-text">文末声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学公式"><span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码高亮"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#头像与文章列表背景"><span class="toc-text">头像与文章列表背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#友链与评论"><span class="toc-text">友链与评论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#全文搜索"><span class="toc-text">全文搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字数统计"><span class="toc-text">字数统计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -348,6 +355,8 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 <pre><code>word_count: true
 # true 开启字数统计
 # 开启此功能需要安装插件 ：在 hexo根目录 执行npm i hexo-wordcount --save
+</code></pre><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>图片放在public/img目录下面，引用的时候只需要</p>
+<pre><code>![name](/img/test.png)
 </code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
@@ -358,10 +367,10 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
 <div class="article_copyright">
     <p><span>文章标题:</span>我从哪里来</p>
-    <p><span>文章字数:</span><span class="post-count">961</span></p>
+    <p><span>文章字数:</span><span class="post-count">985</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
     <p><span>发布时间:</span>2018-08-25, 15:00:08</p>
-    <p><span>最后更新:</span>2018-09-03, 15:42:58</p>
+    <p><span>最后更新:</span>2018-09-07, 18:35:21</p>
     <span>原始链接:</span><a class="post-url" href="/2018/08/25/hexo-github/" title="我从哪里来">https://xjoi.github.io/2018/08/25/hexo-github/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -440,7 +449,7 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
     </div>
     <div class="full-toc">
-        <button class="full"><span class="min mobile"></span></button>
+        <button class="full"><span class="min "></span></button>
 <button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
 <div class="post-toc"><span class="post-toc-title">目录</span>
     <div class="post-toc-content">

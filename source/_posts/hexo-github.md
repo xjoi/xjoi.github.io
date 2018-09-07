@@ -238,3 +238,10 @@ word_count: true
 ```
 
 
+# 图片
+
+图片放在public/img目录下面，引用的时候只需要
+```
+![name](/img/test.png)
+```
+

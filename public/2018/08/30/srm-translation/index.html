@@ -6,13 +6,20 @@
   <meta name="keywords" content=" noip ">
   <meta name="description" content="srm-翻译 | xjoi-blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xjoi-blog">
-<meta property="og:url" content="https://xjoi.github.io/index.html">
+<meta name="description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
+<meta name="keywords" content="noip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="srm-翻译">
+<meta property="og:url" content="https://xjoi.github.io/2018/08/30/srm-translation/index.html">
 <meta property="og:site_name" content="xjoi-blog">
+<meta property="og:description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://xjoi.github.io/img/srm_718_div2_T2.png">
+<meta property="og:updated_time" content="2018-09-07T10:37:53.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xjoi-blog">
+<meta name="twitter:title" content="srm-翻译">
+<meta name="twitter:description" content="srm-718-div2-T2-ChainCity题意 在一条直线上有若干个建筑物，告诉你相邻两个建筑物之间的距离dist[]现在你可以建设k个任意门，任意门可以建造在直线上任意一个浮点位置任意门之间可以瞬间移动你的任务是求所有建筑物之间最大距离的最小值dist的大小为[2,2000]，相邻两个建筑物之间的距离最大为10^6任意门的个数为[2, size(dist) + 1]  样例{3,5,4}">
+<meta name="twitter:image" content="https://xjoi.github.io/img/srm_718_div2_T2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -89,7 +96,7 @@
     <div><a  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="6.6k">
+<input type="hidden" id="yelog_site_word_count" value="6.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -190,12 +197,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-07 18:27:46'>2018-08-30 17:33</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-07 18:37:53'>2018-08-30 17:33</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:5,648</span>
+        <span>字数:5,751</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -247,8 +254,38 @@
 2
 Returns: 4
 
-</code></pre><p><img src="/img/srm_718_div2_T2.png" alt="srm-718-div-T2"></p>
-<h1 id="srm-719-div1-T1-LongMansionDiv1"><a href="#srm-719-div1-T1-LongMansionDiv1" class="headerlink" title="srm-719-div1-T1-LongMansionDiv1"></a>srm-719-div1-T1-LongMansionDiv1</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><blockquote>
+</code></pre><p><img src="/img/srm_718_div2_T2.png" alt="srm-718-div2-T2"></p>
+<p>如上图片所示，d(A,B) = 3, d(A,C) = 4, d(A,D) = 4, d(B,C) = 3, d(B,D) = 3, and d(C,D) = 4.<br>所以最大距离为4</p>
+<pre><code>{3,5,4}
+3
+Returns: 3
+
+
+
+
+{3,5,4}
+4
+Returns: 0
+
+
+
+{3,1,4,1,5,9,2,6,5,3,5} 
+4
+Returns: 8
+
+
+{
+    1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000,
+        1000000,1000000,1000000,1000000,1000000
+}
+6
+Returns: 5000000
+</code></pre><h1 id="srm-719-div1-T1-LongMansionDiv1"><a href="#srm-719-div1-T1-LongMansionDiv1" class="headerlink" title="srm-719-div1-T1-LongMansionDiv1"></a>srm-719-div1-T1-LongMansionDiv1</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><blockquote>
 <p>有一个nxm的数字迷宫，问你从起点走到终点经过的数字和的最小值<br>每一次可以走上下左右相邻的任意一个格子<br>每一行的数字都是相同的,给你一个a[],a[i]表示第i行的数字是什么<br>$1&lt;=n&lt;=50, 1&lt;=m&lt;=10^9, 1&lt;=a[i]&lt;=1000$<br>sx,sy ex,sy分别表示起点与终点<br>$0&lt;=sx,ex&lt;=N-1, 0&lt;=sy,ey&lt;=10^9$</p>
 </blockquote>
 <h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h2><pre><code>{5, 3, 10}
@@ -1034,10 +1071,10 @@ a..A.
 
 <div class="article_copyright">
     <p><span>文章标题:</span>srm-翻译</p>
-    <p><span>文章字数:</span><span class="post-count">5,648</span></p>
+    <p><span>文章字数:</span><span class="post-count">5,751</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
     <p><span>发布时间:</span>2018-08-30, 17:33:15</p>
-    <p><span>最后更新:</span>2018-09-07, 18:27:46</p>
+    <p><span>最后更新:</span>2018-09-07, 18:37:53</p>
     <span>原始链接:</span><a class="post-url" href="/2018/08/30/srm-translation/" title="srm-翻译">https://xjoi.github.io/2018/08/30/srm-translation/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1116,7 +1153,7 @@ a..A.
 
     </div>
     <div class="full-toc">
-        <button class="full"><span class="min mobile"></span></button>
+        <button class="full"><span class="min "></span></button>
 <button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
 <div class="post-toc"><span class="post-toc-title">目录</span>
     <div class="post-toc-content">
