@@ -6,6 +6,89 @@ tags: noip
 mathjax: true
 ---
 
+# srm-714-div2-T3-Saleswoman
+
+## 题意
+
+>有n个人在x轴上，每个人的坐标是一个整数，爱丽丝是一个商人，她在轴上穿梭并与这n个人交易，交易的商品只有一种，每一个人都有对这种商品的需求或者供应，如果delta[i] 是正数，表示这个人要供应delta[i]的数量，如果是负数，表示这个人有-delta[i]的需求，保证delta的和非负，一开始alice在0位置，手里没有任何商品，每一秒她可以往左或者往右走1个单位的距离，如果她和一个人在同一个位置，就可以与之交易，交易是瞬间发生的，每笔交易的数量是由爱丽丝决定的，当然她不能卖出超出自己手里含有的商品数量，行走过程中爱丽丝手里可以拿着任意多的商品，到了一个人的位置，也可以选择不与之交易，最终爱丽丝需要满足以下两点：她必须满足所有人的需求，旅行必须要在最后一个人的位置结束。求最少需要花费多少时间。
+
+## 样例
+
+```
+    	
+{3,14,15,92,101}
+{-3,2,3,-3,1}
+Returns: 143
+Here we have five people. Person 0 is at position 3 and has a demand of 3 units. Person 1 is at position 14 and has 2 units of supply. Person 2 is at position 15 and 3 units of supply. Person 3 is at position 92 and has a demand of 3 unit. Person 4 is at position 101 and has 1 unit of supply In this case, one optimal path for Alice is as follows:
+First, walk to position 15. Since Alice is at the same position as person 2, she can take all of their supply.
+Next, walk to position 14. Alice can take all of the supply here, so she has a total of 5 units of supply.
+Next, walk to position 3. Alice can satisfy this person's demand. She will be left with 2 units of supply.
+Walk to position 101. Alice grabs the supply, so she has 3 units.
+Walk to position 92. Alice can satisfy this person's demands, and she is left with 0 units of supply.
+Finally, walk back to position 101 and end the walk.
+The total time taken by Alice is 15+1+11+98+9+9 = 143.
+
+    	
+{1,2,4,8,16,32,64,128}
+{-1,-1,-1,-1,1,1,1,1}
+Returns: 382
+In this case, Alice's path will look like 0 -> 128 -> 1 -> 128.
+
+
+    	
+{100000}
+{0}
+Returns: 100000
+Note that Alice must end at the rightmost person, even if she doesn't need to do any trades. Note that it is also allowed for a person's delta to be zero.
+
+    	
+{100,200,300,400}
+{10,-3,-5,2}
+Returns: 400
+
+    	
+{1,2,3,5,8,13,21,34,55,89}
+{-1,1,-1,1,-1,1,-1,1,-1,1}
+Returns: 199
+
+    	
+{1,2,3,6,10,15,21,28,36,45,55}
+{-3,-5,10,-2,-6,-7,3,-2,8,5,-1}
+Returns: 129
+```
+# srm-714-div1-T1-ParenthesisRemoval
+
+同下，$2<=len<=2500$
+
+
+# srm-714-div2-T2-RemovingParenthesis
+
+## 题意
+
+>给你一个合法的括号序列，每次操作分两步，第一步删除第一个左括号，第二步删除某一个右括号，要保证删除之后的括号序列还是合法的,求将括号删到空为止一共有多少种不同的删除方法，两种方法不同当且仅当存在某一步右括号的删除位置不同
+> $2<=len<=20$, 保证答案在32位有符号整数范围内
+
+## 样例
+
+```
+    	
+"()()()()()"
+Returns: 1
+
+"(((())))" 
+Returns: 24
+
+"((()()()))" 
+Returns: 54
+
+"(())(())(())" 
+Returns: 8
+
+"((()))(()(()))((()))"
+Returns: 432
+
+```
+
 # srm-716-div2-T3-JumpDistancesOnTreeEasy
 
 ## 题意
