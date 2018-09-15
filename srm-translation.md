@@ -6,6 +6,299 @@ tags: noip
 mathjax: true
 ---
 
+
+# srm-712-div2-T3-AverageVarianceSubset
+
+## 题意
+
+>求一个集合所有满足“最大数减最小数差小于等于R”的非空子集的方差的平均值
+>集合最多有50个元素，每个元素都是唯一的, $1<=ai<=10^9$
+>$0<=R<=10^9$
+
+## 样例
+
+```
+{1,2,3}
+1
+Returns: 0.1
+
+一共有7个非空子集，满足条件的有5个 {1}, {2}, {3}, {1,2}, and {2,3}
+{1} 的方差是 0.
+{2} 的方差是 0.
+{3} 的方差是 0.
+{1,2} 的方差是 1/4.
+{2,3} 的方差是 1/4.
+(0 + 0 + 0 + 1/4 + 1/4) / 5 = 1/10.
+
+
+    	
+{1,2,3}
+3
+Returns: 0.3095238095238096
+This time Alice will consider all seven nonempty subsets. The two new subsets:
+The variance of {1,3} is 1.
+The variance of {1,2,3} is 2/3.
+Bob will then compute the value (0+0+0+1/4+1/4+1+2/3)/7 = 13/42.
+
+    	
+{5,1,3,2}
+1000000000
+Returns: 1.2476851851851847
+
+
+    	
+{1,1000000000}
+1000000000
+Returns: 8.3333333166666672E16
+
+    	
+{1,1000000000}
+1
+Returns: 0.0
+```
+
+# srm-712-div1-T1-LR
+
+## 题意
+
+>给你一个循环数组S，再给你一个目标循环数组T，每次你可以做的操作有如下两种
+>L:每个数都加上左边的数
+>R:每个数都加上右边的数
+>所有的加法都是瞬间同时完成，随意输出一个可以使得S变成T的操作序列
+>2<=|s|<=50, 0<=ele<=10^15
+
+
+## 样例
+
+```
+    	
+{0,1,0,0,0}
+{0,1,2,1,0}
+Returns: "LL"
+The first operation L will change A into {0,1,1,0,0} and then the second operation L will produce the array we wanted.
+
+
+{0,0,0,1}
+{0,1,0,0}
+Returns: "No solution"
+Even though A is cyclic, the precise indices matter. Here, s and t are two different configurations, and there is no valid way to change this s into this t.
+
+    	
+{1,2,3,4,5,6,7,8,9,10}
+{12,24,56,95,12,78,0,100,54,88}
+Returns: "No solution"
+Regardless of the type and order of operations all elements of A will always remain positive. However, t contains a zero. Therefore, t cannot be reached.
+3)	
+
+    	
+{1,0,0}
+{11,11,10}
+Returns: "RRRRR"
+The sequence of five operations R will change the array A as follows: {1,0,0} -> {1,0,1} -> {1,1,2} -> {2,3,3} -> {5,6,5} -> {11,11,10}.
+
+    	
+{0,0,0,0,0}
+{0,0,0,1,0}
+Returns: "No solution"
+
+    	
+{1,1}
+{562949953421312,562949953421312}
+Returns: "RLLLRRRLLRRRLRLRRLLLLRLLRRLRRRLRRLRRLLRRRLLRRRLLL"
+We start with A[0] = A[1] = 1, and we want A[0] = A[1] = 2^49. We can easily verify that in this case each operation changes A from {x, x} into {2x, 2x}. Therefore, any string of exactly 49 'L's and 'R's is a valid answer.
+    	
+{123,456}
+{123,456}
+Returns: ""
+
+```
+
+# srm-712-div2-T2-MakePalindrome
+
+## 题意
+
+>给你一些字符，求最少能拼成多少个回文串，输出任意一种方案
+>$1<=len<=1000$
+
+## 样例
+
+``` 
+"abbaa"
+Returns: {"ababa" }
+
+    	
+"abc"
+Returns: {"a", "b", "c" }
+
+    	
+"aaabbbccc"
+Returns: {"aba", "bcb", "cac" }
+There are other solutions like {"aaa", "bbb", "ccc"}
+
+
+    	
+"topcoder"
+Returns: {"oco", "d", "e", "p", "r", "t" }
+
+	
+"z"
+Returns: {"z" }
+```
+
+# srm-713-div1-T2-DFSCount
+
+## 题意
+>给你一个矩阵G[i][j]=N表示ij之间无边，G[i][j]=Y表示ij之间有边
+>现有如下伪代码
+```
+p = []
+
+dfs(current) := 
+	p.append(current)
+	Let adjs[] = list of vertices that are adjacent to current.
+	random_shuffle(adjs)
+	for v in adjs:
+		if v is not in p:
+			dfs(v)
+
+Let start = random(0, n-1)   # a random number between 0 and n-1, inclusive
+dfs(start)
+output(p)
+```
+
+>显然上面代码会输出一个排列，但是观察到我们用了random，程序可能会输出多种答案，求可能产生多少不同的排列
+>$1<=n<=14$
+
+## 样例
+
+```
+    	
+{"NYY",
+ "YNY",
+ "YYN"}
+Returns: 6
+G describes a complete graph with 3 vertices. There are 3! = 6 permutations of vertices, and we can easily verify that each of these permutations can appear as the output of Ciel's algorithm.
+1)	
+
+    	
+{"NYNN",
+ "YNYN",
+ "NYNY",
+ "NNYN"}
+Returns: 6
+This time the graph is a line: 0 - 1 - 2 - 3. These are the possible outputs:
+0,1,2,3
+1,0,2,3
+1,2,3,0
+2,1,0,3
+2,3,1,0
+3,2,1,0
+
+
+    	
+{"NYYY",
+ "YNYY",
+ "YYNN",
+ "YYNN"}
+Returns: 16
+This graph looks as follows:
+  2
+ / \
+0---1
+ \ /
+  3
+There are 16 possible permutations:
+0,1,2,3
+0,1,3,2
+0,2,1,3
+0,3,1,2
+1,0,2,3
+1,0,3,2
+1,2,0,3
+1,3,0,2
+2,0,1,3
+2,0,3,1
+2,1,0,3
+2,1,3,0
+3,0,1,2
+3,0,2,1
+3,1,0,2
+3,1,2,0
+
+{"NYYYYYYYYYYYYY",
+ "YNYYYYYYYYYYYY",
+ "YYNYYYYYYYYYYY",
+ "YYYNYYYYYYYYYY",
+ "YYYYNYYYYYYYYY",
+ "YYYYYNYYYYYYYY",
+ "YYYYYYNYYYYYYY",
+ "YYYYYYYNYYYYYY",
+ "YYYYYYYYNYYYYY",
+ "YYYYYYYYYNYYYY",
+ "YYYYYYYYYYNYYY",
+ "YYYYYYYYYYYNYY",
+ "YYYYYYYYYYYYNY",
+ "YYYYYYYYYYYYYN"}
+Returns: 87178291200
+The answer is 14!
+
+
+	
+{"N"}
+Returns: 1
+
+```
+# srm-713-div1-T1-PowerEquation
+
+## 题意
+
+>求有多少abcd满足a^b = c^d， 1<=a,b,c,d<=n, mod 10^9+7
+>$1<=n<=10^9$
+
+## 样例
+
+```
+2
+Returns: 6
+We have these solutions:
+1^1=1^1
+1^1=1^2
+1^2=1^1
+1^2=1^2
+2^1=2^1
+2^2=2^2
+
+    	
+3
+Returns: 15
+Now we have:
+1^1=1^1
+1^1=1^2
+1^1=1^3
+1^2=1^1
+1^2=1^2
+1^2=1^3
+1^3=1^1
+1^3=1^2
+1^3=1^3
+2^1=2^1
+2^2=2^2
+2^3=2^3
+3^1=3^1
+3^2=3^2
+3^3=3^3
+
+    	
+100
+Returns: 21620
+3)	
+
+22306
+Returns: 68467
+The answer is 1000068474 mod 10^9+7.
+
+```
+
 # srm-714-div2-T3-Saleswoman
 
 ## 题意
