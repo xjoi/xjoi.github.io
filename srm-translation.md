@@ -89,6 +89,57 @@ Returns: 432
 
 ```
 
+# srm-715-div2-T3-InPrePost
+
+## 题意
+
+```
+def order(v, mode):
+    if v == None:
+        return []
+    if mode == "pre":
+       return [v.label] + order(v.left, s[0]) + order(v.right, s[1])
+    if mode == "in":
+       return order(v.left, s[2]) + [v.label] + order(v.right, s[3])
+    if mode == "post":
+       return order(v.left, s[4]) + order(v.right, s[5]) + [v.label]
+```
+>定义如上二叉树遍历的伪代码，pre表示先序遍历，in表示中序列遍历，post表示后序遍历
+{s[0],s[2],s[4]}与{s[1], s[3], s[5]}  中 都恰好包含"pre","in","post"   
+现在告诉你三个数组以及字符串数组s[]
+a1[] = order(root, "pre")
+a2[] = order(root, "in")
+a3[] = order(root, "post")
+问你是否存在一颗二叉树满足按照如上方式调用order函数之后产生a1[],a2[],a3[]
+a1,a2,a3的长度相同，且不超过50
+
+## 样例
+
+```
+{"post", "in", "pre", "post", "in", "pre"}
+{1,2,3,4,5}
+{2,1,3,5,4}
+{2,4,3,5,1}
+Returns: "Possible"
+```
+![srm-715-div2-T3](/img/srm-715-div2-T3.png)
+
+```
+      
+{"pre", "pre", "in", "in", "post", "post"}
+{1,2,3,4}
+{2,4,3,1}
+{4,3,2,1}
+Returns: "Possible"
+
+{"post", "in", "pre", "post", "in", "pre"}
+{1,2,3,4,5}
+{2,1,3,5,4}
+{1,4,3,5,2}
+Returns: "Impossible"
+备注：从a1看出根是1，从a3看出根是2，矛盾
+```
+
 # srm-716-div2-T3-JumpDistancesOnTreeEasy
 
 ## 题意
