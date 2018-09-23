@@ -1,5 +1,5 @@
 ---
-title: bubble-sort.md
+title: 冒泡排序
 date: 2018-09-23 12:32:02
 categories: 普及组
 tags: 排序
