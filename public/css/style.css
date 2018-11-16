@@ -134,7 +134,7 @@ div.ac > ul.tag > li:before {
   font-family: Roboto, "Roboto", serif;
   height: 75px;
   text-align: center;
-  line-height: 66px;
+  line-height: 44px;
   color: #fff;
   font-size: 30px;
   margin-top: 7px;
@@ -383,7 +383,7 @@ div.ac > ul > li:before,
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 0.5;
   -webkit-font-smoothing: antialiased;
 }
 .full-toc .full {
@@ -1134,8 +1134,8 @@ left0px
 }
 .post {
   height: 100%;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 22px;
+  line-height: 0.5;
   background: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1179,7 +1179,7 @@ left0px
   margin-top: 20px;
 }
 .post .pjax article .article-meta {
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: #bcc1c4;
   border-left: 3px solid #b4b4b4;
   padding-left: 10px;
@@ -1303,7 +1303,7 @@ left0px
 }
 .post .pjax article .article-title {
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.2em;
   border-bottom: 0px;
   line-height: 31px;
   margin-bottom: 10px;
@@ -1346,7 +1346,7 @@ left0px
   background-color: #f7f7f7;
   border-left: 6px solid #b4b4b4;
   word-break: break-word;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 30px;
 }
@@ -1419,7 +1419,7 @@ left0px
   font-family: sans-serif;
 }
 .post .pjax article pre > code {
-  font-size: 15px;
+  font-size: 18px;
   border-radius: 3px;
 /* 滚动条 */
 }
@@ -1454,7 +1454,7 @@ left0px
   width: 56px;
   margin: auto;
   height: 56px;
-  line-height: 56px;
+  line-height: 46px;
   font-size: 20px;
   color: #fff;
   border: none;
@@ -1640,7 +1640,7 @@ img.pswp__img {
 }
 .mobile-menus.show {
   width: 100px;
-  font-size: 16px;
+  font-size: 20px;
   padding: 20px;
 }
 .mobile-menus .dynamic-menu {

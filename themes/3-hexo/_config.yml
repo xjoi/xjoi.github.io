@@ -113,7 +113,7 @@ img_resize: photoSwipe
 highlight:
   on: true # true开启代码高亮
   lineNum: true # true显示行号
-  theme: brown-paper
+  theme: github-gist
 # 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/
 # 支持主题：
 # sublime : 参考sublime的高亮主题
@@ -143,6 +143,17 @@ mathjax:
 # 友情链接
 friends:
   xjoi: http://xjoi.github.io
+  zzd: http://www.cnblogs.com/zhouzhendong
+  cly: https://www.cnblogs.com/cly-none
+  yjc: https://acheing.github.io/
+  yyq: https://blog.csdn.net/effervescence
+  mqy: https://www.cnblogs.com/mangoyang
+  jxc: https://nqiiii.coding.me/blog/
+  jhd: https://jhdjames37.github.io/
+  yzy: https://blog.csdn.net/yzyyylx
+  wzz: https://blog.csdn.net/timsei
+  yn: https://blog.csdn.net/zj_yuneng
+  czl: https://www.cnblogs.com/Apocrypha/p/9940223.html
 
 ##########评论设置#############
 comment:
