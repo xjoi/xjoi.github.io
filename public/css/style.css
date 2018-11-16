@@ -383,7 +383,7 @@ div.ac > ul > li:before,
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 0.5;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 .full-toc .full {
@@ -411,7 +411,7 @@ div.ac > ul > li:before,
   height: 42px;
   margin-left: -100%;
   font-size: 24px;
-  line-height: 42px;
+  line-height: 50px;
   color: #fff;
   background: #2a2935;
   overflow: hidden;
@@ -1135,7 +1135,7 @@ left0px
 .post {
   height: 100%;
   font-size: 22px;
-  line-height: 0.5;
+  line-height: 1;
   background: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1454,7 +1454,7 @@ left0px
   width: 56px;
   margin: auto;
   height: 56px;
-  line-height: 46px;
+  line-height: 56px;
   font-size: 20px;
   color: #fff;
   border: none;
