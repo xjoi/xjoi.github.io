@@ -1,6 +1,6 @@
 ---
 title: 我从哪里来
-categories: 工具们
+categories: 辅助技能
 date: 2018-08-25 15:00:08
 tags: 网站搭建
 mathjax: true

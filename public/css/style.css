@@ -383,7 +383,7 @@ div.ac > ul > li:before,
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 .full-toc .full {
@@ -1134,8 +1134,8 @@ left0px
 }
 .post {
   height: 100%;
-  font-size: 22px;
-  line-height: 1.1;
+  font-size: 16px;
+  line-height: 1.4;
   background: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1303,7 +1303,7 @@ left0px
 }
 .post .pjax article .article-title {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.8em;
   border-bottom: 0px;
   line-height: 31px;
   margin-bottom: 10px;
@@ -1433,7 +1433,7 @@ left0px
   -webkit-border-radius: 0; /*滚动条的圆角宽度*/
 }
 .post .pjax article pre > code::-webkit-scrollbar {
-  width: 10px /*滚动条的宽度*/;
+  width: 15px /*滚动条的宽度*/;
   height: 8px /*滚动条的高度*/;
 }
 .post .pjax article pre > code::-webkit-scrollbar-thumb:vertical {

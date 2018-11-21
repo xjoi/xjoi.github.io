@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title>树的一些入门必备知识</title>
+      <link href="/2018/11/21/tree-basic/"/>
+      <url>/2018/11/21/tree-basic/</url>
+      <content type="html"><![CDATA[<h1 id="LCA"><a href="#LCA" class="headerlink" title="LCA"></a>LCA</h1>]]></content>
+      
+      <categories>
+          
+          <category> 提高 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> dfs序 </tag>
+            
+            <tag> 重心 </tag>
+            
+            <tag> 直径 </tag>
+            
+            <tag> 欧拉序列 </tag>
+            
+            <tag> 最近公共祖先 </tag>
+            
+            <tag> 树上差分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>2018noip游记</title>
       <link href="/2018/11/13/2018noip/"/>
       <url>/2018/11/13/2018noip/</url>
@@ -10,7 +45,7 @@
       
       <categories>
           
-          <category> 竞赛周边 </category>
+          <category> 比赛 </category>
           
       </categories>
       
@@ -31,7 +66,7 @@
       
       <categories>
           
-          <category> 普及组 </category>
+          <category> 普及 </category>
           
       </categories>
       
@@ -52,7 +87,7 @@
       
       <categories>
           
-          <category> 工具们 </category>
+          <category> 辅助技能 </category>
           
       </categories>
       
