@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>hello-world</title>
+      <link href="/2018/11/21/hello-world-md/"/>
+      <url>/2018/11/21/hello-world-md/</url>
+      <content type="html"><![CDATA[<h1 id="开启新世界的程序"><a href="#开启新世界的程序" class="headerlink" title="开启新世界的程序"></a>开启新世界的程序</h1><pre><code>#include &lt;bits/stdc++.h&gt;using namespace std;int main() {    printf(&quot;hello world\n&quot;);    return 0;}</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c/c++入门 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>树的一些入门必备知识</title>
       <link href="/2018/11/21/tree-basic/"/>
       <url>/2018/11/21/tree-basic/</url>
