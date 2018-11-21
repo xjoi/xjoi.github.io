@@ -8,13 +8,26 @@ mathjax: true
 
 
 
-# 安装
+# linux下安装环境
 
-> * [git bash下载](https://gitforwindows.org/)
-> * [nodejs下载](https://nodejs.org/en/download/)
-> * 打开git bash，输入npm -v 检测是否安装成功
-> * 安装hexo: npm i -g hexo
+> * [nodejs下载](https://nodejs.org/en/)
+> * 下载之后解压到合适的目录，假设放到/home/xjoi/nodejs/下
 
+```
+sudo gedit /etc/profile
+# 在底部添加
+export NODE_HOME=/home/xjoi/nodejs/node-v10.13.0-linux-x64/bin
+export PATH=$NODE_HOME:$PATH
+保存退出
+sudo source /etc/profile
+
+验证版本
+node -v
+npm -v
+
+安装hexo: npm i -g hexo && npm install hexo --save
+
+```
 # github 相关
 
 注册github账号,注意验证好邮箱
