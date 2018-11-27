@@ -46,12 +46,13 @@ tags:
 
 # 待遇
 
-- 根据不同竞赛经历的人不太一样，所以如果感兴趣，可以面谈
+- 根据不同竞赛经历的人不太一样，所以如果感兴趣，可以面谈, 数量上不低于一线互联网公司
 
 
 # 联系方式
 
-email: problem_solving@foxmail.com
+发送简历到下方的邮箱，如果感觉合适，我们会与您联系
 
+email: problem_solving@foxmail.com
 
 
