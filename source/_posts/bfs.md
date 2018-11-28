@@ -191,3 +191,118 @@ int bfs(int sx, int sy, int tx, int ty, int n) {
         }
 }
 ```
+
+# 营救计划
+
+## 题意
+
+>在一个nxm的迷宫里，有一个萌新被困住了，你作为一个久经码场的战士，决定去营救萌新。地图中还会有一些守卫，你必须打败守卫才能通过守卫所在的位置，打败守卫需要花费1分钟，移动一步需要花费一分钟，每次你只能往上下左右某个方向移动一步。问你最少需要花费多少时间才能救到萌新。
+
+
+```
+7 8 
+#.#####. 
+#.M#..@. 
+#..#G... 
+..#..#.# 
+#...##.. 
+.#...... 
+........
+
+13
+
+
+2 2
+M.
+G@
+
+2
+```
+
+## 解法
+
+此问题的关键在于当我们搜到守卫的时候，能否将守卫直接放入队列，如果直接放入队列就要将时间直接加上2分钟，那么队列中就会出现时间花费较大的元素排在时间花费较少的元素前面，具体见上面第二个例子，所以从这里我们可以看出队列中元素的步长一定要满足非递减的顺序
+
+那么该如何解决这个问题呢？
+
+假如我们学过优先队列，我们可以直接将时间+2然后插入队列，因为这个元素会自动排在时间较小的元素后面
+
+如果还是用普通的队列可以这样处理：碰到守卫先当作普通的空地一样放入队列，等到取出来的时候，不去扩展周边的格子，而是重新放回队列，并且步数加1
+
+这样子，还是满足了队列的性质，一层层向外扩展，队列中的元素的步长是每次严格的+1
+
+参考代码
+
+```c++
+#include<stdio.h>
+#include<string.h>
+int n,m,x0,y0,k;
+int flag[201][201];
+char str[201][201];
+int step[4][2]={-1,0,1,0,0,1,0,-1};
+struct node{
+    int x,y;
+    int steps;
+}move[400002];
+int bfs()
+{
+    int i,head,rear,tempx,tempy;
+    move[1].x=x0;move[1].y=y0;
+    move[1].steps=0;
+    head=0;rear=1;
+    while(head<rear)
+    {
+        head++;
+        if(str[move[head].x][move[head].y]=='G')
+        {
+            rear++;
+            move[rear].x=move[head].x;
+            move[rear].y=move[head].y;
+            move[rear].steps=move[head].steps+1;
+            str[move[head].x][move[head].y]='.';
+        }
+        else
+        {
+            for(i=0;i<4;i++)
+            {
+                tempx=move[head].x+step[i][0];
+                tempy=move[head].y+step[i][1];
+                if(tempx<0||tempx>=n||tempy<0||tempy>=m||flag[tempx][tempy]||str[tempx][tempy]=='#')
+                    continue;
+                flag[tempx][tempy]=1;
+                rear++;
+                move[rear].x=tempx;
+                move[rear].y=tempy;
+                move[rear].steps=move[head].steps+1;
+                if(str[tempx][tempy]=='M')
+                    return move[rear].steps;
+            }
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int i,j,ans;
+    while(scanf("%d%d",&n,&m)==2)
+    {
+        memset(str,'\0',sizeof(str));
+        memset(flag,0,sizeof(flag));
+        for(i=0;i<n;i++)
+            for(j=0;j<m;j++)
+            {
+                scanf("%1s",&str[i][j]);
+                if(str[i][j]=='@')
+                {
+                    x0=i;y0=j;
+                    str[i][j]='#';
+                }
+            }
+            ans=bfs();
+            if(ans) printf("%d\n",ans);
+            else printf("You can't save Mengxin\n");
+    }
+    return 0;
+}
+```
+
