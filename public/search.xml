@@ -3,6 +3,92 @@
   
     
     <entry>
+      <title>结构体的妙用</title>
+      <link href="/2018/12/01/cplusplus-basic/"/>
+      <url>/2018/12/01/cplusplus-basic/</url>
+      <content type="html"><![CDATA[<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><h1 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h1>]]></content>
+      
+      <categories>
+          
+          <category> 普及 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+            <tag> 面向对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>高精度</title>
+      <link href="/2018/12/01/bigint/"/>
+      <url>/2018/12/01/bigint/</url>
+      <content type="html"><![CDATA[<h1 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h1><h1 id="高精度减法"><a href="#高精度减法" class="headerlink" title="高精度减法"></a>高精度减法</h1><h1 id="高精度乘法"><a href="#高精度乘法" class="headerlink" title="高精度乘法"></a>高精度乘法</h1><h1 id="高精度除法"><a href="#高精度除法" class="headerlink" title="高精度除法"></a>高精度除法</h1>]]></content>
+      
+      <categories>
+          
+          <category> 普及 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 高精度 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>二分查找</title>
+      <link href="/2018/12/01/binary-search/"/>
+      <url>/2018/12/01/binary-search/</url>
+      <content type="html"><![CDATA[<h1 id="lower-bound-amp-upper-bound"><a href="#lower-bound-amp-upper-bound" class="headerlink" title="lower_bound &amp; upper_bound"></a>lower_bound &amp; upper_bound</h1><h1 id="最大化最小值"><a href="#最大化最小值" class="headerlink" title="最大化最小值"></a>最大化最小值</h1><h1 id="尺取法-two-pointers"><a href="#尺取法-two-pointers" class="headerlink" title="尺取法(two-pointers)"></a>尺取法(two-pointers)</h1><h1 id="最大化平均值"><a href="#最大化平均值" class="headerlink" title="最大化平均值"></a>最大化平均值</h1>]]></content>
+      
+      <categories>
+          
+          <category> 普及 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>快速幂</title>
+      <link href="/2018/12/01/fast-pow/"/>
+      <url>/2018/12/01/fast-pow/</url>
+      <content type="html"><![CDATA[<h1 id="位运算入门"><a href="#位运算入门" class="headerlink" title="位运算入门"></a>位运算入门</h1><h1 id="快速幂原理"><a href="#快速幂原理" class="headerlink" title="快速幂原理"></a>快速幂原理</h1>]]></content>
+      
+      <categories>
+          
+          <category> 普及 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>加入我们</title>
       <link href="/2018/11/27/join-us/"/>
       <url>/2018/11/27/join-us/</url>

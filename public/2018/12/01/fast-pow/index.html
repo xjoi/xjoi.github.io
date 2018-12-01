@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>冒泡排序 | xjoi</title>
-  <meta name="keywords" content=" 排序 ">
-  <meta name="description" content="冒泡排序 | xjoi">
+  <title>快速幂 | xjoi</title>
+  <meta name="keywords" content=" 二分 ">
+  <meta name="description" content="快速幂 | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="学军中学信息学团队简介最新战绩以往成就 教练生活你是否想象过边打比赛还能边工作的生活，没错，OI教练就能满足你 信息学竞赛会在未来几年达到一个巅峰状态，越来越多的学生想要参与进来 作为信息竞赛教练，我们经常要跟学生一起并肩作战，通过一场场网络赛，一轮轮现场赛的锻炼，全面提升学生的能力，培养他们不怕苦难的品格 同时我们也会自己举办一系列的比赛，比如我们承办了2018年的浙江省NOIP复赛，未来还会有">
 <meta name="keywords" content="招聘">
@@ -317,9 +317,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-bubble-sort-md" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-fast-pow" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">冒泡排序</h1>
+        <h1 class="article-title">快速幂</h1>
     
     <div class="article-meta">
         
@@ -334,19 +334,19 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">排序</a>
+            <a href="javascript:" class="color3">二分</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-11-21 16:04:07">2018-09-23 12:32</time>
+        创建时间:<time class="date" title="更新时间: 2018-12-01 20:02:59">2018-12-01 20:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:248</span>
+        <span>字数:10</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -376,7 +376,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#主要思想"><span class="toc-text">主要思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码实现"><span class="toc-text">代码实现</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#位运算入门"><span class="toc-text">位运算入门</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快速幂原理"><span class="toc-text">快速幂原理</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -391,33 +391,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="主要思想"><a href="#主要思想" class="headerlink" title="主要思想"></a>主要思想</h1><blockquote>
-<p>假设我们现在要按照从小到大的顺序排,每一轮我们都比较相邻元素的大小,如果前面的元素比较大,就交换,那么第一轮下来最大的数字肯定能跑到最后面去,接下来的每一轮我们都这样执行,那么第二轮,第二大的数会跑到倒数第二个数的位置去…第三轮..,n-1轮之后,整个序列就会变成有序的,每次相当于冒出一个最大的数来,因此叫做冒泡排序<br>复杂度<br>$$<br>O(n^2)<br>$$</p>
-</blockquote>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><pre><code class="c++">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int a[1010];
-int main() {
-    int n;
-    scanf(&quot;%d&quot;, &amp;n);
-    for (int i = 0; i &lt; n; i++) {
-        scanf(&quot;%d&quot;, &amp;a[i]);
-    }
-    for (int i = 0; i &lt; n; i++) {
-        for (int j = 0; j &lt; n - i - 1 ; j++) { //最后面i个数是已经冒出来的i个数，不用再比较了
-            if (a[j] &gt; a[j + 1]) {
-                swap(a[j], a[j + 1]);
-            }
-        }
-    }
-    for (int i = 0; i &lt; n; i++) {
-        printf(&quot;%d &quot;, a[i]);
-    }
-    return 0;
-}
-</code></pre>
-
+        <h1 id="位运算入门"><a href="#位运算入门" class="headerlink" title="位运算入门"></a>位运算入门</h1><h1 id="快速幂原理"><a href="#快速幂原理" class="headerlink" title="快速幂原理"></a>快速幂原理</h1>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
     </div>
@@ -426,12 +400,12 @@ int main() {
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>冒泡排序</p>
-    <p><span>文章字数:</span><span class="post-count">248</span></p>
+    <p><span>文章标题:</span>快速幂</p>
+    <p><span>文章字数:</span><span class="post-count">10</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
-    <p><span>发布时间:</span>2018-09-23, 12:32:02</p>
-    <p><span>最后更新:</span>2018-11-21, 16:04:07</p>
-    <span>原始链接:</span><a class="post-url" href="/2018/09/23/bubble-sort-md/" title="冒泡排序">https://xjoi.github.io/2018/09/23/bubble-sort-md/</a>
+    <p><span>发布时间:</span>2018-12-01, 20:01:22</p>
+    <p><span>最后更新:</span>2018-12-01, 20:02:59</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/12/01/fast-pow/" title="快速幂">https://xjoi.github.io/2018/12/01/fast-pow/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -459,44 +433,6 @@ int main() {
 </script>
 
 
-
-    
-        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-    });
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<input type="hidden" id="MathJax-js" value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 
     
 
