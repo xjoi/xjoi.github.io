@@ -1,5 +1,5 @@
 ---
-title: linux oier使用指南
+title: ubuntu安装后的基本配置
 date: 2018-12-02 19:34:11
 categories: 辅助技能
 tags:
@@ -106,4 +106,31 @@ export LANG=en_US
 xdg-user-dirs-gtk-update
 ```
 
+## 主题的安装
 
+工具安装
+```
+sudo apt-get install unity-tweak-tool
+```
+
+安装Flatabulous主题
+```
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+```
+
+打开unity-tweak工具，在主题栏目里面选择相应主题
+
+## 安装monaco字体
+
+```
+cd /usr/share/fonts/truetype/
+sudo mkdir ttf-monaco
+cd ttf-monaco/
+sudo wget http://codybonney.com/files/fonts/Monaco_Linux.ttf
+sudo mkfontdir
+cd ..
+fc-cache
+```
+字体的使用可以点开左上角菜单栏 编辑->配置文件首选项
