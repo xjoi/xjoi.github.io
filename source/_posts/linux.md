@@ -45,6 +45,14 @@ sudo apt-get update
 sudo apt install chromium-browser vim emacs git
 ```
 
+### typora
+
+typora是常用的markdown编辑器，可以在编辑器内实时显示markdown语法解析后的内容
+
+https://www.typora.io/#linux
+
+安装后之后打开，文件->偏好设置，勾选内联公式
+
 ### 安装sublime text
 ```
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -134,3 +142,8 @@ cd ..
 fc-cache
 ```
 字体的使用可以点开左上角菜单栏 编辑->配置文件首选项
+
+下面是一个截图
+
+![ubuntu](/img/ubuntu.png)
+
