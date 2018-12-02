@@ -94,7 +94,7 @@ Categories=Development
 ```
 Icon一行存放你的topcoder图标所在的目录的绝对路径
 图标可以用下面这个
-![图标](/img/topcoder.jpeg)
+![图标](/img/topcoder.jpg)
 
 topcoder 基本的配置可以参考[moj_instructions](https://github.com/xjoi/topcoder/blob/master/moj_instructions.txt)
 
