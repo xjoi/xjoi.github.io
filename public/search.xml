@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>shell 基本命令</title>
+      <link href="/shell-command/"/>
+      <url>/shell-command/</url>
+      <content type="html"><![CDATA[<p>显示当前目录内容</p><pre><code>ls </code></pre><p>显示当前文件夹的绝对路径</p><pre><code>pwd</code></pre><p>创建文件夹</p><pre><code>mkdir folder</code></pre><p>进入文件夹</p><pre><code>cd folder</code></pre><p>返回上层目录</p><pre><code>cd ..</code></pre><p>~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录</p><pre><code>cd ~</code></pre><p>创建文件</p><pre><code>touch A.cpp</code></pre><p>ls 一下查看是否创建成功</p><p>后台打开并编辑文件，&amp;表示后台打开</p><pre><code>gedit A.cpp &amp;</code></pre><p>gedit是ubuntu系统自带的文本编辑器,打开后可以在菜单栏对自动缩进，字体，背景等进行简单的设置</p><p>编译A.cpp</p><pre><code>g++ A.cpp -o A</code></pre><p>ls查看当前目录是否增加了一个可执行文件(类似于windows下的exe)，名字为A<br>运行这个可执行文件</p><pre><code>./A</code></pre><p>方向键up，可以查看历史命令</p>]]></content>
+      
+      <categories>
+          
+          <category> 辅助技能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>ubuntu安装后的基本配置</title>
       <link href="/linux/"/>
       <url>/linux/</url>
