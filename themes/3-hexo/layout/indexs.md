@@ -1,19 +1,17 @@
 
 
-## 关于本博客
-如果你也想搭建一个类似的博客,请看[教程](https://xjoi.github.io/2018/08/25/hexo-github/)
+## Why
+众所周知，算法竞赛发展的越来越快
 
-一小时内可以完成博客的搭建并学会日常发布文章,搭建博客的过程也是一个学习各类工具过程
-比如git,markdown,mathjax,hexo等
+在网上资源越来越多的情况下，如果没有高效的学习方法，很容易陷入所谓知识的海洋无法自拔
 
-快捷键：
-按s可以隐藏或展示文章列表，按w可以显示文章概要
-gg:调到文章开头
-G:跳到文章结尾
-j:往下滑动
-k:往上滑动
+知识不一定就是力量，有时候是障碍
+
+在海量的知识面前,我们需要有自己的应对之道
 
 
+
+如果你也想搭建一个类似的博客,请看[教程](https://xjoi.github.io/hexo-github/)
 到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。
 
 本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次
