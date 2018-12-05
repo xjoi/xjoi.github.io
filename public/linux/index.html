@@ -160,15 +160,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">2018noip</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">高精度</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">二分</a>
+        <a href="javascript:" class="color4">2018noip</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -177,6 +173,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">广搜</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">二分</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -200,11 +200,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">ubuntu</a>
+        <a href="javascript:" class="color3">招聘</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">招聘</a>
+        <a href="javascript:" class="color2">ubuntu</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -261,6 +261,14 @@
             <span class="post-date" title="2018-11-21 18:48:09">2018/11/21</span>
         </a>
         
+        <a  class="普及 "
+           href="/bigint/"
+           data-tag="高精度"
+           data-author="" >
+            <span class="post-title" title="高精度">高精度</span>
+            <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
+        </a>
+        
         <a  class="比赛 "
            href="/2018noip/"
            data-tag="2018noip"
@@ -270,11 +278,11 @@
         </a>
         
         <a  class="普及 "
-           href="/bigint/"
-           data-tag="高精度"
+           href="/bfs/"
+           data-tag="搜索,广搜"
            data-author="" >
-            <span class="post-title" title="高精度">高精度</span>
-            <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
+            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
+            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
         </a>
         
         <a  class="普及 "
@@ -283,14 +291,6 @@
            data-author="" >
             <span class="post-title" title="二分查找">二分查找</span>
             <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
-        </a>
-        
-        <a  class="普及 "
-           href="/bfs/"
-           data-tag="搜索,广搜"
-           data-author="" >
-            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
-            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
         </a>
         
         <a  class="普及 "
@@ -333,20 +333,20 @@
             <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
         </a>
         
-        <a  class="辅助技能 "
-           href="/linux/"
-           data-tag="ubuntu"
-           data-author="" >
-            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
-            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
-        </a>
-        
         <a  class="加入我们 "
            href="/join-us/"
            data-tag="招聘"
            data-author="" >
             <span class="post-title" title="加入我们">加入我们</span>
             <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
+        </a>
+        
+        <a  class="辅助技能 "
+           href="/linux/"
+           data-tag="ubuntu"
+           data-author="" >
+            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
+            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
         </a>
         
         <a  class="辅助技能 "
@@ -587,7 +587,7 @@ fc-cache
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#比赛题解','#2018noip','#高精度','#二分','#搜索','#广搜','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#ubuntu','#招聘','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分',],
+            'data': ['#比赛题解','#高精度','#2018noip','#搜索','#广搜','#二分','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

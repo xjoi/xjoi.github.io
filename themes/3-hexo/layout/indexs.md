@@ -11,6 +11,8 @@
 
 
 
+>尽管去做你真正热爱的事情！别做其他事情！你的时间太少了。你怎么会想到要浪费时间做某些你不喜欢的事情来谋生呢？那算什么谋生啊？那不叫谋生，那是谋死---与神对话
+
 如果你也想搭建一个类似的博客,请看[教程](https://xjoi.github.io/hexo-github/)
 到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。
 
