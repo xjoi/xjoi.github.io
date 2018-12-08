@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>2018noip题解以及点评 | xjoi</title>
+  <meta name="keywords" content=" 比赛题解 ">
+  <meta name="description" content="2018noip题解以及点评 | xjoi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell 基本命令">
+<meta property="og:url" content="https://xjoi.github.io/shell-command/index.html">
+<meta property="og:site_name" content="xjoi">
+<meta property="og:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-06T11:01:40.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell 基本命令">
+<meta name="twitter:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg">
+</a>
+<div class="author">
+    <span>xjoi</span>
+</div>
+
+<div class="icon">
+    
+    
+    <a class="github" title="github" href="https://github.com/xjoi" target="_blank"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="普及"> 普及 </li>
+    
+    <li data-rel="入门"> 入门 </li>
+    
+    <li data-rel="辅助技能"> 辅助技能 </li>
+    
+    <li data-rel="加入我们"> 加入我们 </li>
+    
+    <li data-rel="提高"> 提高 </li>
+    
+    <li data-rel="比赛"> 比赛 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="14">
+<input type="hidden" id="yelog_site_word_count" value="9.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xjoi.github.io">xjoi</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/zhouzhendong">zzd</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/cly-none">cly</a></li>
+            
+            <li><a target="_blank" href="https://acheing.github.io/">yjc</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/effervescence">yyq</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/mangoyang">mqy</a></li>
+            
+            <li><a target="_blank" href="https://nqiiii.coding.me/blog/">jxc</a></li>
+            
+            <li><a target="_blank" href="https://jhdjames37.github.io/">jhd</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/yzyyylx">yzy</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/timsei">wzz</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/zj_yuneng">yn</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/Apocrypha/p/9940223.html">czl</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">高精度</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">二分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">排序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">c++</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">面向对象</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">c/c++入门</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">招聘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">ubuntu</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">dfs序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">重心</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">直径</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">欧拉序列</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">最近公共祖先</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">树上差分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">比赛题解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">搜索</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">广搜</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">2018noip</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a class="普及 " href="/bigint/" data-tag="高精度" data-author="">
+            <span class="post-title" title="高精度">高精度</span>
+            <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
+        </a>
+        
+        <a class="普及 " href="/binary-search/" data-tag="二分" data-author="">
+            <span class="post-title" title="二分查找">二分查找</span>
+            <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
+        </a>
+        
+        <a class="普及 " href="/bubble-sort-md/" data-tag="排序" data-author="">
+            <span class="post-title" title="冒泡排序">冒泡排序</span>
+            <span class="post-date" title="2018-09-23 12:32:02">2018/09/23</span>
+        </a>
+        
+        <a class="普及 " href="/cplusplus-basic/" data-tag="c++,面向对象" data-author="">
+            <span class="post-title" title="结构体的妙用">结构体的妙用</span>
+            <span class="post-date" title="2018-12-01 20:07:50">2018/12/01</span>
+        </a>
+        
+        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
+            <span class="post-title" title="hello-world">hello-world</span>
+            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
+        </a>
+        
+        <a class="普及 " href="/fast-pow/" data-tag="二分" data-author="">
+            <span class="post-title" title="快速幂">快速幂</span>
+            <span class="post-date" title="2018-12-01 20:01:22">2018/12/01</span>
+        </a>
+        
+        <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
+            <span class="post-title" title="我从哪里来">我从哪里来</span>
+            <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
+        </a>
+        
+        <a class="加入我们 " href="/join-us/" data-tag="招聘" data-author="">
+            <span class="post-title" title="加入我们">加入我们</span>
+            <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
+        </a>
+        
+        <a class="辅助技能 " href="/linux/" data-tag="ubuntu" data-author="">
+            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
+            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
+        </a>
+        
+        <a class="辅助技能 " href="/shell-command/" data-tag="linux" data-author="">
+            <span class="post-title" title="shell 基本命令">shell 基本命令</span>
+            <span class="post-date" title="2018-12-04 22:11:25">2018/12/04</span>
+        </a>
+        
+        <a id="top" class="提高 " href="/tree-basic/" data-tag="树,数据结构,dfs序,重心,直径,欧拉序列,最近公共祖先,树上差分" data-author="">
+            <span class="post-title" title="树的一些入门必备知识">树的一些入门必备知识</span>
+            <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
+        </a>
+        
+        <a class="比赛 " href="/2018noip-solution/" data-tag="比赛题解" data-author="">
+            <span class="post-title" title="2018noip题解以及点评">2018noip题解以及点评</span>
+            <span class="post-date" title="2018-11-21 18:48:09">2018/11/21</span>
+        </a>
+        
+        <a class="普及 " href="/bfs/" data-tag="搜索,广搜" data-author="">
+            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
+            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
+        </a>
+        
+        <a class="比赛 " href="/2018noip/" data-tag="2018noip" data-author="">
+            <span class="post-title" title="2018noip游记">2018noip游记</span>
+            <span class="post-date" title="2018-11-13 23:05:57">2018/11/13</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-2018noip-solution" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+        <h1 class="article-title">2018noip题解以及点评</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="比赛">比赛</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">比赛题解</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2018-12-06 19:01:40">2018-11-21 18:48</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:2,373</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#day1"><span class="toc-text">day1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#T1-道路铺设"><span class="toc-text">T1-道路铺设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T2-货币系统"><span class="toc-text">T2-货币系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T3-赛道修建"><span class="toc-text">T3-赛道修建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#day2"><span class="toc-text">day2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#T1-旅行"><span class="toc-text">T1-旅行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T2-填数游戏"><span class="toc-text">T2-填数游戏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T3-保卫王国"><span class="toc-text">T3-保卫王国</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#点评"><span class="toc-text">点评</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h1><h2 id="T1-道路铺设"><a href="#T1-道路铺设" class="headerlink" title="T1-道路铺设"></a>T1-道路铺设</h2><p>暑假里给学生讲这种模型的时候讲到有四种方法可以做这样的题<br>1：RMQ<br>2：单调栈<br>3：迪卡尔树<br>4：看似暴力的预处理<br>就算没做过原题，不知道差分，随便写一种方法都不会花很长时间</p>
+<h2 id="T2-货币系统"><a href="#T2-货币系统" class="headerlink" title="T2-货币系统"></a>T2-货币系统</h2><p>一看到这个题可能有点紧张，然后看看数据范围基本就能联想到背包<br>想到背包这个题基本就没有了秘密</p>
+<h2 id="T3-赛道修建"><a href="#T3-赛道修建" class="headerlink" title="T3-赛道修建"></a>T3-赛道修建</h2><p>首先根据提高组选手的基本素养，立刻反应要二分<br>二分之后怎么验证呢<br>我们可以枚举路径的LCA，那么一条合法路径就被分成了两条从LCA出发的路径，当然如果某条从LCA出发的路径足够长，自己也可以构成一条路径<br>我们发现每个子树要么自己配对完毕，要么留下一条路径延伸到父亲方向去<br>留下两条或以上没有意义<br>因此如果实在要留，我们尽可能留下最长的那条路径<br>只要两条路径的长度加起来&gt;=K就可以配成一对，因此现在变成了一个子问题<br>给你一个数组，问你最多配成多少对的和&gt;=K的整数对<br>从小到大枚举每个数然后在set里面二分找最小的数去陪对就好了</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const int N = 55555;
+
+vector &lt;pair&lt;int, int&gt; &gt; e[N];
+int n, m;
+int w[N];
+int total;
+
+void dfs(int u, int f, int x) {
+    if (total &gt;= m) {
+        return ;
+    }
+    multiset &lt;int&gt; st;
+    for (auto it : e[u]) {
+        if (it.first != f) {
+            dfs(it.first, u, x);
+            if (total &gt;= m) {
+                return ;
+            }
+            int value = w[it.first] + it.second;
+            if (value &gt;= x) {
+                total++;
+            } else {
+                st.insert(value);
+            }
+        }
+    }
+    if (total &gt;= m) {
+        return ;
+    }
+    int left = 0;
+    while (!st.empty()) {
+        auto it = st.begin();
+        int value = *it;
+        st.erase(it);
+        if (*it &gt;= x) {
+            total ++;
+            continue;
+        }
+
+        auto it_pair = st.lower_bound(x - *it);
+        if (it_pair == st.end()) {
+            left = max(left, value);
+        } else {
+            total ++;
+            st.erase(it_pair);
+        }
+    }
+    w[u] = left;
+}
+
+bool judge (int x) {
+    total = 0;
+    dfs(0, -1, x);
+    return total &gt;= m;
+}
+
+int main () {
+    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+    int a, b, c;
+    for (int i = 1; i &lt; n; i++) {
+        scanf(&quot;%d%d%d&quot;, &amp;a, &amp;b, &amp;c);
+        a--; b--;
+        e[a].push_back(make_pair(b, c));
+        e[b].push_back(make_pair(a, c));
+    }
+    int l = 1, r = 500000000, best = -1;
+    while (l &lt;= r) {
+        int mid = (l + r) &gt;&gt; 1;
+        if (judge (mid)) {
+            best = mid;
+            l = mid + 1;
+        } else {
+            r = mid - 1;
+        }
+    }
+    printf(&quot;%d\n&quot;, best);
+    return 0;
+}
+</code></pre><h1 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h1><h2 id="T1-旅行"><a href="#T1-旅行" class="headerlink" title="T1-旅行"></a>T1-旅行</h2><p>树的情况显然可以直接贪心每次走编号小的儿子<br>图的情况，稍微分析一下发现有一条边可以不走，然后看到数据范围就可以想到暴力枚举了</p>
+<h2 id="T2-填数游戏"><a href="#T2-填数游戏" class="headerlink" title="T2-填数游戏"></a>T2-填数游戏</h2><p>首先打出8*7以内的表,然后发现</p>
+<p>$$ f[n][m]= 3* f[n][m - 1] (m &gt;= n-2) $$</p>
+<p>那么我们只需要搞出8x9以内的就万事大吉<br>那么我们开个O2大力打出8x8的表，你会发现</p>
+<p>$$f[n][n+1] = f[n][n] * 3 + d$$<br>d是个等比数列，然后8x9的答案可以推算出来<br>8×8需要跑一小会，搜索写的好一点可以更快地打出8x8</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+
+
+const int mod = (int)1e9+7;
+
+vector &lt;pair&lt;int,int&gt; &gt; v[100];
+
+int a[8][8];
+int cnt;
+int n, m;
+
+bool check() {
+    for (int i = 1; i &lt; n; i++) {
+        for (int j = 1; j &lt; m; j++) if (a[i - 1][j] == a[i][j - 1]){
+            for (int xie = i + j + 1; xie &lt; n + m - 1; xie++) {
+                int col = -1;
+                int state = 0;
+                for (int k = 0; k &lt; v[xie].size(); k++) {
+                    auto it = v[xie][k];
+                    if (it.first &gt;= i &amp;&amp; it.second &gt;= j) {
+                        state |= (1 &lt;&lt; a[it.first][it.second]);
+                    }
+                    if (state == 3) {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+    return true;
+}
+
+void dfs(int tot, int now) {
+    //printf(&quot;tot=%d now=%d\n&quot;, tot, now);
+    if (now == tot) {
+        if (check()) {
+            cnt++;
+        }
+        return ;
+    }
+    for (int i = 0; i &lt; v[now].size(); i++) {
+        pair&lt;int,int&gt; it = v[now][i];
+        a[it.first][it.second] = 1;
+    }
+    dfs(tot, now + 1);
+    for (int i = 0; i &lt; v[now].size(); i++) {
+        pair&lt;int,int&gt; it = v[now][i];
+        a[it.first][it.second] = 0;
+        dfs(tot, now + 1);
+    }
+}
+
+int brute(int n, int m) {
+    ::n = n;
+    ::m = m;
+    cnt = 0;
+    for (int i = 0; i &lt; 100; i++) v[i].clear();
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; m; j++) {
+            v[i+j].push_back(make_pair(i, j));
+        }
+    }
+    dfs(n + m - 1, 0);
+    return cnt;
+}
+
+ int biao[][10] = {
+ {2,4,8,16,32,64,128,256},
+ {4,12,36,108,324,972,2916,8748},
+ {8,36,112,336,1008,3024,9072,27216},
+ {16,108,336,912,2688,8064,24192,72576},
+ {32,324,1008,2688,7136,21312,63936,191808},
+ {64,972,3024,8064,21312,56768,170112,510336},
+ {128,2916,9072,24192,63936,170112,453504,1360128},
+ {256,8748,27216,72576,191808,510336,1360128,3626752, 10879488}
+};
+
+int pow_mod(int a, int b) {
+    int ret = 1;
+    while (b) {
+        if (b &amp; 1) {
+            ret = 1LL * ret * a % mod;
+        }
+        a = 1LL * a * a % mod;
+        b &gt;&gt;= 1;
+    }
+    return ret;
+}
+
+int main () {
+    /*
+    for (int i = 8; i &lt;= 8; i++) {
+        printf(&quot;i=%d\n&quot;, i);
+        cout &lt;&lt; &#39;{&#39;;
+        for (int j = 8; j &lt;= 8; j++) {
+ //           printf(&quot;i=%d j=%d\n&quot;, i, j);
+            printf(&quot;%d, \n&quot;, brute(i, j));
+        }
+        cout &lt;&lt; &#39;}&#39; &lt;&lt; endl;
+    }*/
+    biao[6][8] = biao[6][7] * 3;
+    biao[6][9] = biao[6][8] * 3;
+    biao[7][9] = biao[7][8] * 3;
+    int n, m;
+    cin &gt;&gt; n &gt;&gt; m;
+    if (n == 1) {
+        cout &lt;&lt; pow_mod(2, m) &lt;&lt; endl;
+        return 0;
+    }
+    n --;
+    m --;
+    if (m &gt;= 7 &amp;&amp; m &gt;= n + 2) {
+        cout &lt;&lt; 1LL * biao[n][n + 2] * pow_mod(3, m - n - 2) % mod;
+    } else {
+        cout &lt;&lt; biao[n][m]  &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre><h2 id="T3-保卫王国"><a href="#T3-保卫王国" class="headerlink" title="T3-保卫王国"></a>T3-保卫王国</h2><p>首先，只要会基本的树形DP就可以拿到44分</p>
+<p>对于正解，我们先观察一下钦点一个点的状态的时候该怎么做<br>如果钦点了一个点的状态，我们需要自底向上DP一遍，然后再从上往下再DP一遍<br>这样子我们可以预处理出两个东西<br>f[u][0/1]: u选或者不选的情况下u子树的最优值<br>g[u][0/1]：u选或者不选的情况下整棵树的最优值</p>
+<p>然后再进一步，我们来思考钦点两个点怎么做</p>
+<p>我们发现钦点两个点其实就是会影响这两个点的LCA子树内的DP状态，把这个子树拿掉后的其他点的代价可以利用前面处理出来的数组快速算出来</p>
+<p>于是就可以考虑用倍增算法来预处理出如下数组</p>
+<p>qd[i][j][x][y]<br>表示j的状态为x,j的2的i次方个祖先的状态为y的情况下的最优值，这个dp满足区间合并的性质，合并起来类似于矩阵乘法的转移</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const int N = 300010;
+const int MAX_POW = 19;
+const long long INF = (long long) 1e12;
+
+vector &lt;int&gt; e[N];
+int val[N], dep[N];
+int p[MAX_POW][N];
+long long f[N][2], g[N][2];
+struct state{
+    long long a[2][2];
+    void init() {
+        a[0][0] = a[0][1] = a[1][1] = a[1][0] = INF;
+    }
+    void print() {
+        for (int i = 0; i &lt; 2; i++) {
+            for (int j = 0; j &lt; 2; j++) {
+                printf(&quot;a[%d][%d] = %lld\n&quot;, i, j, a[i][j]);
+            }
+        }
+        puts(&quot;&quot;);
+    }
+}qd[MAX_POW][N];
+
+int n, m;
+
+void input () {
+    scanf(&quot;%d%d%*s&quot;, &amp;n, &amp;m);
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%d&quot;, &amp;val[i]);
+    }
+    int a, b;
+    for (int i = 1; i &lt; n; i++) {
+        scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+        a--; b--;
+        e[a].push_back(b);
+        e[b].push_back(a);
+    }
+}
+
+void dfs(int u, int pre) {
+    if(pre != -1) dep[u] = dep[pre] + 1;
+    p[0][u] = pre;
+    f[u][0] = 0;
+    f[u][1] = val[u];
+    for (auto v: e[u]) if (v != pre){
+        dfs(v, u);
+        f[u][0] += f[v][1];
+        f[u][1] += min(f[v][0], f[v][1]);
+    }
+}
+
+void rdfs(int u, int pre, int pf0, int pf1) {
+    g[u][0] = f[u][0] + pf1;
+    g[u][1] = f[u][1] + min(pf0, pf1);
+    for (auto v: e[u]) if (v != pre) {
+        qd[0][v].a[0][0] = INF;
+        qd[0][v].a[0][1] = qd[0][v].a[1][1] = f[u][1] - min(f[v][0], f[v][1]);
+        qd[0][v].a[1][0] = f[u][0] - f[v][1];
+        rdfs(v, u, g[u][0] - f[v][1], g[u][1] - min(f[v][0], f[v][1]));
+    }
+}
+
+state merge(const state&amp; A, const state&amp; B) {
+    state res;
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; 2; j++) {
+            res.a[i][j] = INF;
+            for (int k = 0; k &lt; 2; k++) {
+                res.a[i][j] = min(res.a[i][j], A.a[i][k] + B.a[k][j]);
+            }
+        }
+    }
+    return res;
+}
+
+void init() {
+    memset(p, -1, sizeof(p));
+    dfs(0, -1);
+    for (int i = 1; i &lt; MAX_POW; i++) {
+        for (int u = 0; u &lt; n; u++) {
+            p[i][u] = p[i - 1][p[i - 1][u]];
+        }
+    }
+    rdfs(0, -1, 0, 0);
+    for (int i = 1; i &lt; MAX_POW; i++) {
+        for (int u = 0; u &lt; n; u++) {
+            qd[i][u] = merge(qd[i-1][u], qd[i-1][p[i - 1][u]]);
+        }
+    }
+}
+
+void query() {
+    int ua,x,ub,y;
+    for (int i = 0; i &lt; m; i++) {
+        scanf(&quot;%d%d%d%d&quot;, &amp;ua, &amp;x, &amp;ub, &amp;y);
+        ua--; ub--;
+        if (dep[ua] &lt; dep[ub]) {
+            swap(ua, ub);
+            swap(x, y);
+        }
+
+        int delta = dep[ua] - dep[ub];
+
+        state left; left.init(); left.a[x][x] = f[ua][x];
+        state right; right.init(); right.a[y][y] = f[ub][y];
+
+        for (int i = MAX_POW - 1; i &gt;= 0; i--) if (delta &gt;&gt; i &amp; 1){
+            left = merge(left, qd[i][ua]);
+            ua = p[i][ua];
+        }
+        if (ua == ub) {
+            long long res = left.a[x][y];
+            int fa = p[0][ub];
+            if (fa != -1) {
+                long long c0 = g[fa][0] - f[ub][1];
+                long long c1 = g[fa][1] - min(f[ub][0], f[ub][1]);
+                if (y == 0) {
+                    res += c1;
+                } else {
+                    res += min(c0, c1);
+                }
+            }
+            printf(&quot;%lld\n&quot;, res &gt;= INF ? -1 : res);
+        } else {
+
+            for (int i = MAX_POW - 1; i &gt;= 0; i--) if (p[i][ua] != p[i][ub]) {
+                left = merge(left, qd[i][ua]);
+                right = merge(right, qd[i][ub]);
+                ua = p[i][ua];
+                ub = p[i][ub];
+            }
+            int lca = p[0][ua];
+            long long c0 = g[lca][0] - f[ua][1] - f[ub][1];
+            long long c1 = g[lca][1] - min(f[ua][0], f[ua][1]) - min(f[ub][0], f[ub][1]) ;
+            c0 += left.a[x][1] + right.a[y][1];
+            c1 += min(left.a[x][0], left.a[x][1]) + min(right.a[y][0], right.a[y][1]);
+            printf(&quot;%lld\n&quot;, min(c0, c1) &gt;= INF ? -1 : min(c0, c1));
+        }
+    }
+}
+
+int main() {
+    input();
+    init();
+    query();
+    return 0;
+}
+</code></pre><h1 id="点评"><a href="#点评" class="headerlink" title="点评"></a>点评</h1><p>day1三题属于送分题，尤其T1有四五种方法可以做, T2只要大力背包，T3这种二分之后树上贪心的套路也已经屡见不鲜</p>
+<p>day2-T1考察图论基本功，T2没有什么思路首先都会去打表，而且这个题打出8*7以内的表非常容易，几分钟就能跑出答案，观察这个表的规律就可以拿到大部分的分数了，T3比较坑，这本来就是一道原题，而且这种第一次见基本做不出来的题出在了一场决定很多选手命运的比赛中确实不太合适，尽管暴力分给的还算多</p>
+<p>总的来说，今年的题目远远不及前两年, 原题或者类原题实在多了点,思维上也没有什么亮点</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>2018noip题解以及点评</p>
+    <p><span>文章字数:</span><span class="post-count">2,373</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
+    <p><span>发布时间:</span>2018-11-21, 18:48:09</p>
+    <p><span>最后更新:</span>2018-12-06, 19:01:40</p>
+    <span>原始链接:</span><a class="post-url" href="/2018noip-solution/" title="2018noip题解以及点评">https://xjoi.github.io/2018noip-solution/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'af0e91f8b3e07b208cc7',
+            clientSecret: '20b655d18155c0ee2c3093b8be4b91f15d444c3b',
+            repo: 'xjoi.github.io',
+            owner: 'xjoi',
+            admin: ['becauseofyou'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js" value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 xjoi</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#高精度','#二分','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#搜索','#广搜','#2018noip',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #4dff88;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("/img/background.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>

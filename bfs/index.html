@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>广度优先搜索 | xjoi</title>
+  <meta name="keywords" content=" 搜索 , 广搜 ">
+  <meta name="description" content="广度优先搜索 | xjoi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell 基本命令">
+<meta property="og:url" content="https://xjoi.github.io/shell-command/index.html">
+<meta property="og:site_name" content="xjoi">
+<meta property="og:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-06T11:01:40.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell 基本命令">
+<meta name="twitter:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/sublime.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+</div>
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg">
+</a>
+<div class="author">
+    <span>xjoi</span>
+</div>
+
+<div class="icon">
+    
+    
+    <a class="github" title="github" href="https://github.com/xjoi" target="_blank"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="普及"> 普及 </li>
+    
+    <li data-rel="入门"> 入门 </li>
+    
+    <li data-rel="辅助技能"> 辅助技能 </li>
+    
+    <li data-rel="加入我们"> 加入我们 </li>
+    
+    <li data-rel="提高"> 提高 </li>
+    
+    <li data-rel="比赛"> 比赛 </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="14">
+<input type="hidden" id="yelog_site_word_count" value="9.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://xjoi.github.io">xjoi</a></li>
+            
+            <li><a target="_blank" href="http://www.cnblogs.com/zhouzhendong">zzd</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/cly-none">cly</a></li>
+            
+            <li><a target="_blank" href="https://acheing.github.io/">yjc</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/effervescence">yyq</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/mangoyang">mqy</a></li>
+            
+            <li><a target="_blank" href="https://nqiiii.coding.me/blog/">jxc</a></li>
+            
+            <li><a target="_blank" href="https://jhdjames37.github.io/">jhd</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/yzyyylx">yzy</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/timsei">wzz</a></li>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/zj_yuneng">yn</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/Apocrypha/p/9940223.html">czl</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">高精度</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">二分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">排序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">c++</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">面向对象</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">c/c++入门</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">招聘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">ubuntu</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">dfs序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">重心</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">直径</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">欧拉序列</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">最近公共祖先</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">树上差分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">比赛题解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">搜索</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">广搜</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">2018noip</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a class="普及 " href="/bigint/" data-tag="高精度" data-author="">
+            <span class="post-title" title="高精度">高精度</span>
+            <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
+        </a>
+        
+        <a class="普及 " href="/binary-search/" data-tag="二分" data-author="">
+            <span class="post-title" title="二分查找">二分查找</span>
+            <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
+        </a>
+        
+        <a class="普及 " href="/bubble-sort-md/" data-tag="排序" data-author="">
+            <span class="post-title" title="冒泡排序">冒泡排序</span>
+            <span class="post-date" title="2018-09-23 12:32:02">2018/09/23</span>
+        </a>
+        
+        <a class="普及 " href="/cplusplus-basic/" data-tag="c++,面向对象" data-author="">
+            <span class="post-title" title="结构体的妙用">结构体的妙用</span>
+            <span class="post-date" title="2018-12-01 20:07:50">2018/12/01</span>
+        </a>
+        
+        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
+            <span class="post-title" title="hello-world">hello-world</span>
+            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
+        </a>
+        
+        <a class="普及 " href="/fast-pow/" data-tag="二分" data-author="">
+            <span class="post-title" title="快速幂">快速幂</span>
+            <span class="post-date" title="2018-12-01 20:01:22">2018/12/01</span>
+        </a>
+        
+        <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
+            <span class="post-title" title="我从哪里来">我从哪里来</span>
+            <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
+        </a>
+        
+        <a class="加入我们 " href="/join-us/" data-tag="招聘" data-author="">
+            <span class="post-title" title="加入我们">加入我们</span>
+            <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
+        </a>
+        
+        <a class="辅助技能 " href="/linux/" data-tag="ubuntu" data-author="">
+            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
+            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
+        </a>
+        
+        <a class="辅助技能 " href="/shell-command/" data-tag="linux" data-author="">
+            <span class="post-title" title="shell 基本命令">shell 基本命令</span>
+            <span class="post-date" title="2018-12-04 22:11:25">2018/12/04</span>
+        </a>
+        
+        <a id="top" class="提高 " href="/tree-basic/" data-tag="树,数据结构,dfs序,重心,直径,欧拉序列,最近公共祖先,树上差分" data-author="">
+            <span class="post-title" title="树的一些入门必备知识">树的一些入门必备知识</span>
+            <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
+        </a>
+        
+        <a class="比赛 " href="/2018noip-solution/" data-tag="比赛题解" data-author="">
+            <span class="post-title" title="2018noip题解以及点评">2018noip题解以及点评</span>
+            <span class="post-date" title="2018-11-21 18:48:09">2018/11/21</span>
+        </a>
+        
+        <a class="普及 " href="/bfs/" data-tag="搜索,广搜" data-author="">
+            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
+            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
+        </a>
+        
+        <a class="比赛 " href="/2018noip/" data-tag="2018noip" data-author="">
+            <span class="post-title" title="2018noip游记">2018noip游记</span>
+            <span class="post-date" title="2018-11-13 23:05:57">2018/11/13</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-bfs" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+        <h1 class="article-title">广度优先搜索</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+            <a href="javascript:" data-rel="普及">普及</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">搜索</a>
+            
+            <a href="javascript:" class="color3">广搜</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2018-12-06 19:01:40">2018-11-22 10:18</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1,832</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#预备知识"><span class="toc-text">预备知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#队列"><span class="toc-text">队列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一道例题"><span class="toc-text">一道例题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#骑士出行"><span class="toc-text">骑士出行</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意"><span class="toc-text">题意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#营救计划"><span class="toc-text">营救计划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意-1"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解法"><span class="toc-text">解法</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是一种线性数据结构，其结构就跟我们平时排队是一样的，有一个人在头，一个人在尾，队伍中的人当前都在队列中，我们注意到这种普通的队列可能会有两种操作</p>
+<ul>
+<li>删除一个头节点（排在第一的人完成了任务，走了）</li>
+<li>插入一个尾节点（多一个人来排队）</li>
+</ul>
+<p>由上我们知道队列满足先进队先出队的性质，简称先进先出</p>
+<p>在代码实现上我们一般用一个数组来模拟队列，用两个变量来模拟队列的头尾在数组中的位置</p>
+<h1 id="一道例题"><a href="#一道例题" class="headerlink" title="一道例题"></a>一道例题</h1><blockquote>
+<p>给你一个 nxm的地图，‘@’是你所在的位置，’#’是障碍，不能经过，’.’ 是空地，可以经过，你只能往上下左右四个方向行走，现在问你最多可以走到多少个位置，包括你自己所处的位置。</p>
+</blockquote>
+<pre><code>9 11
+.#......... 
+.#.#######. 
+.#.#.....#. 
+.#.#.###.#. 
+.#.#..@#.#. 
+.#.#####.#. 
+.#.......#. 
+.#########. 
+...........
+
+输出：59
+</code></pre><p>这道题我们可以利用队列来扩展还没有访问过的空地，用一个二维数组来标记某个位置是否访问过，访问过的位置不用再管，每次从队列中取出一个队头元素，去看看它的上下左右是否还有新的空地，有的话就加入队尾，下面是代码实现</p>
+<pre><code class="c">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+
+struct node {
+    int x, y;    //队列中的每个元素的信息
+
+};
+
+char mp[100][100];
+
+node Q[1000]; // 保存队列的数组
+int vis[22][22];
+
+int dx[] = {1, 0, -1, 0};
+int dy[] = {0, 1, 0, -1};
+
+
+void bfs(int n, int m, int sx, int sy) {
+    int head = 0, tail = 0; // 队头的位置与队尾的位置
+    Q[tail].x = sx;
+    Q[tail].y = sy;
+    tail++;
+    vis[sx][sy] = 1; //一开始将起点放入队列开始广搜
+    while (head &lt; tail) { // 当队列非空时，不断取出队头的元素
+        node front = Q[head]; head++;
+        int nowx = front.x;
+        int nowy = front.y;
+        for (int i = 0; i &lt; 4; i++) { // 向队头元素的四周扩展
+            int tox = nowx + dx[i];
+            int toy = nowy + dy[i];
+            //越界检查 障碍判断 是否已经访问过
+            if (tox &lt; 0 || tox &gt;= n || toy &lt; 0 || toy &gt;= m || mp[tox][toy] == &#39;#&#39; || vis[tox][toy]) {
+                continue;
+            }
+            //发现新大陆
+            vis[tox][toy] = 1;
+            Q[tail].x = tox;
+            Q[tail].y = toy;
+            tail++;
+        }
+    }
+    printf(&quot;%d\n&quot;, tail);
+
+}
+
+
+int main() {
+    int n, m;
+    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+    int sx =-1, sy = -1;
+    for (int i = 0; i &lt; n; i++) {
+        scanf(&quot;%s&quot;, mp[i]);            
+        for (int j = 0; j &lt; m; j++) {
+            if( mp[i][j] == &#39;@&#39;) {
+                sx = i;
+                sy = j;
+            }
+        }
+    }
+    bfs(n, m, sx, sy);
+    return 0;
+}
+</code></pre>
+<p><strong>当然这还没有完全体现出队列的功能，下面我们再看一道例题</strong></p>
+<h1 id="骑士出行"><a href="#骑士出行" class="headerlink" title="骑士出行"></a>骑士出行</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>告诉你一个棋盘的大小，问你从棋盘的一个点走到另一个点的最小步数，走的规则是国际象棋中骑士的走法，即走日字形</p>
+</blockquote>
+<p><img src="/img/knight.jpg" alt="knight"></p>
+<p>我们观察第一个例题中的队列扩展的过程其实是由近及远扩展的，每一个新的节点都是以最少的步数扩展到的，这个很显然，因为一开始0步的能走到所有距离起点为1的点，所有距离起点为2的点都是由距离起点为1的点扩展到的，以此类推。<br>因此我们考虑在将每个点扩展进队列的时候顺便增加一个信息，就是这个点距离起点的距离，那么我们就可以在广搜的过程中顺便求出每个点到起点的最短路径了<br>因为在搜索的过程中队列的扩展形式是一层层往外扩展的，所以得名广度优先搜索</p>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+//八个方向
+int dx[] = {1, 1, 2, 2, -1, -1, -2, -2};
+int dy[] = {2, -2, 1, -1, 2, -2, 1, -1};
+int queue[90010][3]; // 保存队列，包含三个信息，x坐标，y坐标，与起点之间的距离
+int flag[310][310]; //标记某个点是否走过了
+int main() {
+        int t, n;
+        int bfs(int, int, int , int, int);
+        scanf(&quot;%d&quot;, &amp;n);
+        for(int i = 0; i &lt; n; i++) {
+                for(int j = 0; j &lt; n; j++) {
+                        flag[i][j] = 0;
+                }
+        }
+        int sx, sy, tx, ty;
+        scanf(&quot;%d%d%d%d&quot;, &amp;sx, &amp;sy, &amp;tx, &amp;ty);
+        int ret = bfs(sx, sy, tx, ty, n);
+        printf(&quot;%d\n&quot;, ret);
+        return 0;
+}
+int bfs(int sx, int sy, int tx, int ty, int n) {
+        if(sx == tx &amp;&amp; sy == ty) {
+                return 0;
+        }
+        flag[sx][sy] = 1;
+        int head = 0, tail = 0;
+        queue[tail][0] = sx;
+        queue[tail][1] = sy;
+        queue[tail][2] = 0;
+        tail++;
+        while(head &lt; tail) {
+                int x = queue[head][0];
+                int y = queue[head][1];
+                int step = queue[head][2];
+                head++;
+                for(int i = 0; i &lt; 8; i++) {
+                        int nowx = x + dx[i];
+                        int nowy = y + dy[i];
+                        if(nowx &lt; 0 || nowx &gt;= n || nowy &lt; 0 || nowy &gt;= n) {
+                                continue;
+                        }
+                        if(flag[nowx][nowy] == 1) {
+                                continue;
+                        }
+                        if(nowx == tx &amp;&amp; nowy == ty) {
+                                return step + 1;
+                        }
+                        flag[nowx][nowy] = 1;
+                        queue[tail][0] = nowx;
+                        queue[tail][1] = nowy;
+                        queue[tail][2] = step + 1; //距离等于搜到它的点的距离 加 1
+                        tail++;
+                }
+        }
+}
+</code></pre>
+<h1 id="营救计划"><a href="#营救计划" class="headerlink" title="营救计划"></a>营救计划</h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>在一个nxm的迷宫里，有一个萌新被困住了，你作为一个久经码场的战士，决定去营救萌新。地图中还会有一些守卫，你必须打败守卫才能通过守卫所在的位置，打败守卫需要花费1分钟，移动一步需要花费一分钟，每次你只能往上下左右某个方向移动一步。问你最少需要花费多少时间才能救到萌新。</p>
+</blockquote>
+<pre><code>7 8 
+#.#####. 
+#.M#..@. 
+#..#G... 
+..#..#.# 
+#...##.. 
+.#...... 
+........
+
+13
+
+
+2 2
+M.
+G@
+
+2
+</code></pre><h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>此问题的关键在于当我们搜到守卫的时候，能否将守卫直接放入队列，如果直接放入队列就要将时间直接加上2分钟，那么队列中就会出现时间花费较大的元素排在时间花费较少的元素前面，具体见上面第二个例子，所以从这里我们可以看出队列中元素的步长一定要满足非递减的顺序</p>
+<p>那么该如何解决这个问题呢？</p>
+<p>假如我们学过优先队列，我们可以直接将时间+2然后插入队列，因为这个元素会自动排在时间较小的元素后面</p>
+<p>如果还是用普通的队列可以这样处理：碰到守卫先当作普通的空地一样放入队列，等到取出来的时候，不去扩展周边的格子，而是重新放回队列，并且步数加1</p>
+<p>这样子，还是满足了队列的性质，一层层向外扩展，队列中的元素的步长是每次严格的+1</p>
+<p>参考代码</p>
+<pre><code class="c++">#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+int n,m,x0,y0,k;
+int flag[201][201];
+char str[201][201];
+int step[4][2]={-1,0,1,0,0,1,0,-1};
+struct node{
+    int x,y;
+    int steps;
+}move[400002];
+int bfs()
+{
+    int i,head,rear,tempx,tempy;
+    move[1].x=x0;move[1].y=y0;
+    move[1].steps=0;
+    head=0;rear=1;
+    while(head&lt;rear)
+    {
+        head++;
+        if(str[move[head].x][move[head].y]==&#39;G&#39;)
+        {
+            rear++;
+            move[rear].x=move[head].x;
+            move[rear].y=move[head].y;
+            move[rear].steps=move[head].steps+1;
+            str[move[head].x][move[head].y]=&#39;.&#39;;
+        }
+        else
+        {
+            for(i=0;i&lt;4;i++)
+            {
+                tempx=move[head].x+step[i][0];
+                tempy=move[head].y+step[i][1];
+                if(tempx&lt;0||tempx&gt;=n||tempy&lt;0||tempy&gt;=m||flag[tempx][tempy]||str[tempx][tempy]==&#39;#&#39;)
+                    continue;
+                flag[tempx][tempy]=1;
+                rear++;
+                move[rear].x=tempx;
+                move[rear].y=tempy;
+                move[rear].steps=move[head].steps+1;
+                if(str[tempx][tempy]==&#39;M&#39;)
+                    return move[rear].steps;
+            }
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int i,j,ans;
+    while(scanf(&quot;%d%d&quot;,&amp;n,&amp;m)==2)
+    {
+        memset(str,&#39;\0&#39;,sizeof(str));
+        memset(flag,0,sizeof(flag));
+        for(i=0;i&lt;n;i++)
+            for(j=0;j&lt;m;j++)
+            {
+                scanf(&quot;%1s&quot;,&amp;str[i][j]);
+                if(str[i][j]==&#39;@&#39;)
+                {
+                    x0=i;y0=j;
+                    str[i][j]=&#39;#&#39;;
+                }
+            }
+            ans=bfs();
+            if(ans) printf(&quot;%d\n&quot;,ans);
+            else printf(&quot;You can&#39;t save Mengxin\n&quot;);
+    }
+    return 0;
+}
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>广度优先搜索</p>
+    <p><span>文章字数:</span><span class="post-count">1,832</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
+    <p><span>发布时间:</span>2018-11-22, 10:18:49</p>
+    <p><span>最后更新:</span>2018-12-06, 19:01:40</p>
+    <span>原始链接:</span><a class="post-url" href="/bfs/" title="广度优先搜索">https://xjoi.github.io/bfs/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="/css/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'af0e91f8b3e07b208cc7',
+            clientSecret: '20b655d18155c0ee2c3093b8be4b91f15d444c3b',
+            repo: 'xjoi.github.io',
+            owner: 'xjoi',
+            admin: ['becauseofyou'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2018 xjoi</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#高精度','#二分','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#搜索','#广搜','#2018noip',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #4dff88;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("/img/background.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</html>
