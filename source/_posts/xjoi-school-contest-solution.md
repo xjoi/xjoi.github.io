@@ -2,8 +2,8 @@
 title: 第一届校赛题解
 date: 2018-12-09 19:43:59
 categories:
-tags:
 - 比赛
+tags:
 
 mathjax: true
 ---
