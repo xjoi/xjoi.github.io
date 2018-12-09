@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>我从哪里来 | xjoi</title>
-  <meta name="keywords" content=" 网站搭建 ">
-  <meta name="description" content="我从哪里来 | xjoi">
+  <title>第一届校赛题解 | xjoi</title>
+  <meta name="keywords" content=" 比赛 ">
+  <meta name="description" content="第一届校赛题解 | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="A-easymath找出所有x的约数然后看他们的最小公倍数是否是x即可 B-permutation听说赛场上有人直接打表找规律过了此题？太强了。 这题本着送温暖的目的，被找到规律了也没事。 讲讲科学些的做法： 首先，要清楚一点：排列和置换是可以一一对应的，而且如果假设有点 1…n ，将所有的边 $(i,p_i)$ 连接起来，那么一个排列就对应一个由若干个环构成的图。 假设我们要算的是所有排列的贡献">
 <meta name="keywords" content="比赛">
@@ -344,36 +344,30 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexo-github" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-xjoi-school-contest-solution" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">我从哪里来</h1>
+        <h1 class="article-title">第一届校赛题解</h1>
     
     <div class="article-meta">
         
         
-        
-        <span class="book">
-            
-            <a href="javascript:" data-rel="辅助技能">辅助技能</a>
-            
-        </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">网站搭建</a>
+            <a href="javascript:" class="color3">比赛</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-12-06 19:01:40">2018-08-25 15:00</time>
+        创建时间:<time class="date" title="更新时间: 2018-12-09 20:50:21">2018-12-09 19:43</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1,033</span>
+        <span>字数:2,133</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -403,7 +397,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux下安装环境"><span class="toc-text">linux下安装环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-相关"><span class="toc-text">github 相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初始化博客"><span class="toc-text">初始化博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选择主题"><span class="toc-text">选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#将博客部署到github上"><span class="toc-text">将博客部署到github上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#设置博客模板"><span class="toc-text">设置博客模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#发表博客"><span class="toc-text">发表博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站的备份"><span class="toc-text">网站的备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网站信息修改"><span class="toc-text">网站信息修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文末声明"><span class="toc-text">文末声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学公式"><span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码高亮"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#头像与文章列表背景"><span class="toc-text">头像与文章列表背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#友链与评论"><span class="toc-text">友链与评论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#全文搜索"><span class="toc-text">全文搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字数统计"><span class="toc-text">字数统计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-easymath"><span class="toc-text">A-easymath</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B-permutation"><span class="toc-text">B-permutation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-glance"><span class="toc-text">C-glance</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D-sequence"><span class="toc-text">D-sequence</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#E-game"><span class="toc-text">E-game</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#F-candle"><span class="toc-text">F-candle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#G-string"><span class="toc-text">G-string</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#H-hex"><span class="toc-text">H-hex</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#I-stars"><span class="toc-text">I-stars</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#J-memory"><span class="toc-text">J-memory</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#算法一"><span class="toc-text">算法一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法二"><span class="toc-text">算法二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法三"><span class="toc-text">算法三</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#算法四"><span class="toc-text">算法四</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Maker"><span class="toc-text">Data Maker</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#K-stone"><span class="toc-text">K-stone</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#L-order"><span class="toc-text">L-order</span></a></li>
     
 <style>
     .left-col .switch-btn,
@@ -418,128 +412,60 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="linux下安装环境"><a href="#linux下安装环境" class="headerlink" title="linux下安装环境"></a>linux下安装环境</h1><blockquote>
-<ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs下载</a></li>
-<li>下载之后解压到合适的目录，假设放到/home/xjoi/nodejs/下</li>
-</ul>
-</blockquote>
-<pre><code>sudo gedit /etc/profile
-# 在底部添加
-export NODE_HOME=/home/xjoi/nodejs/node-v10.13.0-linux-x64/bin
-export PATH=$NODE_HOME:$PATH
-保存退出
-sudo source /etc/profile
+        <h1 id="A-easymath"><a href="#A-easymath" class="headerlink" title="A-easymath"></a>A-easymath</h1><p>找出所有x的约数然后看他们的最小公倍数是否是x即可</p>
+<h1 id="B-permutation"><a href="#B-permutation" class="headerlink" title="B-permutation"></a>B-permutation</h1><p>听说赛场上有人直接打表找规律过了此题？太强了。</p>
+<p>这题本着送温暖的目的，被找到规律了也没事。</p>
+<p>讲讲科学些的做法：</p>
+<p>首先，要清楚一点：排列和置换是可以一一对应的，而且如果假设有点 1…n ，将所有的边 $(i,p_i)$ 连接起来，那么一个排列就对应一个由若干个环构成的图。</p>
+<p>假设我们要算的是所有排列的贡献和。</p>
+<p>我们考虑算出每一个数字对于答案的贡献。假设当前数字存在于一个大小为 $t (t\leq n)$ 的环中，那么有 $\binom{n-1}{t-1}(t-1)!(n-t)!$ 种可能。而 $\binom{n-1}{t-1}(t-1)!(n-t)!=(n-1)!$ 。如果这个数有贡献，那么当且仅当 $t$ 是 $k$ 的因数。设 $x$ 为小于等于 $n$ 的 $k$ 的因数，那么 1…n 的任何一个数都对答案有 $(n-1)!x$ 的贡献。所以总贡献为 $n!x$ 。</p>
+<p>由于题目要求的是期望，所以答案要除以 $n!$ ，于是答案就是 $x$ —— 小于等于 $n$ 的 $k$ 的因数个数。</p>
+<p>于是题目中的模数其实并没什么用，只是个障眼法。题目中的 $n,k$ 数据范围可以开的更大，只开 1e9 的也只是个障眼法。</p>
+<h1 id="C-glance"><a href="#C-glance" class="headerlink" title="C-glance"></a>C-glance</h1><p>直接for循环按照题意模拟即可</p>
+<h1 id="D-sequence"><a href="#D-sequence" class="headerlink" title="D-sequence"></a>D-sequence</h1><p>我们考虑如何 $O(n)$ 求出一个序列的不同子序列种数。</p>
+<p>令 $dp_i$ 表示前 $i$ 个数字组成的序列的不同子序列种数，则 $dp_{i+1}=2dp_i-dp_{last_{a_{i+1}}-1}$ 。其中 $last_{a_{i+1}}$表示上一次 $a_{i+1}$ 出现之前的 DP 值。</p>
+<p>表示的意义是：第 $i$ 位在子序列中可以选择不选或者选，但是有 $dp_{last_{a_{i+1}}}$ 种情况重复了，要减掉。</p>
+<p>时间复杂度 $O(nm)$ 。</p>
+<p>考虑把 dp 转移采用矩阵的形式，不难写出对于每一种 $a_i$ 的转移矩阵。由于 $a_i$ 的取值只有 $4$ 种，构造矩阵，令前 $4$ 列分别为对应的数的 $dp_{last_{v}-1}$ 值，第 $5$ 列表示 DP 值，所以转移矩阵的长宽为 $L=5$ ，则我们可以用线段树维护区间转移矩阵乘积。为了支持修改，我们需要预处理矩阵的幂。</p>
+<p>时间复杂度 $O(L^3 m \log n )$ 。</p>
+<h1 id="E-game"><a href="#E-game" class="headerlink" title="E-game"></a>E-game</h1><p>先暴力找到总共的轮数z，得分总和为x+y</p>
+<p>那么每轮的得分为</p>
+<p>1 3 5 7 … 2z-1</p>
+<p>那么我们需要判断这里面最少需要几个数加起来等于x</p>
+<p>从小到大枚举答案cnt</p>
+<p>我们我们取cnt个数，他们的和可以凑成的最小值是前面cnt个数，最大值是后面cnt个数，显然最小值和最大值的奇偶性是一样的，稍微再思考一下我们会发现，最小值+2，最小值+4，最小值+6…一直到最大值这些数我们都可以拼成</p>
+<p>所以我们只需要判断x是否在最小值和最大值之间以及x的奇偶性与最小值是否一致即可</p>
+<h1 id="F-candle"><a href="#F-candle" class="headerlink" title="F-candle"></a>F-candle</h1><p>由于总点数比较小，我们只需要大力状压枚举选择了那些叶子结点然后模拟题意</p>
+<h1 id="G-string"><a href="#G-string" class="headerlink" title="G-string"></a>G-string</h1><p>考察KMP算法next数组的应用，没学过的去学学吧</p>
+<h1 id="H-hex"><a href="#H-hex" class="headerlink" title="H-hex"></a>H-hex</h1><p>首先建图，将每个六边形看成一个点，发现三个六边形有一个公共顶点就给这三个点建边，整个图会形成若干个联通块，我们依次放置同一个联通块内每一个点的标记，我们发现每一个标记都可以到达联通块内的任意一个地方，于是第一个点有cnt种标记可以放，第二个点有cnt-1种标记可以放..</p>
+<p>但是要注意最后联通在一起的三个点只有三种方案可以放</p>
+<p>所以答案为<br>$cnt \times (cnt-1) \times … \times 3 $</p>
+<h1 id="I-stars"><a href="#I-stars" class="headerlink" title="I-stars"></a>I-stars</h1><p>模拟题</p>
+<h1 id="J-memory"><a href="#J-memory" class="headerlink" title="J-memory"></a>J-memory</h1><h4 id="算法一"><a href="#算法一" class="headerlink" title="算法一"></a>算法一</h4><p>我会$O(n^4)$暴力！这种情况应用于没有人愿意验题时出题人的自救行为。</p>
+<h4 id="算法二"><a href="#算法二" class="headerlink" title="算法二"></a>算法二</h4><p>一个直观的想法是，如果一个数不能和其余的$n-1$个数羁绊，这个数不会出现在答案区间。</p>
+<p>那么我们一开始保留整个区间。如果区间中所有的数都能被羁绊，直接更新答案。否则，找到一个不能被羁绊的数删除，划分为两个区间处理。</p>
+<p>数据结构大师这时候就可以直接强上了。对于每个数记录前一个可以羁绊它的数$pre_i$和后一个可以羁绊它的数$nex_i$，只需要在当前区间中查找满足以下条件的数i：</p>
+<p>$ l &lt;= i &lt;= r $，$ pre_i &lt; l $，$ nex_i &gt; r $</p>
+<p>暴力树套树三维数点或者其他高妙做法。还可以加上尽量划分平均之类的小trick。可以做到$O(nlog^2n)$</p>
+<h4 id="算法三"><a href="#算法三" class="headerlink" title="算法三"></a>算法三</h4><p>这是出题人的标算。这并不是复杂度最优的解法，但是思路比较有趣。</p>
+<p>对区间分治，设当前的分治区间是$[l,r]$，中心是$mid$。</p>
+<p>当我们固定一个左端点$i$时，就存在一个最小的$qr_i&gt;=mid$，使得$[l,mid]$中的数可以被羁绊。当且仅当$[l,mid]$本身符合要求时等号成立。</p>
+<p>同理一个右端点$i$，存在最大的$ql_i&lt;=mid+1$，使得$[mid + 1, r]$中的数可以被羁绊。</p>
+<p>枚举一个左端点$i$，我们要找的就是一个最大的右端点$j$，使得$qr_i &lt;= j &lt;= r, ql_j &gt;= i$，<br>离线下来之后非常好处理。</p>
+<p>复杂度$O(nlog^2n)$</p>
+<p>然而当场通过的所有代码中没有一份用的是这个算法（打脸）</p>
+<h4 id="算法四"><a href="#算法四" class="headerlink" title="算法四"></a>算法四</h4><p>用下面的算法可以做到$O(nlogn)$的复杂度。</p>
+<p>枚举右端点$r$。然后我们只考虑$nexi&gt;r$的数。显然最优的左端点是1或这样的$i+1$</p>
+<p>如果$nexi &gt; r$，那么区间$[i + 1, r]$符合条件的充要条件是：$\forall i &lt; j &lt;= r$，如果$nexj&gt;r$，那么$prej&gt;i$</p>
+<p>只需维护：区间+1，区间-1，查询值为0的最小位置。线段树操作一番即可。</p>
+<h3 id="Data-Maker"><a href="#Data-Maker" class="headerlink" title="Data Maker"></a>Data Maker</h3><p>这题的数据并不是很好造啊……写过对拍的同学会发现，在随机的大规模数据下，绝大多数数据答案都是$2$或者$n$。</p>
+<p>我的dmk大致是每个数一定概率在$[1,k]$内随机，一定概率在$[2k-c,3k]$内随机，再随机若干个数变为+inf。然后通过调整参数得到了10组数据。</p>
+<h1 id="K-stone"><a href="#K-stone" class="headerlink" title="K-stone"></a>K-stone</h1><p>1.<br>$f_{i,j}$表示将区间$[i,j]$合并的代价，可得$f_{i,j}=min(f_{i,k}+f_{k+1,j}+sum_{i,j}) (i\le k&lt;j)$<br>$sum_{i,j}=(\sum_{i}^{j} a_k^K)$<br>又由四边形不等式可将其优化到$O(n^2)$<br>具体为：<br>设$r_{i,j}$表示$f_{i,j}$在$k=r_{i,j}$时转移最优<br>由$sum_{i,j}+sum_{i+1,j+1}\le sum_{i,j+1}+sum_{i+1,j}$<br>可得$r_{i,j-1}\le r_{i,j}\le r_{i+1,j}$(四边形不等式)</p>
+<p>2.<br>现在题目转化为将区间$[1,n]$分为$m$个区间，区间$[l,r]$的贡献为$f_{l,r}$,求 所有$m$个区间的贡献总和 的最小值<br>设$dp_{i,j}$表示前$i$个石子堆分成$j$个区间的最小值<br>易列出$dp$转移：<br>$dp_{i,j}=min(dp_{k,j-1}+f_{k+1,i})(1\le k&lt;i)$<br>但显然复杂度为$O(n^2m)$过不了<br>那设$g_{i}$为把区间$[1,n]$分成$i$个区间的最小值，即$g_{i}=dp_{n,i}$<br>我们可以发现点$(1,g_{1}),(2,g_{2}),(3,g_{3})…..(n,g_{n})$在二维坐标中为一下凸包(虽然并不会证233)<br>于是就可以通过$dp$凸优化将$dp$有关$m$的一维去掉，此时复杂度$O(n^2logn)$</p>
+<p>3.<br>列出此时的dp转移方程<br>$dp_{i}=min(dp_{j}+f_{j+1,i}-x)(0\le j&lt;i)$<br>$dp$表示取，$x$是二分的斜率，在这里是定值<br>现在又由决策单调性可将其优化成$O(nlogn)$<br>加上二分复杂度，询问复杂度为$O(nlogn^2)$</p>
+<p>总复杂度为$O(n^2+nlogn^2)$</p>
+<h1 id="L-order"><a href="#L-order" class="headerlink" title="L-order"></a>L-order</h1><p>签到题，按照题意模拟即可</p>
 
-验证版本
-node -v
-npm -v
-
-安装hexo: npm i -g hexo &amp;&amp; npm install hexo --save
-
-</code></pre><h1 id="github-相关"><a href="#github-相关" class="headerlink" title="github 相关"></a>github 相关</h1><p>注册github账号,注意验证好邮箱<br>假设账号名字为yourname<br>在你的github中新建一个仓库,名字为 yourname.github.io</p>
-<p>打开gitbash</p>
-<pre><code>git config --global user.name &quot;账户名&quot;
-git config --global user.email &quot;github验证的邮箱名&quot;
-ssh-keygen -t rsa -C &quot;github验证的邮箱名&quot; (默认按回车即可)
-</code></pre><p>将~/.ssh/id_rsa.pub中的内容复制到github网页端-&gt;settings-&gt;SSH and GPG keys-&gt;New SSH key<br>完成后在bash中输入</p>
-<pre><code>ssh -T git@github.com
-输入yes即可
-</code></pre><p>设置成功返回</p>
-<pre><code>Hi xxxxxxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre><h1 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h1><pre><code>hexo init myblog
-cd myblog
-hexo s
-</code></pre><p>打开<a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a> 检验是否初始化成功</p>
-<h1 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h1><p>在themes文件夹里面放上主题文件,比如3-hexo主题</p>
-<pre><code>git clone https://github.com/xjoi/hexo-theme-3-hexo themes/3-hexo
-
-</code></pre><p>修改 myblog/_config.yml文件,将theme后面的landscape改为3-hexo,更多主题参考<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官网</a></p>
-<pre><code>hexo g &amp;&amp; hexo s
-</code></pre><p>输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>, 查看主题是否加载成功</p>
-<h1 id="将博客部署到github上"><a href="#将博客部署到github上" class="headerlink" title="将博客部署到github上"></a>将博客部署到github上</h1><p>在myblog目录下安装hexo-deployer-git</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>修改myblog/_config.yml最后几行,注意空格要严格一样</p>
-<pre><code>deploy:
-  type: git
-  repo: https://github.com/yourname/yourname.github.io.git
-  branch: master
-</code></pre><p>部署</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
-</code></pre><p>稍等一会儿在浏览器中输入yourname.github.io查看是否发布成功</p>
-<h1 id="设置博客模板"><a href="#设置博客模板" class="headerlink" title="设置博客模板"></a>设置博客模板</h1><p>修改 scaffolds下的post.md</p>
-<pre><code>---
-title: {{ title }}
-date: {{ date }}
-categories:
-tags:
----
-
-</code></pre><h1 id="发表博客"><a href="#发表博客" class="headerlink" title="发表博客"></a>发表博客</h1><pre><code>hexo new post xxx
-</code></pre><p>会自动生成一个以xxx为title的markdown文件,编辑这个文件即可</p>
-<h1 id="网站的备份"><a href="#网站的备份" class="headerlink" title="网站的备份"></a>网站的备份</h1><p>发布到github上面的内容是不带原有的markdown文件的,发布的是解析后的html文件</p>
-<p>因此为了满足异地的写作与发布,我们应该要将本地的内容以及相关的配置备份一下</p>
-<p><a href="https://lrscy.github.io/2018/01/26/Hexo-Github-Backup/" target="_blank" rel="noopener">备份</a></p>
-<pre><code>git clone https://github.com/yourgithubname/yourgithubname.github.com
-cd yourgithubname
-npm install hexo-cli
-npm install
-npm install hexo-deployer-git
-</code></pre><h1 id="网站信息修改"><a href="#网站信息修改" class="headerlink" title="网站信息修改"></a>网站信息修改</h1><p>编辑myblog/_config.yml文件</p>
-<pre><code>title: 网站名字
-author: 作者
-url: 网站网址
-</code></pre><h1 id="文末声明"><a href="#文末声明" class="headerlink" title="文末声明"></a>文末声明</h1><p>编辑<code>3-hexo/_config.yml</code>文件,找到文末声明的地方,修改自己的邮箱</p>
-<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>编辑 <code>node_modules\marked\lib\marked.js</code> 脚本<br>处理markdown与mathjax的冲突<br>如果要显示数学公式,可以在最开头加上mathjax: true</p>
-<pre><code>451行左右(随着版本的更新可能有波动)
-escape: /^\\([\\`*{}\[\]()# +\-.!_&gt;])/,
-改为
-escape: /^\\([`*\[\]()# +\-.!_&gt;])/,
-
-459行左右
-em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
-改为
-em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
-</code></pre><h1 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h1><p>首先关闭myblog/_config.yml中的高亮设置</p>
-<pre><code>highlight:
-  enable: false
-</code></pre><p>配置3-hexo/_config.yml中的高亮设置：</p>
-<pre><code>highlight:
-  on: true # true开启代码高亮
-  lineNum: true # true显示行号
-  theme: atom-dark
-</code></pre><h1 id="头像与文章列表背景"><a href="#头像与文章列表背景" class="headerlink" title="头像与文章列表背景"></a>头像与文章列表背景</h1><blockquote>
-<p>替换themes/3-hexo/source/img 下面的avatar.jpg (头像)<br>替换themes/3-hexo/source/img 下面的background.jpg(文章列表背景图片)</p>
-</blockquote>
-<h1 id="友链与评论"><a href="#友链与评论" class="headerlink" title="友链与评论"></a>友链与评论</h1><p>编辑themes/3-hexo/_config.yml文件</p>
-<blockquote>
-<p>链接图标link: 修改github地址<br>友情链接friends: 增加自己朋友的blog地址<br>评论: comment : 开启设置为true, 选择gitalk ,在下方gitalk下面填入相应信息</p>
-<pre><code>注册: https://github.com/settings/applications/new
-</code></pre></blockquote>
-<p><img src="/img/auth.png" alt="image"></p>
-<p>编辑3-hexo/_config.yml</p>
-<pre><code>gitalk:
-  githubID: xjoi #git账户名
-  repo: xjoi.github.io #仓库名
-  ClientID: af0e91f8b3e07b208cc7 #上一步得到的信息
-  ClientSecret: 20b655d18155c0ee2c3093b8be4b91f15d444c3b
-  adminUser: becauseofyou # 仓库管理员账号名
-</code></pre><h1 id="全文搜索"><a href="#全文搜索" class="headerlink" title="全文搜索"></a>全文搜索</h1><p>找到3-hexo/_config.yml 中searchAll: 有提示</p>
-<pre><code>searchAll: true
-# true 启用全文搜索
-# 开启此功能需要下面操作：
-# 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
-# 2. 在 hexo 根目录的 _config.xml 中添加下面内容
-# search:
-#   path: search.xml
-#   field: post
-</code></pre><h1 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h1><p>同上</p>
-<pre><code>word_count: true
-# true 开启字数统计
-# 开启此功能需要安装插件 ：在 hexo根目录 执行npm i hexo-wordcount --save
-</code></pre><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>图片放在/img目录下面，引用的时候只需要</p>
-<pre><code>![name](/img/test.png)
-</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
     </div>
@@ -548,12 +474,12 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>我从哪里来</p>
-    <p><span>文章字数:</span><span class="post-count">1,033</span></p>
+    <p><span>文章标题:</span>第一届校赛题解</p>
+    <p><span>文章字数:</span><span class="post-count">2,133</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
-    <p><span>发布时间:</span>2018-08-25, 15:00:08</p>
-    <p><span>最后更新:</span>2018-12-06, 19:01:40</p>
-    <span>原始链接:</span><a class="post-url" href="/hexo-github/" title="我从哪里来">https://xjoi.github.io/hexo-github/</a>
+    <p><span>发布时间:</span>2018-12-09, 19:43:59</p>
+    <p><span>最后更新:</span>2018-12-09, 20:50:21</p>
+    <span>原始链接:</span><a class="post-url" href="/xjoi-school-contest-solution/" title="第一届校赛题解">https://xjoi.github.io/xjoi-school-contest-solution/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

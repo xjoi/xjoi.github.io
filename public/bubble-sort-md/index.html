@@ -6,18 +6,18 @@
   <meta name="keywords" content=" 排序 ">
   <meta name="description" content="冒泡排序 | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
-<meta name="keywords" content="linux">
+<meta name="description" content="A-easymath找出所有x的约数然后看他们的最小公倍数是否是x即可 B-permutation听说赛场上有人直接打表找规律过了此题？太强了。 这题本着送温暖的目的，被找到规律了也没事。 讲讲科学些的做法： 首先，要清楚一点：排列和置换是可以一一对应的，而且如果假设有点 1…n ，将所有的边 $(i,p_i)$ 连接起来，那么一个排列就对应一个由若干个环构成的图。 假设我们要算的是所有排列的贡献">
+<meta name="keywords" content="比赛">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell 基本命令">
-<meta property="og:url" content="https://xjoi.github.io/shell-command/index.html">
+<meta property="og:title" content="第一届校赛题解">
+<meta property="og:url" content="https://xjoi.github.io/xjoi-school-contest-solution/index.html">
 <meta property="og:site_name" content="xjoi">
-<meta property="og:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta property="og:description" content="A-easymath找出所有x的约数然后看他们的最小公倍数是否是x即可 B-permutation听说赛场上有人直接打表找规律过了此题？太强了。 这题本着送温暖的目的，被找到规律了也没事。 讲讲科学些的做法： 首先，要清楚一点：排列和置换是可以一一对应的，而且如果假设有点 1…n ，将所有的边 $(i,p_i)$ 连接起来，那么一个排列就对应一个由若干个环构成的图。 假设我们要算的是所有排列的贡献">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-06T11:01:40.200Z">
+<meta property="og:updated_time" content="2018-12-09T12:50:21.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell 基本命令">
-<meta name="twitter:description" content="显示当前目录内容 ls  显示当前文件夹的绝对路径 pwd 创建文件夹 mkdir folder 进入文件夹 cd folder 返回上层目录 cd .. ~表示主目录，即/home/username/ 目录，下面命令可以进入到主目录 cd ~ 创建文件 touch A.cpp ls 一下查看是否创建成功 后台打开并编辑文件，&amp;amp;表示后台打开 gedit A.cpp &amp;amp; gedit是">
+<meta name="twitter:title" content="第一届校赛题解">
+<meta name="twitter:description" content="A-easymath找出所有x的约数然后看他们的最小公倍数是否是x即可 B-permutation听说赛场上有人直接打表找规律过了此题？太强了。 这题本着送温暖的目的，被找到规律了也没事。 讲讲科学些的做法： 首先，要清楚一点：排列和置换是可以一一对应的，而且如果假设有点 1…n ，将所有的边 $(i,p_i)$ 连接起来，那么一个排列就对应一个由若干个环构成的图。 假设我们要算的是所有排列的贡献">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -101,8 +101,8 @@
     </div>
     <div><a class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="14">
-<input type="hidden" id="yelog_site_word_count" value="9.9k">
+<input type="hidden" id="yelog_site_posts_number" value="15">
+<input type="hidden" id="yelog_site_word_count" value="12.1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -228,7 +228,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">比赛</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">比赛题解</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">2018noip</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -237,10 +245,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">广搜</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">2018noip</a>
     </li>
     
     <div class="clearfix"></div>
@@ -273,14 +277,14 @@
             <span class="post-date" title="2018-12-01 20:07:50">2018/12/01</span>
         </a>
         
-        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
-            <span class="post-title" title="hello-world">hello-world</span>
-            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
-        </a>
-        
         <a class="普及 " href="/fast-pow/" data-tag="二分" data-author="">
             <span class="post-title" title="快速幂">快速幂</span>
             <span class="post-date" title="2018-12-01 20:01:22">2018/12/01</span>
+        </a>
+        
+        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
+            <span class="post-title" title="hello-world">hello-world</span>
+            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
         </a>
         
         <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
@@ -308,19 +312,24 @@
             <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
         </a>
         
+        <a class="" href="/xjoi-school-contest-solution/" data-tag="比赛" data-author="">
+            <span class="post-title" title="第一届校赛题解">第一届校赛题解</span>
+            <span class="post-date" title="2018-12-09 19:43:59">2018/12/09</span>
+        </a>
+        
         <a class="比赛 " href="/2018noip-solution/" data-tag="比赛题解" data-author="">
             <span class="post-title" title="2018noip题解以及点评">2018noip题解以及点评</span>
             <span class="post-date" title="2018-11-21 18:48:09">2018/11/21</span>
         </a>
         
-        <a class="普及 " href="/bfs/" data-tag="搜索,广搜" data-author="">
-            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
-            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
-        </a>
-        
         <a class="比赛 " href="/2018noip/" data-tag="2018noip" data-author="">
             <span class="post-title" title="2018noip游记">2018noip游记</span>
             <span class="post-date" title="2018-11-13 23:05:57">2018/11/13</span>
+        </a>
+        
+        <a class="普及 " href="/bfs/" data-tag="搜索,广搜" data-author="">
+            <span class="post-title" title="广度优先搜索">广度优先搜索</span>
+            <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
         </a>
         
     </nav>
@@ -549,7 +558,7 @@ int main() {
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#高精度','#二分','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#搜索','#广搜','#2018noip',],
+            'data': ['#高精度','#二分','#排序','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛','#比赛题解','#2018noip','#搜索','#广搜',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
