@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title>oi-search</title>
+      <title>如何查询一名oi选手的综合实力</title>
       <link href="/oi-search/"/>
       <url>/oi-search/</url>
       <content type="html"><![CDATA[<h1 id="如何查询一名oi选手的综合实力"><a href="#如何查询一名oi选手的综合实力" class="headerlink" title="如何查询一名oi选手的综合实力"></a>如何查询一名oi选手的综合实力</h1><p>首先是NOI官网上的历史成绩搜索</p><p><a href="http://www.noi.cn/awardsearch.html" target="_blank" rel="noopener">http://www.noi.cn/awardsearch.html</a></p><p>其次，如果你知道这名选手在竞赛圈内的常用ID(比如叫做username)，可以访问</p><p>codeforces.com/profile/username</p><p>CF上常见的实力档位从上往下依次是是红名，橙名，紫名，蓝名，绿名，灰名</p><p>看这名选手的rating曲线的分布，可以大致判断选手的实力</p>]]></content>
