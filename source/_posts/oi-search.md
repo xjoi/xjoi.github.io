@@ -1,5 +1,5 @@
 ---
-title: oi-search
+title: 如何查询一名oi选手的综合实力
 date: 2018-12-17 18:29:10
 categories: 竞赛周边
 tags:
