@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>ubuntu安装后的基本配置 | xjoi</title>
-  <meta name="keywords" content=" ubuntu ">
-  <meta name="description" content="ubuntu安装后的基本配置 | xjoi">
+  <title>cf-1084 | xjoi</title>
+  <meta name="keywords" content=" 题解 ">
+  <meta name="description" content="cf-1084 | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="如何查询一名oi选手的综合实力首先是NOI官网上的历史成绩搜索 http://www.noi.cn/awardsearch.html 其次，如果你知道这名选手在竞赛圈内的常用ID(比如叫做username)，可以访问 codeforces.com/profile/username CF上常见的实力档位从上往下依次是是红名，橙名，紫名，蓝名，绿名，灰名 看这名选手的rating曲线的分布，可以大致判">
 <meta property="og:type" content="article">
@@ -355,9 +355,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-cf-1084" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">ubuntu安装后的基本配置</h1>
+        <h1 class="article-title">cf-1084</h1>
     
     <div class="article-meta">
         
@@ -365,26 +365,26 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="辅助技能">辅助技能</a>
+            <a href="javascript:" data-rel="比赛">比赛</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">ubuntu</a>
+            <a href="javascript:" class="color3">题解</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-12-06 19:01:40">2018-12-02 19:34</time>
+        创建时间:<time class="date" title="更新时间: 2018-12-23 10:46:36">2018-12-23 07:12</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:611</span>
+        <span>字数:830</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -414,7 +414,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要学会使用linux系统"><span class="toc-text">为什么要学会使用linux系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装完成后要做的一些事情"><span class="toc-text">安装完成后要做的一些事情</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#改源"><span class="toc-text">改源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装常用软件"><span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#editor"><span class="toc-text">editor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typora"><span class="toc-text">typora</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装sublime-text"><span class="toc-text">安装sublime text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装搜狗输入法"><span class="toc-text">安装搜狗输入法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装topcoder"><span class="toc-text">安装topcoder</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新文件英文目录"><span class="toc-text">更新文件英文目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题的安装"><span class="toc-text">主题的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装monaco字体"><span class="toc-text">安装monaco字体</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#div2-C-div1-A"><span class="toc-text">div2-C/div1-A</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#div2-D-div1-B"><span class="toc-text">div2-D/div1-B</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#div2-E-div1-C"><span class="toc-text">div2-E/div1-C</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -429,66 +429,32 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="为什么要学会使用linux系统"><a href="#为什么要学会使用linux系统" class="headerlink" title="为什么要学会使用linux系统"></a>为什么要学会使用linux系统</h1><p>用了你就知道了</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>用U盘制作一个ubuntu 启动盘，建议下载16.04版本的ubuntu-desktop<br>推荐国内下载链接<a href="http://mirrors.ustc.edu.cn/ubuntu-releases/16.04/" target="_blank" rel="noopener">USTC镜像站</a><br>64位选择amd64.iso,32位的选择i386.iso</p>
-<p>至于如何用U盘安装，网上有很多教程，略过</p>
-<h1 id="安装完成后要做的一些事情"><a href="#安装完成后要做的一些事情" class="headerlink" title="安装完成后要做的一些事情"></a>安装完成后要做的一些事情</h1><h2 id="改源"><a href="#改源" class="headerlink" title="改源"></a>改源</h2><p>组合键ctrl+alt+T 打开terminal</p>
-<p>默认的软件源的下载速度可能比较慢，先换成国内的下载源</p>
-<pre><code>sudo gedit /etc/apt/sources.list
-</code></pre><p>打开<a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</a><br>选择你的操作系统版本，复制相应内容到上面的sources.list</p>
-<p>更新</p>
-<pre><code>sudo apt-get update
-</code></pre><h2 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h2><h3 id="editor"><a href="#editor" class="headerlink" title="editor"></a>editor</h3><pre><code>sudo apt install chromium-browser vim emacs git
-</code></pre><h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><p>typora是常用的markdown编辑器，可以在编辑器内实时显示markdown语法解析后的内容</p>
-<p><a href="https://www.typora.io/#linux" target="_blank" rel="noopener">https://www.typora.io/#linux</a></p>
-<p>安装后之后打开，文件-&gt;偏好设置，勾选内联公式</p>
-<h3 id="安装sublime-text"><a href="#安装sublime-text" class="headerlink" title="安装sublime text"></a>安装sublime text</h3><pre><code>wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
-</code></pre><h3 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h3><p>先到官网下载deb安装包<a href="https://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="noopener">地址</a></p>
-<p>cd 到安装包的目录</p>
-<p>解压并安装</p>
-<pre><code>sudo apt install -f
-sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
-</code></pre><h3 id="安装topcoder"><a href="#安装topcoder" class="headerlink" title="安装topcoder"></a>安装topcoder</h3><p>安装java applet启动器 </p>
-<pre><code>sudo apt install icedtea-netx
-</code></pre><p>下载topcoder所需文件</p>
-<pre><code>git clone https://github.com/xjoi/topcoder.git
-</code></pre><p>制作topcoder启动图标</p>
-<pre><code>sudo gedit /usr/share/applications/topcoder.desktop
-</code></pre><p>填入如下内容</p>
-<pre><code>[Desktop Entry]
-Version=1.0
-Name=TopCoder
-Exec=javaws https://community.topcoder.com/contest/arena/ContestAppletProd.jnlp
-Terminal=false
-Icon=/home/software/topcoder/topcoder.jpeg
-Type=Application
-Categories=Development
-</code></pre><p>Icon一行存放你的topcoder图标所在的目录的绝对路径<br>图标可以用下面这个<br><img src="/img/topcoder.jpeg" alt="图标"></p>
-<p>topcoder 基本的配置可以参考<a href="https://github.com/xjoi/topcoder/blob/master/moj_instructions.txt" target="_blank" rel="noopener">moj_instructions</a></p>
-<h2 id="更新文件英文目录"><a href="#更新文件英文目录" class="headerlink" title="更新文件英文目录"></a>更新文件英文目录</h2><p>中文目录在命令行下会不方便，所以改成英文目录</p>
-<pre><code>export LANG=en_US
-xdg-user-dirs-gtk-update
-</code></pre><h2 id="主题的安装"><a href="#主题的安装" class="headerlink" title="主题的安装"></a>主题的安装</h2><p>工具安装</p>
-<pre><code>sudo apt-get install unity-tweak-tool
-</code></pre><p>安装Flatabulous主题</p>
-<pre><code>sudo add-apt-repository ppa:noobslab/themes
-sudo apt-get update
-sudo apt-get install flatabulous-theme
-</code></pre><p>打开unity-tweak工具，在主题栏目里面选择相应主题</p>
-<h2 id="安装monaco字体"><a href="#安装monaco字体" class="headerlink" title="安装monaco字体"></a>安装monaco字体</h2><pre><code>cd /usr/share/fonts/truetype/
-sudo mkdir ttf-monaco
-cd ttf-monaco/
-sudo wget http://codybonney.com/files/fonts/Monaco_Linux.ttf
-sudo mkfontdir
-cd ..
-fc-cache
-</code></pre><p>字体的使用可以点开左上角菜单栏 编辑-&gt;配置文件首选项</p>
-<p>下面是一个截图</p>
-<p><img src="/img/ubuntu.png" alt="ubuntu"></p>
+        <p>div2A/B 略</p>
+<h1 id="div2-C-div1-A"><a href="#div2-C-div1-A" class="headerlink" title="div2-C/div1-A"></a>div2-C/div1-A</h1><p>记录fa 表示以a结尾的合法序列数量</p>
+<p>记录fb 表示以b结尾的合法序列数量</p>
+<p>假如当前字符为a，那么 fa += fb + 1;<br>假如当前字符为b，那么 fb = fa;</p>
+<h1 id="div2-D-div1-B"><a href="#div2-D-div1-B" class="headerlink" title="div2-D/div1-B"></a>div2-D/div1-B</h1><p>最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件</p>
+<p>如果不满足，可以用反证法证明这条路径并非是最大的</p>
+<p>然后我们可以用一个树DP来做</p>
+<p>dp[u]表u节点的子树中以u开头的点权边权之差最大的路径</p>
+<p>那么dp[u]可能会是某个dp[v] 转移过来，v是u的某个儿子</p>
+<p>也有可能从两个dp[v] 转移过来，相当于是一条横跨u的路径，由两条u走向子树的路径结合而成</p>
+<p>由于dfs的时候是一个一个儿子枚举过去的，所以可以记录u的前面儿子的最优值prev，与当前子树的最优值进行合并</p>
+<p>合并完成后再用当前子树的最优值去更新prev</p>
+<h1 id="div2-E-div1-C"><a href="#div2-E-div1-C" class="headerlink" title="div2-E/div1-C"></a>div2-E/div1-C</h1><p>首先是理解题目意思<br>给你两个数n,k($n \le 500000, k \le 10^9$), 还有两个长度为n的字符串s，t</p>
+<p>s的字典序小于等于t，求[s,t]之间选出k个串，不同前缀的数目最大是多少，所有的串都只有ab两种字符构成</p>
+<p>相当于你有很多种选择k个串的方法，每一种方法都对应了一个不同前缀的数量，求所有方法中最大的一个</p>
+<p>如果我们先找好k个串，然后再数一数有多少前缀，这样的计算量必然是天文数字</p>
+<p>逆向思维是这类计数问题的常用解题思路，即算每一种长度的前缀在最终答案中被算到了几次</p>
+<p>假设先不考虑字典序</p>
+<p>再进一步思考，假设长度为i的满足条件的不同前缀有x个，那么这x个前缀完全可以再延伸一个字符然后作为长度为i+1的满足条件的不同前缀</p>
+<p>由于字符只有两种所以长度为i+1的不同前缀有 x * 2种，但是我们只能选择k个串，所以要和k取个min</p>
+<p>然后我们考虑字典序问题，根据s，t两个字符串的第i+1位的情况我们可以分类讨论四种情况</p>
+<p>1: s[i+1] = ‘a’, t[i+1] = ‘b’<br>x = x <em> 2; 所有的x </em> 2种的前缀都是合法的，因为后面无论接入a还是b都满足字典序列</p>
+<p>2: s[i+1] = ‘a’, t[i+1] = ‘a’<br>x = x * 2 - 1; 除了t[1~i]这个字典序最大的串后面不能接b，其他都可以随意的接上a b</p>
+<p>3: s[i+1] = ‘b’, t[i+1] = ‘b’<br>x = x * 2 - 1; 除了s[1~i]这个字典序最小的串后面不能接a，其他都可以随意的接上a b</p>
+<p>4: s[i+1] = ‘b’, t[i+1] = ‘a’<br>x = x * 2 - 2; 同上推理</p>
+<p>所以只需要统计每种长度的前缀的数量和k取min相加就是答案了</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 problem_solving@foxmail.com </span>
@@ -498,12 +464,12 @@ fc-cache
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>ubuntu安装后的基本配置</p>
-    <p><span>文章字数:</span><span class="post-count">611</span></p>
+    <p><span>文章标题:</span>cf-1084</p>
+    <p><span>文章字数:</span><span class="post-count">830</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xjoi">xjoi</a></p>
-    <p><span>发布时间:</span>2018-12-02, 19:34:11</p>
-    <p><span>最后更新:</span>2018-12-06, 19:01:40</p>
-    <span>原始链接:</span><a class="post-url" href="/linux/" title="ubuntu安装后的基本配置">https://xjoi.github.io/linux/</a>
+    <p><span>发布时间:</span>2018-12-23, 07:12:54</p>
+    <p><span>最后更新:</span>2018-12-23, 10:46:36</p>
+    <span>原始链接:</span><a class="post-url" href="/cf-1084/" title="cf-1084">https://xjoi.github.io/cf-1084/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
