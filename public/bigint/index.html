@@ -6,17 +6,18 @@
   <meta name="keywords" content=" 高精度 ">
   <meta name="description" content="高精度 | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="如何查询一名oi选手的综合实力首先是NOI官网上的历史成绩搜索 http://www.noi.cn/awardsearch.html 其次，如果你知道这名选手在竞赛圈内的常用ID(比如叫做username)，可以访问 codeforces.com/profile/username CF上常见的实力档位从上往下依次是是红名，橙名，紫名，蓝名，绿名，灰名 看这名选手的rating曲线的分布，可以大致判">
+<meta name="description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何查询一名oi选手的综合实力">
-<meta property="og:url" content="https://xjoi.github.io/oi-search/index.html">
+<meta property="og:title" content="cf-1084">
+<meta property="og:url" content="https://xjoi.github.io/cf-1084/index.html">
 <meta property="og:site_name" content="xjoi">
-<meta property="og:description" content="如何查询一名oi选手的综合实力首先是NOI官网上的历史成绩搜索 http://www.noi.cn/awardsearch.html 其次，如果你知道这名选手在竞赛圈内的常用ID(比如叫做username)，可以访问 codeforces.com/profile/username CF上常见的实力档位从上往下依次是是红名，橙名，紫名，蓝名，绿名，灰名 看这名选手的rating曲线的分布，可以大致判">
+<meta property="og:description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-17T10:39:12.294Z">
+<meta property="og:updated_time" content="2018-12-23T02:48:38.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何查询一名oi选手的综合实力">
-<meta name="twitter:description" content="如何查询一名oi选手的综合实力首先是NOI官网上的历史成绩搜索 http://www.noi.cn/awardsearch.html 其次，如果你知道这名选手在竞赛圈内的常用ID(比如叫做username)，可以访问 codeforces.com/profile/username CF上常见的实力档位从上往下依次是是红名，橙名，紫名，蓝名，绿名，灰名 看这名选手的rating曲线的分布，可以大致判">
+<meta name="twitter:title" content="cf-1084">
+<meta name="twitter:description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -84,9 +85,9 @@
     
     <li data-rel="入门"> 入门 </li>
     
-    <li data-rel="加入我们"> 加入我们 </li>
-    
     <li data-rel="辅助技能"> 辅助技能 </li>
+    
+    <li data-rel="加入我们"> 加入我们 </li>
     
     <li data-rel="竞赛周边"> 竞赛周边 </li>
     
@@ -157,11 +158,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">二分</a>
+        <a href="javascript:" class="color4">高精度</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">高精度</a>
+        <a href="javascript:" class="color3">二分</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -185,15 +186,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">招聘</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">ubuntu</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">网站搭建</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -233,11 +234,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">2018noip</a>
+        <a href="javascript:" class="color5">比赛题解</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">比赛题解</a>
+        <a href="javascript:" class="color4">2018noip</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -258,14 +259,14 @@
     
     <nav id="title-list-nav">
         
-        <a class="普及 " href="/binary-search/" data-tag="二分" data-author="">
-            <span class="post-title" title="二分查找">二分查找</span>
-            <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
-        </a>
-        
         <a class="普及 " href="/bigint/" data-tag="高精度" data-author="">
             <span class="post-title" title="高精度">高精度</span>
             <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
+        </a>
+        
+        <a class="普及 " href="/binary-search/" data-tag="二分" data-author="">
+            <span class="post-title" title="二分查找">二分查找</span>
+            <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
         </a>
         
         <a class="普及 " href="/bubble-sort-md/" data-tag="排序" data-author="">
@@ -293,6 +294,11 @@
             <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
         </a>
         
+        <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
+            <span class="post-title" title="我从哪里来">我从哪里来</span>
+            <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
+        </a>
+        
         <a class="加入我们 " href="/join-us/" data-tag="招聘" data-author="">
             <span class="post-title" title="加入我们">加入我们</span>
             <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
@@ -303,9 +309,9 @@
             <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
         </a>
         
-        <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
-            <span class="post-title" title="我从哪里来">我从哪里来</span>
-            <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
+        <a class="竞赛周边 " href="/oi-search/" data-tag="" data-author="">
+            <span class="post-title" title="如何查询一名oi选手的综合实力">如何查询一名oi选手的综合实力</span>
+            <span class="post-date" title="2018-12-17 18:29:10">2018/12/17</span>
         </a>
         
         <a class="辅助技能 " href="/shell-command/" data-tag="linux" data-author="">
@@ -313,19 +319,14 @@
             <span class="post-date" title="2018-12-04 22:11:25">2018/12/04</span>
         </a>
         
-        <a class="竞赛周边 " href="/oi-search/" data-tag="" data-author="">
-            <span class="post-title" title="如何查询一名oi选手的综合实力">如何查询一名oi选手的综合实力</span>
-            <span class="post-date" title="2018-12-17 18:29:10">2018/12/17</span>
-        </a>
-        
         <a id="top" class="提高 " href="/tree-basic/" data-tag="树,数据结构,dfs序,重心,直径,欧拉序列,最近公共祖先,树上差分" data-author="">
             <span class="post-title" title="树的一些入门必备知识">树的一些入门必备知识</span>
             <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
         </a>
         
-        <a class="比赛 " href="/2018noip/" data-tag="2018noip" data-author="">
-            <span class="post-title" title="2018noip游记">2018noip游记</span>
-            <span class="post-date" title="2018-11-13 23:05:57">2018/11/13</span>
+        <a class="比赛 " href="/xjoi-school-contest-solution/" data-tag="" data-author="">
+            <span class="post-title" title="第一届校赛题解">第一届校赛题解</span>
+            <span class="post-date" title="2018-12-09 19:43:59">2018/12/09</span>
         </a>
         
         <a class="比赛 " href="/2018noip-solution/" data-tag="比赛题解" data-author="">
@@ -333,14 +334,14 @@
             <span class="post-date" title="2018-11-21 18:48:09">2018/11/21</span>
         </a>
         
+        <a class="比赛 " href="/2018noip/" data-tag="2018noip" data-author="">
+            <span class="post-title" title="2018noip游记">2018noip游记</span>
+            <span class="post-date" title="2018-11-13 23:05:57">2018/11/13</span>
+        </a>
+        
         <a class="普及 " href="/bfs/" data-tag="搜索,广搜" data-author="">
             <span class="post-title" title="广度优先搜索">广度优先搜索</span>
             <span class="post-date" title="2018-11-22 10:18:49">2018/11/22</span>
-        </a>
-        
-        <a class="比赛 " href="/xjoi-school-contest-solution/" data-tag="" data-author="">
-            <span class="post-title" title="第一届校赛题解">第一届校赛题解</span>
-            <span class="post-date" title="2018-12-09 19:43:59">2018/12/09</span>
         </a>
         
     </nav>
@@ -505,7 +506,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#二分','#高精度','#排序','#题解','#c++','#面向对象','#c/c++入门','#招聘','#ubuntu','#网站搭建','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#2018noip','#比赛题解','#搜索','#广搜',],
+            'data': ['#高精度','#二分','#排序','#题解','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#2018noip','#搜索','#广搜',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
