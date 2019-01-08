@@ -6,18 +6,18 @@
   <meta name="keywords" content=" c/c++入门 ">
   <meta name="description" content="hello-world | xjoi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
-<meta name="keywords" content="题解">
+<meta name="description" content="A Adding DigitsProblem description 给出数字a和b，每次在a后面添加一位数字，重复n次，使得每次产生的数字a都能够被b整除  Data Limit：1 &amp;lt;= a,b,n &amp;lt;= 10^5  Time Limit: 2sSolution 因为一旦添加某一位后a不能被b整除，整个操作就不合法，因此可行方案的第一次添加就必须使a被b整除，剩余的n-1次操作只需">
+<meta name="keywords" content="cf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cf-1084">
-<meta property="og:url" content="https://xjoi.github.io/cf-1084/index.html">
+<meta property="og:title" content="cf-260">
+<meta property="og:url" content="https://xjoi.github.io/cf-260/index.html">
 <meta property="og:site_name" content="xjoi">
-<meta property="og:description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
+<meta property="og:description" content="A Adding DigitsProblem description 给出数字a和b，每次在a后面添加一位数字，重复n次，使得每次产生的数字a都能够被b整除  Data Limit：1 &amp;lt;= a,b,n &amp;lt;= 10^5  Time Limit: 2sSolution 因为一旦添加某一位后a不能被b整除，整个操作就不合法，因此可行方案的第一次添加就必须使a被b整除，剩余的n-1次操作只需">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-23T02:48:38.990Z">
+<meta property="og:updated_time" content="2019-01-08T00:06:57.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cf-1084">
-<meta name="twitter:description" content="div2A/B 略 div2-C/div1-A记录fa 表示以a结尾的合法序列数量 记录fb 表示以b结尾的合法序列数量 假如当前字符为a，那么 fa += fb + 1;假如当前字符为b，那么 fb = fa; div2-D/div1-B最重要的观察：本质就是在找点权和减去边权和最大的路径，这样的路径必然会满足题目的条件 如果不满足，可以用反证法证明这条路径并非是最大的 然后我们可以用一个树DP">
+<meta name="twitter:title" content="cf-260">
+<meta name="twitter:description" content="A Adding DigitsProblem description 给出数字a和b，每次在a后面添加一位数字，重复n次，使得每次产生的数字a都能够被b整除  Data Limit：1 &amp;lt;= a,b,n &amp;lt;= 10^5  Time Limit: 2sSolution 因为一旦添加某一位后a不能被b整除，整个操作就不合法，因此可行方案的第一次添加就必须使a被b整除，剩余的n-1次操作只需">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -85,13 +85,13 @@
     
     <li data-rel="入门"> 入门 </li>
     
-    <li data-rel="加入我们"> 加入我们 </li>
-    
     <li data-rel="辅助技能"> 辅助技能 </li>
     
-    <li data-rel="提高"> 提高 </li>
+    <li data-rel="加入我们"> 加入我们 </li>
     
     <li data-rel="竞赛周边"> 竞赛周边 </li>
+    
+    <li data-rel="提高"> 提高 </li>
     
 </ul>
 <div class="left-bottom">
@@ -166,11 +166,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">排序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">题解</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">排序</a>
+        <a href="javascript:" class="color3">cf</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -186,15 +190,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站搭建</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">招聘</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">ubuntu</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">网站搭建</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -264,19 +268,9 @@
             <span class="post-date" title="2018-12-01 20:06:13">2018/12/01</span>
         </a>
         
-        <a class="" href="/cf-260/" data-tag="" data-author="">
-            <span class="post-title" title="cf-260">cf-260</span>
-            <span class="post-date" title="2019-01-08 08:01:44">2019/01/08</span>
-        </a>
-        
         <a class="普及 " href="/binary-search/" data-tag="二分" data-author="">
             <span class="post-title" title="二分查找">二分查找</span>
             <span class="post-date" title="2018-12-01 20:04:27">2018/12/01</span>
-        </a>
-        
-        <a class="比赛 " href="/cf-1084/" data-tag="题解" data-author="">
-            <span class="post-title" title="cf-1084">cf-1084</span>
-            <span class="post-date" title="2018-12-23 07:12:54">2018/12/23</span>
         </a>
         
         <a class="普及 " href="/bubble-sort-md/" data-tag="排序" data-author="">
@@ -284,19 +278,19 @@
             <span class="post-date" title="2018-09-23 12:32:02">2018/09/23</span>
         </a>
         
+        <a class="比赛 " href="/cf-1084/" data-tag="题解" data-author="">
+            <span class="post-title" title="cf-1084">cf-1084</span>
+            <span class="post-date" title="2018-12-23 07:12:54">2018/12/23</span>
+        </a>
+        
+        <a class="比赛 " href="/cf-260/" data-tag="cf" data-author="">
+            <span class="post-title" title="cf-260">cf-260</span>
+            <span class="post-date" title="2019-01-08 08:01:44">2019/01/08</span>
+        </a>
+        
         <a class="普及 " href="/cplusplus-basic/" data-tag="c++,面向对象" data-author="">
             <span class="post-title" title="结构体的妙用">结构体的妙用</span>
             <span class="post-date" title="2018-12-01 20:07:50">2018/12/01</span>
-        </a>
-        
-        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
-            <span class="post-title" title="hello-world">hello-world</span>
-            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
-        </a>
-        
-        <a class="加入我们 " href="/join-us/" data-tag="招聘" data-author="">
-            <span class="post-title" title="加入我们">加入我们</span>
-            <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
         </a>
         
         <a class="普及 " href="/fast-pow/" data-tag="二分" data-author="">
@@ -304,9 +298,9 @@
             <span class="post-date" title="2018-12-01 20:01:22">2018/12/01</span>
         </a>
         
-        <a class="辅助技能 " href="/linux/" data-tag="ubuntu" data-author="">
-            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
-            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
+        <a class="入门 " href="/hello-world-md/" data-tag="c/c++入门" data-author="">
+            <span class="post-title" title="hello-world">hello-world</span>
+            <span class="post-date" title="2018-11-21 18:03:16">2018/11/21</span>
         </a>
         
         <a class="辅助技能 " href="/hexo-github/" data-tag="网站搭建" data-author="">
@@ -314,14 +308,14 @@
             <span class="post-date" title="2018-08-25 15:00:08">2018/08/25</span>
         </a>
         
-        <a class="辅助技能 " href="/shell-command/" data-tag="linux" data-author="">
-            <span class="post-title" title="shell 基本命令">shell 基本命令</span>
-            <span class="post-date" title="2018-12-04 22:11:25">2018/12/04</span>
+        <a class="加入我们 " href="/join-us/" data-tag="招聘" data-author="">
+            <span class="post-title" title="加入我们">加入我们</span>
+            <span class="post-date" title="2018-11-27 16:03:58">2018/11/27</span>
         </a>
         
-        <a id="top" class="提高 " href="/tree-basic/" data-tag="树,数据结构,dfs序,重心,直径,欧拉序列,最近公共祖先,树上差分" data-author="">
-            <span class="post-title" title="树的一些入门必备知识">树的一些入门必备知识</span>
-            <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
+        <a class="辅助技能 " href="/linux/" data-tag="ubuntu" data-author="">
+            <span class="post-title" title="ubuntu安装后的基本配置">ubuntu安装后的基本配置</span>
+            <span class="post-date" title="2018-12-02 19:34:11">2018/12/02</span>
         </a>
         
         <a class="竞赛周边 " href="/oi-search/" data-tag="" data-author="">
@@ -329,9 +323,19 @@
             <span class="post-date" title="2018-12-17 18:29:10">2018/12/17</span>
         </a>
         
+        <a class="辅助技能 " href="/shell-command/" data-tag="linux" data-author="">
+            <span class="post-title" title="shell 基本命令">shell 基本命令</span>
+            <span class="post-date" title="2018-12-04 22:11:25">2018/12/04</span>
+        </a>
+        
         <a class="比赛 " href="/xjoi-school-contest-solution/" data-tag="" data-author="">
             <span class="post-title" title="第一届校赛题解">第一届校赛题解</span>
             <span class="post-date" title="2018-12-09 19:43:59">2018/12/09</span>
+        </a>
+        
+        <a id="top" class="提高 " href="/tree-basic/" data-tag="树,数据结构,dfs序,重心,直径,欧拉序列,最近公共祖先,树上差分" data-author="">
+            <span class="post-title" title="树的一些入门必备知识">树的一些入门必备知识</span>
+            <span class="post-date" title="2018-11-21 15:27:19">2018/11/21</span>
         </a>
         
         <a class="比赛 " href="/2018noip-solution/" data-tag="比赛题解" data-author="">
@@ -517,7 +521,7 @@ int main() {
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#高精度','#二分','#题解','#排序','#c++','#面向对象','#c/c++入门','#招聘','#ubuntu','#网站搭建','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#2018noip','#搜索','#广搜',],
+            'data': ['#高精度','#二分','#排序','#题解','#cf','#c++','#面向对象','#c/c++入门','#网站搭建','#招聘','#ubuntu','#linux','#树','#数据结构','#dfs序','#重心','#直径','#欧拉序列','#最近公共祖先','#树上差分','#比赛题解','#2018noip','#搜索','#广搜',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
